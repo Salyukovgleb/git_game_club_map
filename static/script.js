@@ -22,11 +22,53 @@ function init() {
 }
 
 function showDetails(clubId) {
-    // Функция для отображения подробной информации о клубе
-    // В данном примере не реализована полностью, требуется дополнительная логика для отображения деталей
-    alert("Показать детали для клуба с ID: " + clubId);
-    // Здесь должен быть код для отображения детальной информации о клубе
+    // Make a request to the Flask endpoint with the club ID
+    fetch(`/get_club_details?id=${clubId}`)
+    .then(response => response.json())
+    .then(club => {
+        if (club.error) {
+            alert(club.error);
+            return;
+        }
+
+        // Construct the details HTML using the club data
+        const detailsHtml = `
+            <h2>${club.name}</h2>
+            <p><strong>Description:</strong> ${club.description}</p>
+            <p><strong>Location:</strong> ${club.location.address}, Coordinates: [${club.location.coordinates.join(', ')}], Time: ${club.location.time}</p>
+            <div><strong>Photos:</strong> ${club.photos.map(photo => `<img src="${photo}" style="width: 100%; display: block; margin-bottom: 10px;">`).join('')}</div>
+            <div><strong>Reviews:</strong> ${club.reviews.map(review => `<div>${review.user}: ${review.text} (Rating: ${review.rating})</div>`).join('')}</div>
+            <p><strong>Contact:</strong> ${club.administration.contact}, ${club.administration.number}</p>
+            <div><strong>Services:</strong> ${Object.entries(club.services).map(([service, available]) => `${service}: ${available ? 'Yes' : 'No'}`).join(', ')}</div>
+            <p><strong>Prices:</strong> PC Rent: ${club.prices.pc_rent}, Special Offers: ${club.prices.special_offers}</p>
+            <p><strong>Club Card:</strong> Loyalty Program: ${club.club_card.loyalty_program ? 'Yes' : 'No'}, Benefits: ${club.club_card.benefits}</p>
+            <p><strong>Comments:</strong> ${club.comments}</p>
+        `;
+
+        // Populate the modal with the details and display it
+        document.getElementById('clubInfo').innerHTML = detailsHtml;
+        document.getElementById('clubModal').style.display = 'block';
+    })
+    .catch(error => {
+        console.error('Error fetching club details:', error);
+        alert('There was an error fetching the club details.');
+    });
 }
+
+// Close modal when the close button is clicked
+document.querySelector('.close').onclick = function() {
+    document.getElementById('clubModal').style.display = 'none';
+};
+
+// Close the modal when clicking outside of it
+window.onclick = function(event) {
+    if (event.target == document.getElementById('clubModal')) {
+        document.getElementById('clubModal').style.display = 'none';
+    }
+};
+
+
+
 
 
 function buildRoute(from, to, map) {

@@ -166,3 +166,62 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+
+/* Basic modal styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Dim background */
+    z-index: 1000; /* Ensure modal is on top */
+    animation: fadeIn 0.5s; /* Smooth fade-in effect */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* Adjust margin to center modal */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Adjust width for desktop */
+    animation: slideIn 0.5s; /* Slide-in effect */
+}
+
+/* Close button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Animation for the modal to fade in */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Animation for the modal content to slide in */
+@keyframes slideIn {
+    from {margin-top: -100px; opacity: 0;}
+    to {margin-top: 10%; opacity: 1;}
+}
+
+/* Responsive modal for smaller screens */
+@media screen and (max-width: 600px) {
+    .modal-content {
+        width: 80%;
+    }
+}
+
