@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интернет-Клубы на Карте</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=a4f31dff-8fe8-4648-818d-31cea424e6af&lang=ru_RU" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/index">Главная</a></li>
+                <li><a href="/about">О проекте</a></li>
+                <li><a href="/logout">Выйти</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Hi</h1>
+    <div id="map" style="width: 100%; height: 400px;"></div>
+    <footer>
+        <p>© 2024 Интернет-Клубы. Все права защищены.</p>
+    </footer>
+</body>
+</html>

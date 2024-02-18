@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Регистрация</h1>
+    <div id="wrapper">
+        <form id="signin" method="post" action="/register" autocomplete="off">
+            <input type="text" id="user" name="Логин" placeholder="username" required>
+            <input type="text" id="name" name="Имя" placeholder="name">
+            <input type="password" id="pass" name="Пароль" placeholder="password" required>
+            <button type="submit">&#xf0da;</button>
+        </form>
+    </div>
+    {% if messages %}
+        <ul>
+        {% for message in messages %}
+            <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
