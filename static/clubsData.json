@@ -1,6 +1,6 @@
 {
   "clubsData": [
-    {
+     {
       "id": 1,
       "name": "DENVER GAME CLUB",
       "description": "4 кабинки 5x5 + Вип & Люкс кабинки. Переферия от Redragon и HyperX",
@@ -9,16 +9,18 @@
         "coordinates": [41.315569, 69.279737],
         "time": "Круглосуточно"
       },
-      "photos": ["https://lh3.googleusercontent.com/p/AF1QipMa8c9hEFJkd7tR6CXnOP79BLgSuVpOBgJYwuh-=s1360-w1360-h1020-rw"],
+      "photos": ["https://lh3.googleusercontent.com/p/AF1QipMa8c9hEFJkd7tR6CXnOP79BLgSuVpOBgJYwuh-=s1360-w1360-h1020-rw",
+                 "https://i4.photo.2gis.com/images/branch/0/30258560163944869_b67b_328x170.jpg"],
+
       "reviews": [
         {
-          "user": "Иван",
+          "user": "Ulugbek Khudoynazarov",
           "rating": 5,
-          "text": "Отличная атмосфера и обслуживание!"
+          "text": "Очень крутое место! Мощные компы, уютная атмосфера, бар с хот-догами и многими другими снеками. Приходите не пожалеете!"
         }
       ],
       "administration": {
-        "contact": "info@cluba.com",
+        "contact": "-",
         "number": "+998 99‒022‒68‒68, +998 99‒023‒68‒68"
       },
       "services": {
@@ -30,7 +32,7 @@
         "relaxation_zones": true
       },
       "prices": {
-        "pc_rent": 100,
+        "pc_rent": 15000,
         "special_offers": "Скидка 20% после 22:00"
       },
       "working_hours": "9:00 - 24:00",
@@ -40,70 +42,119 @@
       },
       "comments": "Дополнительная информация и акции доступны на сайте клуба"
     },
-    {
+     {
       "id": 2,
-      "name": "Colizeum",
-      "description": "Играй нон-стоп! Мощные компьютеры и профессиональная периферия",
+      "name": "Bazz Game",
+      "description": "\uD83C\uDFAE✨ Привет, друзья! Представляем настоящий рай для геймеров - BAZZ cyber lounge! \uD83C\uDF89\uD83D\uDD79✨",
       "location": {
-        "address": "\u200BБЦ Gc\u200BНиёзбек Йули, 30\u200B-1 этаж",
-        "coordinates": [41.315569, 69.279737],
+        "address": "Осиё улица, 23\u200B1 этаж\nЮнусабадский район, Ташкент",
+        "coordinates": [41.327438, 69.288208],
         "time": "Круглосуточно"
       },
-      "photos": ["https://lh3.googleusercontent.com/p/AF1QipMa8c9hEFJkd7tR6CXnOP79BLgSuVpOBgJYwuh-=s1360-w1360-h1020-rw"],
+      "photos": [
+        "https://ams2-cdn.2gis.com/previews/1186336940887113731/b0988d0a-8205-47dc-898e-ea04c92666b9/3/ru/328x170?api-version=2.0",
+        "https://i1.photo.2gis.com/images/branch/0/30258560169454547_f423_328x170.jpg"],
       "reviews": [
         {
-          "user": "Глеб Салюков",
+          "user": "АЛЯ МАНТЕРА",
           "rating": 5,
-          "text": "Каждый день хожу туда трачу по 100 тыс и я там вип клиент"
+          "text": "Крутой клуб мне зашел он"
+        }
+      ],
+      "administration": {
+        "contact": "info@cluba.com",
+        "number": "+998 (77) 704‒03‒33"
+      },
+       "services": {
+        "Wi-Fi": true,
+        "bar": true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent": 17000,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "24/7",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+        {
+          "id": 3,
+      "name": "Invictus Gaming Club",
+      "description": "Здесь в свободной уличной атмосфере с граффити на стенах и с самой лучшей игровой гарнитурой , вы можете не просто поиграть в Dota и CS:GO.",
+      "location": {
+        "address": "\u200BФидокор, 32а\u200Bцокольный этаж\u200B2 филиала\nЛолазор ж/м, Мирабадский район, Ташкент",
+        "coordinates": [41.324987, 69.290505],
+        "time": "Круглосуточно"
+      },
+      "photos": [
+        "https://i9.photo.2gis.com/images/branch/0/30258560095057456_9600_328x170.jpg",
+        "https://i5.photo.2gis.com/images/branch/0/30258560095057463_506d_328x170.jpg"
+      ],
+      "reviews": [
+        {
+          "user": "\u200BErnazar Tajimuratov",
+          "rating": 5,
+          "text": "Нам нравитя советую как постоянные клиенты"
+        }
+      ],
+      "administration": {
+        "contact": "mvp.2gis.biz",
+        "number": "+998 90‒017‒14‒00"
+      },
+       "services": {
+        "Wi-Fi": true,
+        "bar": true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent": 25000,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "24/7",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+            {
+      "id": 4,
+      "name": "Colizeum",
+      "description": "COLIZEUM — это максимальное удовольствие от игры.",
+      "location": {
+        "address": "\u200BБЦ Gc\u200BНиёзбек Йули, 30\u200B-1 этаж\nМирзо-Улугбекский район, Ташкент",
+        "coordinates": [41.324987, 69.290505],
+        "time": "Круглосуточно"
+      },
+      "photos": [
+        "https://i9.photo.2gis.com/images/branch/0/30258560095057456_9600_328x170.jpg",
+        "https://i5.photo.2gis.com/images/branch/0/30258560095057463_506d_328x170.jpg"
+
+      ],
+      "reviews": [
+        {
+          "user": "\u200BЕвгений Измайлов",
+          "rating": 5,
+          "text": "Отличный компьютерный клуб, приехали к друзьям на недельку, решили зайти сюда и не прогадали. Отличные сотрудники, классное железо и интерьер. Будем приходить ещё"
         }
       ],
       "administration": {
         "contact": "colizeum.toshkent@gmail.com",
-        "number": "+998 90‒900‒96‒55"
+        "number": "+998 90‒017‒14‒00"
       },
       "services": {
         "Wi-Fi": true,
-        "bar": true,
-        "kitchen": true,
-        "consoles": true,
-        "games": true,
-        "relaxation_zones": true
-      },
-      "prices": {
-        "pc_rent": 100,
-        "special_offers": "Скидка 20% после 00:00"
-      },
-      "working_hours": "24/7",
-      "club_card": {
-        "loyalty_program": true,
-        "benefits": "Скидки постоянным клиентам, бонусные игры"
-      },
-      "comments": "Дополнительная информация и акции доступны на сайте клуба"
-    },
-        {
-      "id": 3,
-      "name": "Invictus Gaming Club",
-      "description": "Вам кажется, что даже само сочетание «компьютерный клуб» устарело и попахивает нафталином?\nА что если мы скажем, что наш клуб — это настоящее сообщество по интересам?\n\nЗдесь в свободной уличной атмосфере с граффити на стенах и с самой лучшей игровой гарнитурой , вы можете не просто поиграть в Dota и CS:GO.\nТак же у нас есть бар с большим ассортиментом прохладительных напитков и зоной где вы можете отдохнуть от потных каток.\nВот что действительно погрузит вас в мир Invictus.",
-      "location": {
-        "address": "\u200BБЦ Gc\u200BНиёзбек Йули, 30\u200B-1 этаж",
-        "coordinates": [41.315569, 69.279737],
-        "time": "Круглосуточно"
-      },
-      "photos": ["https://ams2-cdn.2gis.com/previews/1155310930473517056/dc07827e-cdfe-436b-bfd0-e1115663610a/3/ru/328x170?api-version=2.0"],
-      "reviews": [
-        {
-          "user": "Хон Игорь",
-          "rating": 5,
-          "text": "Один из любимых компьютерных клубов в Ташкенте, приходил туда очень часто, ассортимент напитков и снеков широкий, если проголодались, компьютеры в чистоте, отдельный респект за ВИП-зону, удобные кресла, хорошая, но не идеальная переферия, некоторое оборудование дабл-кликает, либо же не зажимается ( в игре ) вообще, вроде исправили эту ошибку, поэтому 5 звезд!"
-        }
-      ],
-      "administration": {
-        "contact": "mvp.2gis.biz",
-        "number": "+998 90‒900‒96‒55"
-      },
-      "services": {
-        "Wi-Fi": true,
-        "bar": true,
+        "bar":   true,
         "kitchen": true,
         "consoles": true,
         "games": true,
@@ -111,7 +162,7 @@
       },
       "prices": {
         "pc_rent": 25000,
-        "special_offers": "Скидка 20% после 00:00"
+        "special_offers": "Скидка 20% после 22:00"
       },
       "working_hours": "24/7",
       "club_card": {
@@ -120,158 +171,42 @@
       },
       "comments": "Дополнительная информация и акции доступны на сайте клуба"
     },
-     {
-      "id": 4,
-      "name": "Arcada",
-      "description": "Мощные компьютеры и профессиональная периферия, удобные кресла.\nУ нас часто проводятся турниры, акции и скидки, чтобы быть в курсе следи за на нами в Instagram.",
-      "location": {
-        "address": "\u200BКушбеги микрорайон, 5а\u200Bцокольный этаж",
-        "coordinates": [41.315569, 69.279737],
-        "time": "Круглосуточно"
-      },
-      "photos": ["src=\"https://ams2-cdn.2gis.com/previews/1186336940887113731/b0988d0a-8205-47dc-898e-ea04c92666b9/3/ru/328x170?api-version=2.0\""],
-      "reviews": [
-        {
-          "user": "Станислав Иргашев",
-          "rating": 5,
-          "text": "Компы просто топ , играл на лайте все удобства, всё есть ! Следят за чистотой , порядком.\nВидел такие компы только в Казахстане в Астане . Молодцы , только вот редко подлагивал интернет но думаю исправят ! Админ просто топ , вежливый помогает , подсказывает как лучше ! Советую \uD83D\uDC4D"
-        }
-      ],
-      "administration": {
-        "contact": "arcadagameclub@gmail.com",
-        "number": "+998 (71) 230‒01‒99 +998 90‒906‒88‒33"
-      },
-      "services": {
-        "Wi-Fi": true,
-        "bar": true,
-        "kitchen": true,
-        "consoles": true,
-        "games": true,
-        "relaxation_zones": true
-      },
-      "prices": {
-        "pc_rent": 25000,
-        "special_offers": "Скидка 20% после 00:00"
-      },
-      "working_hours": "24/7",
-      "club_card": {
-        "loyalty_program": true,
-        "benefits": "Скидки постоянным клиентам, бонусные игры"
-      },
-      "comments": "Дополнительная информация и акции доступны на сайте клуба"
-    },
-         {
+                {
       "id": 5,
-      "name": "Bazz Game",
-      "description": "\uD83C\uDFAE✨ Привет, друзья! Представляем настоящий рай для геймеров - BAZZ cyber lounge! \uD83C\uDF89\uD83D\uDD79✨\n\uD83D\uDC7EНачнем с наших прекрасных VIP-кабинок. В этих кабинках вы сможете погрузиться в мир своих любимых игр, наслаждаясь уютом и комфортом. Наша команда заботится о каждой детали, чтобы вы могли насладиться игровым процессом на полную катушку.\n\uD83C\uDFAEА как насчет PlayStation 5? У нас есть все самые горячие игры, чтобы вы могли насладиться игровым процессом на самом новом уровне. Помимо этого, у нас есть VR-зона\nНо не только эти кабинки будут радовать вас в BAZZ cyber lounge! У нас есть общий зал, а еще, специально для наших девочек, есть отдельная кабинка, где вы сможете насладиться играми в атмосфере полного комфорта и безопасности.\nМы с нетерпением ждем вас в нашем BAZZ cyber lounge, чтобы поделиться с вами этим захватывающим миром гейминга. Получите незабываемые эмоции и насладитесь каждым моментом вместе с нами! \uD83C\uDF1F\uD83C\uDFAE✨",
-      "location": {
-        "address": "\u200BОсиё улица, 23\u200B1 этаж",
-        "coordinates": [41.315569, 69.279737],
-        "time": "Круглосуточно"
-      },
-      "photos": ["src=\"https://ams2-cdn.2gis.com/previews/1186336940887113731/b0988d0a-8205-47dc-898e-ea04c92666b9/3/ru/328x170?api-version=2.0\""],
-      "reviews": [
-        {
-          "user": "Хон Игорь",
-          "rating": 5,
-          "text": "Один из любимых компьютерных клубов в Ташкенте, приходил туда очень часто, ассортимент напитков и снеков широкий, если проголодались, компьютеры в чистоте, отдельный респект за ВИП-зону, удобные кресла, хорошая, но не идеальная переферия, некоторое оборудование дабл-кликает, либо же не зажимается ( в игре ) вообще, вроде исправили эту ошибку, поэтому 5 звезд!"
-        }
-      ],
-      "administration": {
-        "contact": "mvp.2gis.biz",
-        "number": "+998 (77) 704‒03‒33"
-      },
-      "services": {
-        "Wi-Fi": true,
-        "bar": true,
-        "kitchen": true,
-        "consoles": true,
-        "games": true,
-        "relaxation_zones": true
-      },
-      "prices": {
-        "pc_rent": 25000,
-        "special_offers": "Скидка 20% после 00:00"
-      },
-      "working_hours": "24/7",
-      "club_card": {
-        "loyalty_program": true,
-        "benefits": "Скидки постоянным клиентам, бонусные игры"
-      },
-      "comments": "Дополнительная информация и акции доступны на сайте клуба"
-    },
-     {
-      "id": 6,
-      "name": "MVP Gaming Club",
-      "description": " МВП - компьютерный клуб формата кибер лаунж основой которого является стилистика киберпанка.",
-      "location": {
-        "address": "Минор жилмассив, 57\u200Bцокольный этаж",
-        "coordinates": [41.315569, 69.279737],
-        "time": "Круглосуточно"
-      },
-      "photos": ["https://ams2-cdn.2gis.com/previews/1168500954606075904/6c02c04f-fd0f-4dc0-a187-f5f149a948d5/3/ru/328x170?api-version=2.0"],
-      "reviews": [
-        {
-          "user": "Хон Игорь",
-          "rating": 5,
-          "text": "Один из любимых компьютерных клубов в Ташкенте, приходил туда очень часто, ассортимент напитков и снеков широкий, если проголодались, компьютеры в чистоте, отдельный респект за ВИП-зону, удобные кресла, хорошая, но не идеальная переферия, некоторое оборудование дабл-кликает, либо же не зажимается ( в игре ) вообще, вроде исправили эту ошибку, поэтому 5 звезд!"
-        }
-      ],
-      "administration": {
-        "contact": "mvpuzbekistan@gmail.com",
-        "number": "+998 95‒777‒77‒73"
-      },
-      "services": {
-        "Wi-Fi": true,
-        "bar": true,
-        "kitchen": true,
-        "consoles": true,
-        "games": true,
-        "relaxation_zones": true
-      },
-      "prices": {
-        "pc_rent": 25000,
-        "special_offers": "Скидка 20% после 00:00"
-      },
-      "working_hours": "24/7",
-      "club_card": {
-        "loyalty_program": true,
-        "benefits": "Скидки постоянным клиентам, бонусные игры"
-      },
-      "comments": "Дополнительная информация и акции доступны на сайте клуба"
-    },
-         {
-      "id": 7,
-      "name": "MAJOR Premium Gaming ",
+      "name": "MAJOR Premium Gaming",
       "description": "Major Premium Gaming — киберспортивный проект,объединивший ценителей компьютерных видеоигр,игроков и фанатов.",
       "location": {
-        "address": "\u200BБЦ Shevchenko Plaza\u200BУлица Тараса Шевченко, 21/1\u200Bцокольный этаж",
-        "coordinates": [41.315569, 69.279737],
+        "address": "\u200BЖилмассив Кораташ, 32а\u200Bцокольный этаж\u200B4 филиала\nКараташ ж/м, Шайхантахурский район, Ташкент, 100021",
+        "coordinates": [41.298058, 69.280117],
         "time": "Круглосуточно"
       },
-      "photos": ["https://ams2-cdn.2gis.com/previews/1168500954606075904/6c02c04f-fd0f-4dc0-a187-f5f149a948d5/3/ru/328x170?api-version=2.0"],
+      "photos": [
+        "https://i6.photo.2gis.com/images/branch/0/30258560075645251_1643_328x170.jpg",
+        "https://i1.photo.2gis.com/images/branch/0/30258560075645252_562c_328x170.jpg"
+
+      ],
       "reviews": [
         {
-          "user": "Даяна Даяна",
+          "user": "\u200BЕвгений Измайлов",
           "rating": 5,
-          "text": "Отличный железа, все тянут!"
+          "text": "Отличный компьютерный клуб, приехали к друзьям на недельку, решили зайти сюда и не прогадали. Отличные сотрудники, классное железо и интерьер. Будем приходить ещё"
         }
       ],
       "administration": {
-        "contact": "mvpuzbekistan@gmail.com",
+        "contact": "majorclub.uz@gmail.com",
         "number": "+998 (78) 888‒15‒55"
       },
       "services": {
         "Wi-Fi": true,
-        "bar": true,
+        "bar":   true,
         "kitchen": true,
         "consoles": true,
         "games": true,
         "relaxation_zones": true
       },
       "prices": {
-        "pc_rent": 25000,
-        "special_offers": "Скидка 20% после 00:00"
+        "pc_rent": 22000,
+        "special_offers": "Скидка 20% после 22:00"
       },
       "working_hours": "24/7",
       "club_card": {
@@ -280,205 +215,357 @@
       },
       "comments": "Дополнительная информация и акции доступны на сайте клуба"
     },
-    {
-    "id": 8,
-    "name": "CyberTech Gaming Center",
-    "description": "CyberTech Gaming Center - современный клуб для ценителей киберспорта и компьютерных игр.",
-    "location": {
-      "address": "\u200BУл. Пролетарская, 78, Этаж 2, ТЦ \"Компьютерный мир\"",
-      "coordinates": [41.305648, 69.278240],
-      "time": "Ежедневно с 10:00 до 02:00"
+        {
+      "id": 6,
+      "name": "MVP Gaming Club",
+      "description": "• МВП - компьютерный клуб формата кибер лаунж основой которого является стилистика киберпанка.",
+      "location": {
+        "address": "\u200BМинор жилмассив, 57\u200Bцокольный этаж\u200B3 филиала\nМинор (Ц-6) ж/м, Юнусабадский район, Ташкент",
+        "coordinates": [41.331208, 69.281809],
+        "time": "Круглосуточно"
+      },
+      "photos": [
+        "https://ams2-cdn.2gis.com/previews/1168500954606075904/6c02c04f-fd0f-4dc0-a187-f5f149a948d5/3/ru/328x170?api-version=2.0",
+        "https://i7.photo.2gis.com/images/branch/0/30258560107311803_2e0e_328x170.jpg"
+
+      ],
+      "reviews": [
+        {
+          "user": "\n\u200BRustam Sobirov",
+          "rating": 5,
+          "text": "Не плохой компьютерный клуб. Недорого!"
+        }
+      ],
+      "administration": {
+        "contact": "mvpuzbekistan@gmail.com",
+        "number": "+998 95‒777‒77‒73, +998 95‒078‒77‒73"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar":   true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent": 25000,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "24/7",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
     },
-    "photos": ["https://example.com/photo5.jpg"],
-    "reviews": [
-      {
-        "user": "Андрей Иванов",
-        "rating": 4,
-        "text": "Отличное оборудование и удобное расположение!"
-      }
-    ],
-    "administration": {
-      "contact": "cybertech@example.com",
-      "number": "+998 (71) 876-54-32"
+            {
+      "id": 7,
+      "name": "Arcada",
+      "description": "Мощные компьютеры и профессиональная периферия, удобные кресла.\nУ нас часто проводятся турниры, акции и скидки, чтобы быть в курсе следи за на нами в Instagram.",
+      "location": {
+        "address": "\u200BКушбеги микрорайон, 5а\u200Bцокольный этаж\u200B2 филиала\nКушбеги ж/м, Яккасарайский район, Ташкент, 100022",
+        "coordinates": [41.268030, 69.244299],
+        "time": "Круглосуточно"
+      },
+      "photos": [
+        "https://ams2-cdn.2gis.com/previews/1168500954606075904/6c02c04f-fd0f-4dc0-a187-f5f149a948d5/3/ru/328x170?api-version=2.0",
+        "https://i7.photo.2gis.com/images/branch/0/30258560107311803_2e0e_328x170.jpg"
+
+      ],
+      "reviews": [
+        {
+          "user": "\u200BNuradil Yerbolov",
+          "rating": 3,
+          "text": "3 звезды чисто из-за девайсов -2 потому что не смог поиграть фейсит ("
+        }
+      ],
+      "administration": {
+        "contact": "arcadagameclub@gmail.com",
+        "number": "+998 (71) 230‒01‒99, +998 90‒906‒88‒33"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar":   true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent": 25000,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "24/7",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
     },
-    "services": {
-      "Wi-Fi": true,
-      "bar": true,
-      "kitchen": true,
-      "consoles": true,
-      "games": true,
-      "relaxation_zones": true
+                {
+      "id": 8,
+      "name": "FPS Gaming",
+      "description": "\uD83D\uDDA5Топ 40 мощных компьютеров\n\uD83C\uDFAEВидеокарты RTX 3060 12GB\n\uD83D\uDDB1⌨\uD83C\uDFA7Периферия от HYPERX и DURGOD\n\uD83D\uDDA5Мониторы от MSI 180hz IPS и G-SYNQ",
+      "location": {
+        "address": "\u200BЭзгулик, 1/1\u200Bцокольный этаж\nЮнусабадский район, Ташкент",
+        "coordinates": [41.344725, 69.288578],
+        "time": "Ежедневно с 10:00 до 01:00"
+      },
+      "photos": [
+        "https://ams2-cdn.2gis.com/previews/1186258519842619395/557deb83-b754-458d-ae03-aa0ff284ddd9/3/ru/328x170?api-version=2.0",
+        "https://i3.photo.2gis.com/images/branch/0/30258560169511427_f3eb_328x170.jpg"
+
+      ],
+      "reviews": [
+        {
+          "user": "Timur Djusipov",
+          "rating": 5,
+          "text": "\uD83D\uDC4Dместо супер приходите"
+        }
+      ],
+      "administration": {
+        "contact": "arcadagameclub@gmail.com",
+        "number": "+998 (77) 021‒44‒04"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar":   true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent": 25000,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "Ежедневно с 10:00 до 01:00",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
     },
-    "prices": {
-      "pc_rent": 27000,
-      "special_offers": "Скидки для студентов по будням"
+                    {
+      "id": 9,
+      "name": "Bulls arena",
+      "description": "Круглосуточное место, где можно мериться силами с виртуальными противниками и отлично провести свободное время.",
+      "location": {
+        "address": "\u200BМассив Ялангач, 30Б\u200Bцокольный этаж\u200B2 филиала\nЯлангач ж/м, Мирзо-Улугбекский район, Ташкент",
+        "coordinates": [41.350451, 69.343274],
+        "time": "Круглосуточно"
+      },
+      "photos": [
+        "https://wizardpc.net/image/catalog/pcclub/arena-header.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjAm8fXLU1YbpDUQVwsvH_sHHoj1b1RlkqORzF-lTL-thvG67JnVxkOIHV2lCIuwREDA0&usqp=CAU"
+
+      ],
+      "reviews": [
+        {
+          "user": "ГОЛУБОЙ ЯРУС",
+          "rating": 5,
+          "text": "\uD83D\uDC4Dместо супер приходите"
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "+998 94‒622‒00‒66"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar":   true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent": 25000,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "24/7",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
     },
-    "working_hours": "Ежедневно с 10:00 до 02:00",
-    "club_card": {
-      "loyalty_program": true,
-      "benefits": "Бонусы и скидки для постоянных клиентов"
+                        {
+      "id": 10,
+      "name": "Bezone gaming",
+      "description": "Круглосуточное место, где можно мериться силами и членом.",
+      "location": {
+        "address": "Массив Буюк Ипак Йули, 1\nБуюк Ипак Йули (Ц-1) ж/м, Мирзо-Улугбекский район, Ташкент, 100047",
+        "coordinates": [41.313361, 69.287047],
+        "time": "Круглосуточно"
+      },
+      "photos": [
+        "https://avatars.mds.yandex.net/get-altay/7044542/2a00000182c6ed18e380dd15b4a27ebf70d9/XXXL",
+        "https://avatars.mds.yandex.net/get-altay/7370029/2a00000182c6ecf9fe75bd1d62789a65dae2/XXXL"
+
+      ],
+      "reviews": [
+        {
+          "user": "Zohid Husanov",
+          "rating": 5,
+          "text": "ВАЩЕ ТОПЧОВОЕ МЕСТА!!!"
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "+998 95‒515‒05‒00"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar":   true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent": 28000,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "24/7",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
     },
-    "comments": "Больше информации на сайте клуба."
-  },
-  {
-    "id": 9,
-    "name": "Galactic eSports Arena",
-    "description": "Galactic eSports Arena - место, где звезды рождаются в мире киберспорта.",
-    "location": {
-      "address": "\u200BПроспект Мустакиллик, 100, Этаж 3, ТРЦ \"Галактика\"",
-      "coordinates": [41.320402, 69.278879],
-      "time": "Пн-Чт: 12:00 - 00:00, Пт-Вс: 10:00 - 02:00"
+                            {
+      "id": 11,
+      "name": "Friends",
+      "description": "\uD83C\uDFAE✨ Привет, друзья! Представляем настоящий рай для геймеров - FRIENDS cyber lounge! \uD83C\uDF89\uD83D\uDD79✨",
+      "location": {
+        "address": "\u200BЖилмассив Себзар, 1\u200Bцокольный этаж\u200B3 филиала\nСебзар (Ц17/18) ж/м, Алмазарский район, Ташкент",
+        "coordinates": [41.295912, 69.256408],
+        "time": "Круглосуточно"
+      },
+      "photos": [
+        "https://i1.photo.2gis.com/images/branch/0/30258560117939015_c632_328x170.jpg",
+        "https://i6.photo.2gis.com/images/geo/0/30258560050754198_add1_328x170.jpg"
+
+      ],
+      "reviews": [
+        {
+          "user": "Камола Мирбабаева",
+          "rating": 5,
+          "text": "Классное место"
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "+998 33‒410‒04‒95"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar":   true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent": 28000,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "24/7",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
     },
-    "photos": ["https://example.com/photo6.jpg"],
-    "reviews": [
-      {
-        "user": "Елена Смирнова",
-        "rating": 5,
-        "text": "Лучший клуб в городе! Отличная атмосфера и профессиональное оборудование."
-      }
-    ],
-    "administration": {
-      "contact": "galacticesports@example.com",
-      "number": "+998 (71) 345-67-89"
+                                {
+      "id": 12,
+      "name": "Dark zone E-sport",
+      "description": "\uD83C\uDFAE✨ Привет, друзья! Представляем настоящий рай для геймеров - Dark zone E-sport! \uD83C\uDF89\uD83D\uDD79✨",
+      "location": {
+        "address": "\u200BУлица Лабзак, 112\u200Bцокольный этаж\u200B6 филиалов\nШайхантахурский район, Ташкент, 100128",
+        "coordinates": [41.281905, 69.351811],
+        "time": "Круглосуточно"
+      },
+      "photos": [
+        "https://i3.photo.2gis.com/images/branch/0/30258560122840441_9140_328x170.jpg",
+        "https://i2.photo.2gis.com/images/branch/0/30258560122840447_758e_328x170.jpg"
+
+      ],
+      "reviews": [
+        {
+          "user": "\u200BАнастасия Чистова",
+          "rating": 5,
+          "text": "Приехала с подругами, очень крутое место и есть premium кабинка где моники на 360 Ггц что и порадовала \uD83D\uDD25"
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "+998 33‒125‒33‒33\nконтакт-центр: круглосуточно\n+998 (77) 777‒43‒24"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar":   true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent": 15000,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "24/7",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
     },
-    "services": {
-      "Wi-Fi": true,
-      "bar": true,
-      "kitchen": true,
-      "consoles": true,
-      "games": true,
-      "relaxation_zones": true
-    },
-    "prices": {
-      "pc_rent": 28000,
-      "special_offers": "Скидки для групповых посещений"
-    },
-    "working_hours": "Пн-Чт: 12:00 - 00:00, Пт-Вс: 10:00 - 02:00",
-    "club_card": {
-      "loyalty_program": true,
-      "benefits": "Бонусы за каждый посещенный час"
-    },
-    "comments": "Больше информации на сайте клуба."
-  },
-  {
-    "id": 10,
-    "name": "TechGenius eSports Lounge",
-    "description": "TechGenius eSports Lounge - место, где технологии и киберспорт соединяются.",
-    "location": {
-      "address": "\u200BУл. Навои, 64, Этаж 4, ТЦ \"Техно Парк\"",
-      "coordinates": [41.321601, 69.277728],
-      "time": "Ежедневно с 09:00 до 02:00"
-    },
-    "photos": ["https://example.com/photo7.jpg"],
-    "reviews": [
-      {
-        "user": "Сергей Петров",
-        "rating": 4,
-        "text": "Отличное место для игры в компании друзей!"
-      }
-    ],
-    "administration": {
-      "contact": "techgeniusesports@example.com",
-      "number": "+998 (71) 678-90-12"
-    },
-    "services": {
-      "Wi-Fi": true,
-      "bar": true,
-      "kitchen": true,
-      "consoles": true,
-      "games": true,
-      "relaxation_zones": true
-    },
-    "prices": {
-      "pc_rent": 29000,
-      "special_offers": "Специальные акции на выходные"
-    },
-    "working_hours": "Ежедневно с 09:00 до 02:00",
-    "club_card": {
-      "loyalty_program": true,
-      "benefits": "Бонусы и скидки для постоянных клиентов"
-    },
-    "comments": "Больше информации на сайте клуба."
-  },
-  {
-    "id": 11,
-    "name": "MasterPlay Gaming Lounge",
-    "description": "MasterPlay Gaming Lounge - место, где каждый может стать мастером в мире киберспорта.",
-    "location": {
-      "address": "\u200BУл. Садыка Азимова, 10, Этаж 2, ТЦ \"Мастер Плей\"",
-      "coordinates": [41.299861, 69.299652],
-      "time": "Пн-Чт: 12:00 - 00:00, Пт-Вс: 10:00 - 02:00"
-    },
-    "photos": ["https://example.com/photo8.jpg"],
-    "reviews": [
-      {
-        "user": "Алишер Жуманов",
-        "rating": 5,
-        "text": "Отличное место для игры и общения!"
-      }
-    ],
-    "administration": {
-      "contact": "masterplay@example.com",
-      "number": "+998 (71) 321-09-87"
-    },
-    "services": {
-      "Wi-Fi": true,
-      "bar": true,
-      "kitchen": true,
-      "consoles": true,
-      "games": true,
-      "relaxation_zones": true
-    },
-    "prices": {
-      "pc_rent": 30000,
-      "special_offers": "Ежедневные турниры и соревнования"
-    },
-    "working_hours": "Пн-Чт: 12:00 - 00:00, Пт-Вс: 10:00 - 02:00",
-    "club_card": {
-      "loyalty_program": true,
-      "benefits": "Бонусы и скидки для постоянных клиентов"
-    },
-    "comments": "Больше информации на сайте клуба."
-  },
-  {
-    "id": 12,
-    "name": "DreamTech eSports Center",
-    "description": "DreamTech eSports Center - место, где воплощаются мечты киберспортсменов.",
-    "location": {
-      "address": "\u200BУл. Якубовского, 15, Этаж 3, ТЦ \"Дрим Тех\"",
-      "coordinates": [41.330722, 69.240980],
-      "time": "Пн-Чт: 12:00 - 00:00, Пт-Вс: 10:00 - 02:00"
-    },
-    "photos": ["https://example.com/photo9.jpg"],
-    "reviews": [
-      {
-        "user": "Наталья Козлова",
-        "rating": 4,
-        "text": "Отличное место для игры в выходные!"
-      }
-    ],
-    "administration": {
-      "contact": "dreamtechesports@example.com",
-      "number": "+998 (71) 876-54-32"
-    },
-    "services": {
-      "Wi-Fi": true,
-      "bar": true,
-      "kitchen": true,
-      "consoles": true,
-      "games": true,
-      "relaxation_zones": true
-    },
-    "prices": {
-      "pc_rent": 28000,
-      "special_offers": "Скидки для групповых посещений"
-    },
-    "working_hours": "Пн-Чт: 12:00 - 00:00, Пт-Вс: 10:00 - 02:00",
-    "club_card": {
-      "loyalty_program": true,
-      "benefits": "Бонусы и скидки для постоянных клиентов"
-    },
-    "comments": "Больше информации на сайте клуба."
-  }
+                                    {
+      "id": 13,
+      "name": "OctaZone",
+      "description": "\uD83C\uDFAE✨ Привет, друзья! Представляем настоящий рай для геймеров - Dark zone E-sport! \uD83C\uDF89\uD83D\uDD79✨",
+      "location": {
+        "address": "\u200BПроспект Амира Темура, 112\u200Bцокольный этаж\nЮнусабадский район, Ташкент, 100099",
+        "coordinates": [41.281905, 69.351811],
+        "time": "Круглосуточно"
+      },
+      "photos": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzVsUDZeCoyWmTlAtJ4yjlfVQXRV2BhNUNBX7uTnTPm1E01Q1JTuLL6EdIr23BSvQYlUc&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA_nvbL9ul2dMQVkb2t7MKjPX7Jlfeyg-ZcfgpPg4jsehLilFywCxpPYgJhutrkXGBLWg&usqp=CAU"
+
+      ],
+      "reviews": [
+        {
+          "user": "Kuat Abdurahmanov",
+          "rating": 5,
+          "text": "Интересный дизайн, хорошие девайсы, удобные кресла, топ железо, своя кухня и нет запахов"
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "+998 (55) 520‒22‒02"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar":   true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent": 35000,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "24/7",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    }
   ]
 }

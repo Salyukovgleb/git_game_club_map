@@ -1,227 +1,277 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css");
 
-*{
-	font-family: 'Open Sans', 'sans-serif', 'FontAwesome';
+* {
+  font-family: "Open Sans", "sans-serif", "FontAwesome";
 }
-body{
-    background: rgb(52, 56, 61);
+
+body {
+  /* background: rgb(52, 56, 61); */
+  background: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
-h1{
-	color: rgb(255, 255, 255);
-	margin: 20px auto 0;
-	width: 200px;
-	text-align: center;
+
+h1 {
+  color: rgb(255, 255, 255);
+  margin: 20px auto 0;
+  width: 200px;
+  text-align: center;
 }
-#wrapper{
-	position: absolute;
-	width: 320px;
-	left: 50%;
-	margin-left: -160px;
-	top: 50%;
-	margin-top: -75px;
+#wrapper {
+  position: absolute;
+  width: 320px;
+  left: 50%;
+  margin-left: -160px;
+  top: 50%;
+  margin-top: -75px;
 }
 
 /* === Sign in Form === */
 #signin {
-	height: 90px;
-	width: 300px;
-	border-radius: 8px;
-	position: relative;
+  height: 90px;
+  width: 300px;
+  border-radius: 8px;
+  position: relative;
 }
 #signin::before {
-	display: block;
-	position: relative;
-	height: 2px;
-	background: rgb(52, 56, 61);
-	content: '';
-	top: 44px;
-	margin-left: 20px;
-	z-index: 1;
+  display: block;
+  position: relative;
+  height: 2px;
+  background: rgb(52, 56, 61);
+  content: "";
+  top: 44px;
+  margin-left: 20px;
+  z-index: 1;
 }
-#signin input:first-of-type{
-	border-top-right-radius: 8px;
-	border-top-left-radius: 8px;
+#signin input:first-of-type {
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
 }
-#signin input:last-of-type{
-	border-bottom-right-radius: 8px;
-	border-bottom-left-radius: 8px;
+#signin input:last-of-type {
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
-#signin  input[type="text"], #signin  input[type="password"], #signin button[type="submit"]{
-	background: rgb(28, 30, 33);
-	box-shadow: inset -100px -100px 0 rgb(28, 30, 33); /*Prevent yellow autofill color*/
-	color: rgb(52, 56, 61);
+#signin input[type="text"],
+#signin input[type="password"],
+#signin button[type="submit"] {
+  background: rgb(28, 30, 33);
+  box-shadow: inset -100px -100px 0 rgb(28, 30, 33); /*Prevent yellow autofill color*/
+  color: #fff;
 }
-#signin  input[type="text"], #signin  input[type="password"]{
-	position: relative;
-	display: block;
-	width: 280px;
-	height: 45px;
-	border: 0;
-	outline: 0;
-	top: -2px;
-	padding: 0 0 0 20px;
-	font-weight: 700;
+#signin input[type="text"],
+#signin input[type="password"] {
+  position: relative;
+  display: block;
+  width: 280px;
+  height: 45px;
+  border: 0;
+  outline: 0;
+  top: -2px;
+  padding: 0 0 0 20px;
+  font-weight: 700;
 }
-#signin  input[type="text"]:focus, #signin  input[type="password"]:focus{
-	color: rgb(255, 255, 255);
+#signin input[type="text"]:focus,
+#signin input[type="password"]:focus {
+  color: rgb(255, 255, 255);
 }
-#signin button[type="submit"]{
-	display: block;
-	position: absolute;
-	width: 52px;
-	height: 52px;
-	color: rgb(52, 56, 61);
-	border-radius: 50px;
-	outline: 0;
-	z-index: 2;
-	top: 19px;
-	right: -24px;
-	border: 6px solid rgb(52, 56, 61);
-	font-size: 25px;
-	text-indent: 0px;
-	padding-left: 9px;
-	padding-bottom: 3px;
-	text-align: center;
+#signin button[type="submit"] {
+  display: block;
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  color: rgb(52, 56, 61);
+  border-radius: 50px;
+  outline: 0;
+  z-index: 2;
+  top: 19px;
+  right: -24px;
+  border: 6px solid rgb(52, 56, 61);
+  font-size: 25px;
+  text-indent: 0px;
+  padding-left: 9px;
+  padding-bottom: 3px;
+  text-align: center;
 }
-#signin button[type="submit"]:hover{
-	color: rgb(0, 126, 165);
-	text-shadow: 0 0 10px rgb(0, 126, 165);
-	cursor: pointer;
+#signin button[type="submit"]:hover {
+  color: rgb(0, 126, 165);
+  text-shadow: 0 0 10px rgb(0, 126, 165);
+  cursor: pointer;
 }
 #signin p {
-	color: rgb(79, 85, 97);
-	padding: 0 20px;
-	font-weight: 700;
-	font-size: 12px;
-	margin: 5px 0 0 0;
+  color: rgb(79, 85, 97);
+  padding: 0 20px;
+  font-weight: 700;
+  font-size: 12px;
+  margin: 5px 0 0 0;
 }
-#signin p > a{
-	color: rgb(111, 119, 135);
-	text-decoration: none;
+#signin p > a {
+  color: rgb(111, 119, 135);
+  text-decoration: none;
 }
-#signin p > a:hover{
-	border-bottom: 1px solid;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+#signin p > a:hover {
+  border-bottom: 1px solid;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 40px;
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 20px 0 20px 40px; */
+}
+
+.log_avatar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header .logo h1 {
+  color: red;
+  margin: 0;
+}
+
+.btn_logout a {
+  padding: 8px 14px;
+}
+
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 header nav ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 header nav ul li {
-    display: inline;
-    margin-right: 20px;
+  display: inline;
+  margin-right: 20px;
 }
 
 header nav ul li a {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 
 h1 {
-    color: #333;
+  color: #333;
 }
 
 #map {
-    margin: 20px auto;
-    width: 90%;
-    height: 400px;
-    background-color: #ddd;
+  margin: 20px auto;
+  width: 90%;
+  height: 400px;
+  background-color: #ddd;
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
-
 
 /* Basic modal styling */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.4); /* Dim background */
-    z-index: 1000; /* Ensure modal is on top */
-    animation: fadeIn 0.5s; /* Smooth fade-in effect */
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Dim background */
+  z-index: 1000; /* Ensure modal is on top */
+  animation: fadeIn 0.5s; /* Smooth fade-in effect */
 }
 
 .modal-content {
-    background-color: #fefefe;
-    margin: 10% auto; /* Adjust margin to center modal */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 50%; /* Adjust width for desktop */
-    animation: slideIn 0.5s; /* Slide-in effect */
+  background-color: #000;
+  color: #fff !important;
+  border-radius: 8px;
+  margin: 10% auto; /* Adjust margin to center modal */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* Adjust width for desktop */
+  animation: slideIn 0.5s; /* Slide-in effect */
 }
 
 /* Close button */
 .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* Animation for the modal to fade in */
 @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Animation for the modal content to slide in */
 @keyframes slideIn {
-    from {margin-top: -100px; opacity: 0;}
-    to {margin-top: 10%; opacity: 1;}
+  from {
+    margin-top: -100px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 10%;
+    opacity: 1;
+  }
 }
 
 /* Responsive modal for smaller screens */
 @media screen and (max-width: 600px) {
-    .modal-content {
-        width: 80%;
-    }
+  .modal-content {
+    width: 80%;
+  }
 }
 
+
+
+.logo img {
+  /* Устанавливаем ширину и высоту логотипа */
+  width: 45px; /* Пример ширины, можете настроить под свои нужды */
+  height: 45px; /* Пример высоты, чтобы сделать изображение квадратным */
+
+  /* Делаем края изображения круглыми */
+  border-radius: 40%;
+
+  /* Опционально: добавляем небольшую тень для лучшего визуального восприятия */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  /* Опционально: центрируем изображение, если оно находится внутри контейнера */
+  display: block;
+  margin: 0 auto;
+
+  /* Опционально: добавляем плавный переход для эффектов наведения или других изменений */
+  transition: transform 0.3s ease;
+}
+
+/* Опционально: добавляем эффект увеличения при наведении */
+.logo img:hover {
+  transform: scale(1.05);
+}

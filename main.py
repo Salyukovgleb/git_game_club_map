@@ -92,6 +92,32 @@ def get_club_details():
     return jsonify({"error": "Club not found"}), 404
 
 
+@app.route('/profile')
+def profile():
+    if 'user_id' not in session:
+        return redirect('/login')
+    user_id = session['user_id']
+    user = User.query.get(user_id)
+    if user:
+        return render_template('profile.html', user=user)
+    else:
+        return redirect('/login')
+
+@app.route('/update_profile', methods=['POST'])
+def update_profile():
+    if 'user_id' not in session:
+        return jsonify({'error': 'Not logged in'}), 401
+    user = User.query.filter_by(id=session['user_id']).first()
+    if user:
+        user.name = request.form.get('name', user.name)
+        # Update other fields as needed
+        db.session.commit()
+        flash('Profile updated successfully.', 'success')
+    return redirect('/profile')
+
+
+
+
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
