@@ -68,7 +68,7 @@ function showDetails(clubId) {
             <div class="info-block"><strong>Время:</strong> ${club.location.time}</div>
             <div class="info-block"><strong>Контакты:</strong><br>${club.administration.contact} <span class="copy-icon" onclick="copyToClipboard('${club.administration.contact}')">&#x1f4cb;</span><br>${club.administration.number} <span class="copy-icon" onclick="copyToClipboard('${club.administration.number}')">&#x1f4cb;</span></div>
             <div class="info-block"><strong>Услуги:</strong> ${Object.entries(club.services).map(([service, available]) => `<div>${service}: ${available ? 'Да' : 'Нет'}</div>`).join('')}</div>
-            <div class="info-block"><strong>Цены:</strong><br>PC Rent: ${club.prices.pc_rent}<br>Специальные предложения: ${club.prices.special_offers}</div>
+            <div class="info-block"><strong>Цены STANDART-VIP:</strong><br>PC Rent: ${club.prices.pc_rent_STANDART},${club.prices.pc_rent_VIP}<br>Специальные предложения: ${club.prices.special_offers}</div>
             <div class="info-block"><strong>Клубная карта:</strong><br>Программа лояльности: ${club.club_card.loyalty_program ? 'Да' : 'Нет'}<br>Преимущества: ${club.club_card.benefits}</div>
         `;
 

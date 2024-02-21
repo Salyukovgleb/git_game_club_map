@@ -32,7 +32,8 @@
         "relaxation_zones": true
       },
       "prices": {
-        "pc_rent": 15000,
+        "pc_rent_STANDART": 14400,
+      "pc_rent_VIP": 17700,
         "special_offers": "Скидка 20% после 22:00"
       },
       "working_hours": "9:00 - 24:00",
@@ -74,7 +75,8 @@
         "relaxation_zones": true
       },
       "prices": {
-        "pc_rent": 17000,
+        "pc_rent_STANDART": 17000,
+      "pc_rent_VIP": 20000,
         "special_offers": "Скидка 20% после 22:00"
       },
       "working_hours": "24/7",
@@ -117,7 +119,8 @@
         "relaxation_zones": true
       },
       "prices": {
-        "pc_rent": 25000,
+        "pc_rent_STANDART": 15000,
+      "pc_rent_VIP": 25000,
         "special_offers": "Скидка 20% после 22:00"
       },
       "working_hours": "24/7",
@@ -161,7 +164,8 @@
         "relaxation_zones": true
       },
       "prices": {
-        "pc_rent": 25000,
+        "pc_rent_STANDART": 17000,
+      "pc_rent_VIP": 24000,
         "special_offers": "Скидка 20% после 22:00"
       },
       "working_hours": "24/7",
@@ -205,7 +209,8 @@
         "relaxation_zones": true
       },
       "prices": {
-        "pc_rent": 22000,
+        "pc_rent_STANDART": 8000,
+      "pc_rent_VIP": 10000,
         "special_offers": "Скидка 20% после 22:00"
       },
       "working_hours": "24/7",
@@ -249,7 +254,8 @@
         "relaxation_zones": true
       },
       "prices": {
-        "pc_rent": 25000,
+        "pc_rent_STANDART": 20000,
+      "pc_rent_VIP": 50000,
         "special_offers": "Скидка 20% после 22:00"
       },
       "working_hours": "24/7",
@@ -293,7 +299,8 @@
         "relaxation_zones": true
       },
       "prices": {
-        "pc_rent": 25000,
+        "pc_rent_STANDART": 14000,
+      "pc_rent_VIP": 18000,
         "special_offers": "Скидка 20% после 22:00"
       },
       "working_hours": "24/7",
@@ -337,7 +344,8 @@
         "relaxation_zones": true
       },
       "prices": {
-        "pc_rent": 25000,
+        "pc_rent_STANDART": 12000,
+      "pc_rent_VIP": 17000,
         "special_offers": "Скидка 20% после 22:00"
       },
       "working_hours": "Ежедневно с 10:00 до 01:00",
@@ -381,7 +389,8 @@
         "relaxation_zones": true
       },
       "prices": {
-        "pc_rent": 25000,
+        "pc_rent_STANDART": 20000,
+      "pc_rent_VIP": 26000,
         "special_offers": "Скидка 20% после 22:00"
       },
       "working_hours": "24/7",
@@ -425,7 +434,8 @@
         "relaxation_zones": true
       },
       "prices": {
-        "pc_rent": 28000,
+        "pc_rent_STANDART": 20000,
+      "pc_rent_VIP": 28000,
         "special_offers": "Скидка 20% после 22:00"
       },
       "working_hours": "24/7",
@@ -469,7 +479,8 @@
         "relaxation_zones": true
       },
       "prices": {
-        "pc_rent": 28000,
+        "pc_rent_STANDART": 18000,
+      "pc_rent_VIP": 24000,
         "special_offers": "Скидка 20% после 22:00"
       },
       "working_hours": "24/7",
@@ -513,7 +524,8 @@
         "relaxation_zones": true
       },
       "prices": {
-        "pc_rent": 15000,
+        "pc_rent_STANDART": 15000,
+      "pc_rent_VIP": 20000,
         "special_offers": "Скидка 20% после 22:00"
       },
       "working_hours": "24/7",
@@ -557,7 +569,8 @@
         "relaxation_zones": true
       },
       "prices": {
-        "pc_rent": 35000,
+              "pc_rent_STANDART": 16000,
+      "pc_rent_VIP": 22000,
         "special_offers": "Скидка 20% после 22:00"
       },
       "working_hours": "24/7",
@@ -601,7 +614,8 @@
         "relaxation_zones": true
       },
       "prices": {
-        "pc_rent": 12000,
+        "pc_rent_STANDART": 12000,
+      "pc_rent_VIP": 14000,
         "special_offers": "Скидка 20% после 22:00"
       },
       "working_hours": "Ежедневно с 11:00 до 02:00",
@@ -645,7 +659,8 @@
         "relaxation_zones": true
       },
       "prices": {
-        "pc_rent": 35000,
+        "pc_rent_STANDART": 14000,
+      "pc_rent_VIP": 18000,
         "special_offers": "Скидка 20% после 22:00"
       },
       "working_hours": "Круглосуточно",
@@ -688,7 +703,8 @@
       "relaxation_zones": true
     },
     "prices": {
-      "pc_rent": 22000,
+      "pc_rent_STANDART": 10000,
+      "pc_rent_VIP": 20000,
       "special_offers": "Скидка 20% после 22:00"
     },
     "working_hours": "Ежедневно с 10:00 до 02:00",
@@ -731,7 +747,8 @@
       "relaxation_zones": true
     },
     "prices": {
-      "pc_rent": 40000,
+      "pc_rent_STANDART": 20000,
+      "pc_rent_VIP": 40000,
       "special_offers": "Скидка 15% в будние дни"
     },
     "working_hours": "Круглосуточно",
@@ -774,7 +791,8 @@
       "relaxation_zones": true
     },
     "prices": {
-      "pc_rent": 30000,
+      "pc_rent_STANDART": 20000,
+      "pc_rent_VIP": 25000,
       "special_offers": "Скидка 10% при предъявлении студенческого билета"
     },
     "working_hours": "Ежедневно с 12:00 до 02:00",
@@ -817,7 +835,8 @@
       "relaxation_zones": true
     },
     "prices": {
-      "pc_rent": 32000,
+      "pc_rent_STANDART": 16000,
+      "pc_rent_VIP": 32000,
       "special_offers": "Скидка 15% при бронировании заранее"
     },
     "working_hours": "Пн-Пт: с 14:00 до 02:00, Сб-Вс: круглосуточно",
@@ -860,8 +879,889 @@
       "relaxation_zones": true
     },
     "prices": {
-      "pc_rent": 30000,
+      "pc_rent_STANDART": 15000,
+      "pc_rent_VIP": 20000,
       "special_offers": "Скидка 10% для студентов"
+    },
+    "working_hours": "Круглосуточно",
+    "club_card": {
+      "loyalty_program": true,
+      "benefits": "Бонусы за посещения и скидки на напитки"
+    },
+    "comments": "Дополнительную информацию можно получить на нашем официальном сайте"
+  },
+          {
+    "id": 21,
+    "name": "Traffic",
+    "description": "Интернет-кафе киберспорт игровой клуб",
+    "location": {
+      "address": "\nЧиланзарский район, массив Чиланзор, 18-й квартал, 9",
+      "coordinates": [41.272504, 69.191554],
+      "time": "Круглосуточно"
+    },
+    "photos": [
+      "https://avatars.mds.yandex.net/get-altay/4538345/2a0000017825d2667297fd3cd99cee054aeb/XXXL",
+      "https://avatars.mds.yandex.net/get-altay/4280929/2a000001783f46ae9d03aaa09509d478d21d/XXXL"
+    ],
+    "reviews": [
+      {
+        "user": "Шадияр Абилкасимов",
+        "rating": 5,
+        "text": "Отличное место, уютно и удобно. Админы всегда помогут и система кондиционирования работает на ура"
+      }
+    ],
+    "administration": {
+      "contact": "cyberzonetashkent@gmail.com",
+      "number": "+\n+998 95 515 11 00"
+    },
+    "services": {
+      "Wi-Fi": true,
+      "bar": true,
+      "kitchen": true,
+      "consoles": true,
+      "games": true,
+      "relaxation_zones": true
+    },
+    "prices": {
+      "pc_rent_STANDART": 15000,
+      "pc_rent_VIP": 22000,
+      "special_offers": "Скидка 10% для студентов"
+    },
+    "working_hours": "Круглосуточно",
+    "club_card": {
+      "loyalty_program": true,
+      "benefits": "Бонусы за посещения и скидки на напитки"
+    },
+    "comments": "Дополнительную информацию можно получить на нашем официальном сайте"
+  },
+              {
+    "id": 22,
+    "name": "Tokyo. PC",
+    "description": "Интернет-кафе",
+    "location": {
+      "address": "Ташкент, ул. Олой Бозори, 23 этаж 2",
+      "coordinates": [41.318257, 69.286704],
+      "time": "Круглосуточно"
+    },
+    "photos": [
+      "https://avatars.mds.yandex.net/get-altay/918124/2a000001617a78d31cbbb4ae7ee9a4e2779c/XXXL",
+      "https://avatars.mds.yandex.net/get-altay/910613/2a0000018c6450d34e7f49c6def76ba459fb/XXXL"
+    ],
+    "reviews": [
+      {
+        "user": "\nLaziza Pulatova",
+        "rating": 5,
+        "text": "Раз в год я приглашаю значимых друзей в это место только ради донеров. Донеры здесь — произведение искусства. Я, как жительница Узбекистана, привыкла к тому, что еда почти везде всегда вкусная. Для меня, когда «очень вкусно» это просто база, но донеры здесь это высший пилотаж. Это вальс Доги, это Ранэвэй Канье Уэста, это Ne boldi Севинч Муминовой, это «Впечатление» Клода Моне, это Ренессанс, это весна моего сердца. Когда я окажусь перед Аллахом и он спросит, жила ли я, я отвечу да и приведу в этом место. Бесконечный респект и баракат всем поварам и всему персоналу. Любовь"
+      }
+    ],
+    "administration": {
+      "contact": "cyberzonetashkent@gmail.com",
+      "number": "+\n+998 95 515 11 00"
+    },
+    "services": {
+      "Wi-Fi": true,
+      "bar": true,
+      "kitchen": true,
+      "consoles": true,
+      "games": true,
+      "relaxation_zones": true
+    },
+    "prices": {
+      "pc_rent_STANDART": 12000,
+      "pc_rent_VIP": 20000,
+      "special_offers": "Скидка 10% для студентов"
+    },
+    "working_hours": "Круглосуточно",
+    "club_card": {
+      "loyalty_program": true,
+      "benefits": "Бонусы за посещения и скидки на напитки"
+    },
+    "comments": "Дополнительную информацию можно получить на нашем официальном сайте"
+  },
+                  {
+    "id": 23,
+    "name": "Cyberium.uz",
+    "description": "Интернет-кафе киберспорт развлекательный центр",
+    "location": {
+      "address": "Ташкент, ул. Мирабад, 2/1",
+      "coordinates": [41.318257, 69.286704],
+      "time": "Круглосуточно"
+    },
+    "photos": [
+      "https://avatars.mds.yandex.net/get-altay/918124/2a000001617a78d31cbbb4ae7ee9a4e2779c/XXXL",
+      "https://avatars.mds.yandex.net/get-altay/910613/2a0000018c6450d34e7f49c6def76ba459fb/XXXL"
+    ],
+    "reviews": [
+      {
+        "user": "\nLaziza Pulatova",
+        "rating": 5,
+        "text": "Раз в год я приглашаю значимых друзей в это место только ради донеров. Донеры здесь — произведение искусства. Я, как жительница Узбекистана, привыкла к тому, что еда почти везде всегда вкусная. Для меня, когда «очень вкусно» это просто база, но донеры здесь это высший пилотаж. Это вальс Доги, это Ранэвэй Канье Уэста, это Ne boldi Севинч Муминовой, это «Впечатление» Клода Моне, это Ренессанс, это весна моего сердца. Когда я окажусь перед Аллахом и он спросит, жила ли я, я отвечу да и приведу в этом место. Бесконечный респект и баракат всем поварам и всему персоналу. Любовь"
+      }
+    ],
+    "administration": {
+      "contact": "TokyoPCtashkent@gmail.com",
+      "number": "+\n+998 95 515 11 00"
+    },
+    "services": {
+      "Wi-Fi": true,
+      "bar": true,
+      "kitchen": true,
+      "consoles": true,
+      "games": true,
+      "relaxation_zones": true
+    },
+    "prices": {
+      "pc_rent_STANDART": 20000,
+      "pc_rent_VIP": 50000,
+      "special_offers": "Скидка 10% для студентов"
+    },
+    "working_hours": "Круглосуточно",
+    "club_card": {
+      "loyalty_program": true,
+      "benefits": "Бонусы за посещения и скидки на напитки"
+    },
+    "comments": "Дополнительную информацию можно получить на нашем официальном сайте"
+  },
+                      {
+    "id": 24,
+    "name": "Fidanza",
+    "description": "Интернет-кафе киберспорт развлекательный центр",
+    "location": {
+      "address": "Ташкент, Юнусабадский район, махалля Севинч, улица Юнусата 14\n",
+      "coordinates": [41.370929, 69.310413],
+      "time": "Круглосуточно"
+    },
+    "photos": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0USKBs7g2H8bi43r-AMsG1g3aCvLK8WZaxA&usqp=CAU",
+      "https://avatars.mds.yandex.net/get-altay/1881714/2a0000018637b42467f5d9f916ce3f31ad71/orig"
+    ],
+    "reviews": [
+      {
+        "user": "Умарбек Муроджонов",
+        "rating": 5,
+        "text": "Один из лучших игровых клубов по моему мнение, особенно кайфово отдельные кабинки 5х5 для любителей контр-страйка доты и тд, для игры команда на команду, весь шум гам остается там, цены лучшие в городе, персонал приветливые, остался доволен после похода туда"
+      }
+    ],
+    "administration": {
+      "contact": "fidanzatashkent@gmail.com",
+      "number": "+998 95 144 24 42"
+    },
+    "services": {
+      "Wi-Fi": true,
+      "bar": true,
+      "kitchen": true,
+      "consoles": true,
+      "games": true,
+      "relaxation_zones": true
+    },
+    "prices": {
+      "pc_rent_STANDART": 12000,
+      "pc_rent_VIP": 15000,
+      "special_offers": "Скидка 10% для студентов"
+    },
+    "working_hours": "Круглосуточно",
+    "club_card": {
+      "loyalty_program": true,
+      "benefits": "Бонусы за посещения и скидки на напитки"
+    },
+    "comments": "Дополнительную информацию можно получить на нашем официальном сайте"
+  },
+                          {
+    "id": 25,
+    "name": "Fidanza",
+    "description": "Интернет-кафе киберспорт развлекательный центр",
+    "location": {
+      "address": "Ташкент, Юнусабадский район, махалля Севинч, улица Юнусата 14\n",
+      "coordinates": [41.370929, 69.310413],
+      "time": "Круглосуточно"
+    },
+    "photos": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0USKBs7g2H8bi43r-AMsG1g3aCvLK8WZaxA&usqp=CAU",
+      "https://avatars.mds.yandex.net/get-altay/1881714/2a0000018637b42467f5d9f916ce3f31ad71/orig"
+    ],
+    "reviews": [
+      {
+        "user": "Умарбек Муроджонов",
+        "rating": 5,
+        "text": "Один из лучших игровых клубов по моему мнение, особенно кайфово отдельные кабинки 5х5 для любителей контр-страйка доты и тд, для игры команда на команду, весь шум гам остается там, цены лучшие в городе, персонал приветливые, остался доволен после похода туда"
+      }
+    ],
+    "administration": {
+      "contact": "fidanzatashkent@gmail.com",
+      "number": "+998 95 144 24 42"
+    },
+    "services": {
+      "Wi-Fi": true,
+      "bar": true,
+      "kitchen": true,
+      "consoles": true,
+      "games": true,
+      "relaxation_zones": true
+    },
+    "prices": {
+      "pc_rent_STANDART": 14000,
+      "pc_rent_VIP": 16500,
+      "special_offers": "Скидка 10% для студентов"
+    },
+    "working_hours": "Круглосуточно",
+    "club_card": {
+      "loyalty_program": true,
+      "benefits": "Бонусы за посещения и скидки на напитки"
+    },
+    "comments": "Дополнительную информацию можно получить на нашем официальном сайте"
+  },
+                              {
+    "id": 26,
+    "name": "Lvl Up",
+    "description": "\nИнтернет-кафе",
+    "location": {
+      "address": "Ташкент, Шайхантахурский район, массив Хадра, 23",
+      "coordinates": [41.327107, 69.249338],
+      "time": "Круглосуточно"
+    },
+    "photos": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0USKBs7g2H8bi43r-AMsG1g3aCvLK8WZaxA&usqp=CAU",
+      "https://avatars.mds.yandex.net/get-altay/1881714/2a0000018637b42467f5d9f916ce3f31ad71/orig"
+    ],
+    "reviews": [
+      {
+        "user": "Санжар Ахмедов",
+        "rating": 5,
+        "text": "Классный клуб,как для онлайн та и для офлайн игр, отличный админы которые знают свою работу,чутка какие-то вопросы сразу реагируют,и компы без лагов, отдыхаем часто,довольны на все 100%"
+      }
+    ],
+    "administration": {
+      "contact": "LVLtashkent@gmail.com",
+      "number": "+998 95 144 24 42"
+    },
+    "services": {
+      "Wi-Fi": true,
+      "bar": true,
+      "kitchen": true,
+      "consoles": true,
+      "games": true,
+      "relaxation_zones": true
+    },
+    "prices": {
+      "pc_rent_STANDART": 10000,
+      "pc_rent_VIP": 13000,
+      "special_offers": "Скидка 10% для студентов"
+    },
+    "working_hours": "Круглосуточно",
+    "club_card": {
+      "loyalty_program": true,
+      "benefits": "Бонусы за посещения и скидки на напитки"
+    },
+    "comments": "Дополнительную информацию можно получить на нашем официальном сайте"
+  },
+                                  {
+    "id": 27,
+    "name": "Adrenalinet",
+    "description": "Интернет-кафе",
+    "location": {
+      "address": "\nул. Шота Руставели, 53",
+      "coordinates": [41.285504, 69.254316],
+      "time": "Круглосуточно"
+    },
+    "photos": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2XOI0lZO1CmFB7Xj38J84Z98i8Kt7J9t4Eg&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs8-945d9G7xztBh-0pDb0WsoQrKgRpolRVq58Jx3_lLNFNMKtOvqJ50VuwE6di0izxYM&usqp=CAU"
+    ],
+    "reviews": [
+      {
+        "user": "Rafael Rustamovich",
+        "rating": 5,
+        "text": "Наверное это лучший клуб в городе! Наличие кабинок с PS это плюс, а кабинка кинотеатр, в которой можно посмотреть фильмы, поиграть в PS или в настольные игры с большой компанией, это вообще супер!"
+      }
+    ],
+    "administration": {
+      "contact": "Adrenalinettashkent@gmail.com",
+      "number": "+998 95 144 24 42"
+    },
+    "services": {
+      "Wi-Fi": true,
+      "bar": true,
+      "kitchen": true,
+      "consoles": true,
+      "games": true,
+      "relaxation_zones": true
+    },
+    "prices": {
+      "pc_rent_STANDART": 16000,
+      "pc_rent_VIP": 18000,
+      "special_offers": "Скидка 10% для студентов"
+    },
+    "working_hours": "Круглосуточно",
+    "club_card": {
+      "loyalty_program": true,
+      "benefits": "Бонусы за посещения и скидки на напитки"
+    },
+    "comments": "Дополнительную информацию можно получить на нашем официальном сайте"
+  },
+                                      {
+    "id": 28,
+    "name": "B2_game",
+    "description": "Интернет-кафе",
+    "location": {
+      "address": "\nул. Шахрисабз, 1Б этаж -1",
+      "coordinates": [41.309505, 69.287184],
+      "time": "Круглосуточно"
+    },
+    "photos": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2XOI0lZO1CmFB7Xj38J84Z98i8Kt7J9t4Eg&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs8-945d9G7xztBh-0pDb0WsoQrKgRpolRVq58Jx3_lLNFNMKtOvqJ50VuwE6di0izxYM&usqp=CAU"
+    ],
+    "reviews": [
+      {
+        "user": "Рамазан Палванов",
+        "rating": 5,
+        "text": "приветливые сотрудники и можно поводить машину как в реальной жизни"
+      }
+    ],
+    "administration": {
+      "contact": "B2tashkent@gmail.com",
+      "number": "\n+998 881 97 57 77"
+    },
+    "services": {
+      "Wi-Fi": true,
+      "bar": true,
+      "kitchen": true,
+      "consoles": true,
+      "games": true,
+      "relaxation_zones": true
+    },
+    "prices": {
+      "pc_rent_STANDART": 13000,
+      "pc_rent_VIP": 15000,
+      "special_offers": "Скидка 40% для инвалидов"
+    },
+    "working_hours": "Круглосуточно",
+    "club_card": {
+      "loyalty_program": true,
+      "benefits": "Бонусы за посещения и скидки на напитки"
+    },
+    "comments": "Дополнительную информацию можно получить на нашем официальном сайте"
+  },
+                                          {
+    "id": 29,
+    "name": "Imperial",
+    "description": "Интернет-кафе",
+    "location": {
+      "address": "Яшнободский район, массив Тузель, 2-й квартал, 15В",
+      "coordinates": [41.290037, 69.359923],
+      "time": "Круглосуточно"
+    },
+    "photos": [
+      "https://avatars.mds.yandex.net/get-altay/1881714/2a0000018637b42467f5d9f916ce3f31ad71/XXXL",
+      "https://avatars.mds.yandex.net/get-altay/4388821/2a000001794b01418301bab93461eb3e92fd/XXXL"
+    ],
+    "reviews": [
+      {
+        "user": "\nВячеслв Цхэ",
+        "rating": 5,
+        "text": "Думаю самый играбельный клуб района.\nДействительно дружеская, уютная атмосфера. Порядок и чистота на уровне. Игровой клуб для своих)\nПорядочные и отзывчивые администратор вры."
+      }
+    ],
+    "administration": {
+      "contact": "IMPERIALtashkent@gmail.com",
+      "number": "+998 90 944-11-42"
+    },
+    "services": {
+      "Wi-Fi": true,
+      "bar": true,
+      "kitchen": true,
+      "consoles": true,
+      "games": true,
+      "relaxation_zones": true
+    },
+    "prices": {
+      "pc_rent_STANDART": 13000,
+      "pc_rent_VIP": 15000,
+      "special_offers": "Скидка постоянным клиентам"
+    },
+    "working_hours": "Круглосуточно",
+    "club_card": {
+      "loyalty_program": true,
+      "benefits": "Бонусы за посещения и скидки на напитки"
+    },
+    "comments": "Дополнительную информацию можно получить на нашем официальном сайте"
+  },
+    {
+    "id": 30,
+    "name": "Fox gaming",
+    "description": "Интернет-кафе компьютерный клуб игровой клуб",
+    "location": {
+      "address": "Яшнободский район, тупик Мавляна Риёзи, 31 этаж -1",
+      "coordinates": [41.314098, 69.325389],
+      "time": "Круглосуточно"
+    },
+    "photos": [
+      "https://avatars.mds.yandex.net/get-altay/7379963/2a000001868e3348f29ad6644eb5e67acda3/XXXL",
+      "https://avatars.mds.yandex.net/get-altay/953593/2a000001868e332f66a48b0ad6485dad1e82/XXXL"
+    ],
+    "reviews": [
+      {
+        "user": "БУБСИК",
+        "rating": 5,
+        "text": "Думаю самый играбельный клуб района.\nДействительно дружеская, уютная атмосфера. Порядок и чистота на уровне. Игровой клуб для своих)\nПорядочные и отзывчивые администратор вры."
+      }
+    ],
+    "administration": {
+      "contact": "FOXGAME@gmail.com",
+      "number": "+998 90 037 19 05"
+    },
+    "services": {
+      "Wi-Fi": true,
+      "bar": true,
+      "kitchen": true,
+      "consoles": true,
+      "games": true,
+      "relaxation_zones": true
+    },
+    "prices": {
+      "pc_rent_STANDART": 13000,
+      "pc_rent_VIP": 15000,
+      "special_offers": "Скидка постоянным клиентам"
+    },
+    "working_hours": "Круглосуточно",
+    "club_card": {
+      "loyalty_program": true,
+      "benefits": "Бонусы за посещения и скидки на напитки"
+    },
+    "comments": "Дополнительную информацию можно получить на нашем официальном сайте"
+  },
+      {
+    "id": 31,
+    "name": "XXxGAMING",
+    "description": "Интернет-кафе компьютерный клуб игровой клуб",
+    "location": {
+      "address": "\nул. Гейдара Алиева, 204",
+      "coordinates": [41.314098, 69.325389],
+      "time": "Круглосуточно"
+    },
+    "photos": [
+      "https://avatars.mds.yandex.net/get-altay/3798254/2a00000176d305335b0b33df6eb960d7bcdf/XXXL",
+      "https://avatars.mds.yandex.net/get-altay/4614377/2a0000017772190dfd0c31e4314d5f00fc33/XXXL"
+    ],
+    "reviews": [
+      {
+        "user": "Журабек Бахронов",
+        "rating": 4,
+        "text": "Хорошая локация,приветливые сотрудники,электроника качественная но не для полного удовольствия"
+      }
+    ],
+    "administration": {
+      "contact": "XXxGAMING@gmail.com",
+      "number": "+998 95 500 00 77"
+    },
+    "services": {
+      "Wi-Fi": true,
+      "bar": true,
+      "kitchen": true,
+      "consoles": true,
+      "games": true,
+      "relaxation_zones": true
+    },
+    "prices": {
+      "pc_rent_STANDART": 11000,
+      "pc_rent_VIP": 17000,
+      "special_offers": "Скидка постоянным клиентам"
+    },
+    "working_hours": "Круглосуточно",
+    "club_card": {
+      "loyalty_program": true,
+      "benefits": "Бонусы за посещения и скидки на напитки"
+    },
+    "comments": "Дополнительную информацию можно получить на нашем официальном сайте"
+  },
+      {
+    "id": 32,
+    "name": "Headshot Game Club",
+    "description": "Интернет-кафе компьютерный клуб игровой клуб",
+    "location": {
+      "address": "\nул. Тахтагуль, 32Аэтаж 1",
+      "coordinates": [41.286029, 69.196004],
+      "time": "Круглосуточно"
+    },
+    "photos": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm8SCf-NZriIOygyHKRyiGtjtlY0qJt5Rx2A&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCH784IrsrklspXBb_x3bPFX70EVVLXmNHTA&usqp=CAU"
+    ],
+    "reviews": [
+      {
+        "user": "Журабек Бахронов",
+        "rating": 4,
+        "text": "Хорошая локация,приветливые сотрудники,электроника качественная но не для полного удовольствия"
+      }
+    ],
+    "administration": {
+      "contact": "HeadshotGameClub@gmail.com",
+      "number": "+998 93 894 08 12"
+    },
+    "services": {
+      "Wi-Fi": true,
+      "bar": true,
+      "kitchen": true,
+      "consoles": true,
+      "games": true,
+      "relaxation_zones": true
+    },
+    "prices": {
+      "pc_rent_STANDART": 12000,
+      "pc_rent_VIP": 30000,
+      "special_offers": "Скидка постоянным клиентам"
+    },
+    "working_hours": "Круглосуточно",
+    "club_card": {
+      "loyalty_program": true,
+      "benefits": "Бонусы за посещения и скидки на напитки"
+    },
+    "comments": "Дополнительную информацию можно получить на нашем официальном сайте"
+  },
+          {
+    "id": 33,
+    "name": "Феникс",
+    "description": "Интернет-кафе игровые приставки игровой клуб",
+    "location": {
+      "address": "\nобводная ул. Нурафшон, 79",
+      "coordinates": [41.335411, 69.221448],
+      "time": "Круглосуточно"
+    },
+    "photos": [
+      "https://avatars.mds.yandex.net/get-altay/5457654/2a0000017e8c65ce65377eaa2d6f0cfb5af3/XXXL",
+      "https://avatars.mds.yandex.net/get-altay/5457654/2a0000017e8c65ce65377eaa2d6f0cfb5af3/XXXL"
+    ],
+    "reviews": [
+      {
+        "user": "Коробчук Артем",
+        "rating": 5,
+        "text": "ТОП МЕСТО!!!"
+      }
+    ],
+    "administration": {
+      "contact": "HeadshotGameClub@gmail.com",
+      "number": "+998 93 894 08 12"
+    },
+    "services": {
+      "Wi-Fi": true,
+      "bar": true,
+      "kitchen": true,
+      "consoles": true,
+      "games": true,
+      "relaxation_zones": true
+    },
+    "prices": {
+      "pc_rent_STANDART": 15000,
+      "pc_rent_VIP": 25000,
+      "special_offers": "Скидка постоянным клиентам"
+    },
+    "working_hours": "Круглосуточно",
+    "club_card": {
+      "loyalty_program": true,
+      "benefits": "Бонусы за посещения и скидки на напитки"
+    },
+    "comments": "Дополнительную информацию можно получить на нашем официальном сайте"
+  },
+              {
+    "id": 34,
+    "name": "AG-PASHALKA",
+    "description": "Интернет-кафе игровые приставки игровой клуб",
+    "location": {
+      "address": "УЛИЦА ЗАЕБЦОВА-ДОМ СТРЕЛЬЦОВА 13",
+      "coordinates": [41.259862, 69.255352],
+      "time": "Круглосуточно"
+    },
+    "photos": [
+      "https://i.ibb.co/JHTCWYn/photo-2024-02-22-02-45-51.jpg",
+      "https://i.ibb.co/3vXwv2d/photo-2024-02-22-02-45-41.jpg"
+    ],
+    "reviews": [
+      {
+        "user": "Коробчук Артем",
+        "rating": 5,
+        "text": "ТОП МЕСТО!!!"
+      }
+    ],
+    "administration": {
+      "contact": "Bomin@gmail.com",
+      "number": "+998 93 894 08 12"
+    },
+    "services": {
+      "Wi-Fi": true,
+      "bar": true,
+      "kitchen": true,
+      "consoles": true,
+      "games": true,
+      "relaxation_zones": true
+    },
+    "prices": {
+      "pc_rent_STANDART": 0,
+      "pc_rent_VIP": 1,
+      "special_offers": "Скидка постоянным клиентам"
+    },
+    "working_hours": "Круглосуточно",
+    "club_card": {
+      "loyalty_program": true,
+      "benefits": "Бонусы за посещения и скидки на напитки"
+    },
+    "comments": "Дополнительную информацию можно получить на нашем официальном сайте"
+  },
+          {
+    "id": 35,
+    "name": "Cougar Game Club",
+    "description": "Игровой клуб интернет-кафе",
+    "location": {
+      "address": "\nТашкент, Сергелийский район, махалля Янги-Сергели 1",
+      "coordinates": [41.221088, 69.218441],
+      "time": "Круглосуточно"
+    },
+    "photos": [
+      "https://avatars.mds.yandex.net/get-altay/4449685/2a000001828d910110ba6f0e34250c12b0cf/XXXL",
+      "https://avatars.mds.yandex.net/get-altay/11396712/2a0000018d23bfafbca43a939fd0f8affcbf/XXXL"
+    ],
+    "reviews": [
+      {
+        "user": "Akbar Gafurov",
+        "rating": 4,
+        "text": "Самые напряженные ночи в играх проводятся здесь. Также хорошее место, чтобы заняться дизайном, попробуйте прийти позже вечером, так как обычно здесь может быть слишком людно (смотрите это как отличное портфолио с описанием)."
+      }
+    ],
+    "administration": {
+      "contact": "COUGAR@gmail.com",
+      "number": "+998 93 894 08 12"
+    },
+    "services": {
+      "Wi-Fi": true,
+      "bar": true,
+      "kitchen": true,
+      "consoles": true,
+      "games": true,
+      "relaxation_zones": true
+    },
+    "prices": {
+      "pc_rent_STANDART": 13000,
+      "pc_rent_VIP": 16000,
+      "special_offers": "Скидка постоянным клиентам"
+    },
+    "working_hours": "Круглосуточно",
+    "club_card": {
+      "loyalty_program": true,
+      "benefits": "Бонусы за посещения и скидки на напитки"
+    },
+    "comments": "Дополнительную информацию можно получить на нашем официальном сайте"
+  },
+              {
+    "id": 36,
+    "name": "Pantera Club",
+    "description": "Игровой клуб интернет-кафе",
+    "location": {
+      "address": "Tашкент, Сергелийский район, массив Курувчи, 3А",
+      "coordinates": [41.217975, 69.259948],
+      "time": "Круглосуточно"
+    },
+    "photos": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0u2sxnA5vUncqedvNIsBS_053I7oxNkuA4Q&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwjkg7pnaR-6m-P00unbiWBpW10jt4cjbSzQ&usqp=CAU"
+    ],
+    "reviews": [
+      {
+        "user": "Akbar Gafurov",
+        "rating": 5,
+        "text": "Самые напряженные ночи в играх проводятся здесь. Также хорошее место, чтобы заняться дизайном, попробуйте прийти позже вечером, так как обычно здесь может быть слишком людно (смотрите это как отличное портфолио с описанием)."
+      }
+    ],
+    "administration": {
+      "contact": "PanteraClub@gmail.com",
+      "number": "+998 93 894 08 12"
+    },
+    "services": {
+      "Wi-Fi": true,
+      "bar": true,
+      "kitchen": true,
+      "consoles": true,
+      "games": true,
+      "relaxation_zones": true
+    },
+    "prices": {
+      "pc_rent_STANDART": 13000,
+      "pc_rent_VIP": 16000,
+      "special_offers": "Скидка постоянным клиентам"
+    },
+    "working_hours": "8.00-22.00",
+    "club_card": {
+      "loyalty_program": true,
+      "benefits": "Бонусы за посещения и скидки на напитки"
+    },
+    "comments": "Дополнительную информацию можно получить на нашем официальном сайте"
+  },
+                  {
+    "id": 37,
+    "name": "Toman",
+    "description": "Игровой клуб интернет-кафе",
+    "location": {
+      "address": "Ташкент, Мирабадский район, махалля Зиёнур",
+      "coordinates": [41.249677, 69.302627],
+      "time": "Круглосуточно"
+    },
+    "photos": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD6pV7CoANZW5iu1htUMh5VaO9DuQ5d0hFCA&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW999AZleOV962I54Kv7owAr3q-Msk2v-OmQ&usqp=CAU"
+    ],
+    "reviews": [
+      {
+        "user": "Usmonov Usmonxon",
+        "rating": 5,
+        "text": "Хороший места."
+      }
+    ],
+    "administration": {
+      "contact": "TomanClub@gmail.com",
+      "number": "+998 93 894 08 12"
+    },
+    "services": {
+      "Wi-Fi": true,
+      "bar": true,
+      "kitchen": true,
+      "consoles": true,
+      "games": true,
+      "relaxation_zones": true
+    },
+    "prices": {
+      "pc_rent_STANDART": 13000,
+      "pc_rent_VIP": 16000,
+      "special_offers": "Скидка постоянным клиентам"
+    },
+    "working_hours": "Круглосуточно",
+    "club_card": {
+      "loyalty_program": true,
+      "benefits": "Бонусы за посещения и скидки на напитки"
+    },
+    "comments": "Дополнительную информацию можно получить на нашем официальном сайте"
+  },
+                      {
+    "id": 38,
+    "name": "Fidanza",
+    "description": "Игровой клуб интернет-кафе",
+    "location": {
+      "address": "\nЯшнободский район, массив Городок Авиастроителей, 2-й квартал, 40",
+      "coordinates": [41.284383, 69.343586],
+      "time": "Круглосуточно"
+    },
+    "photos": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR42ht5ceU2y_FhJKkjUC02t-EP33SDCWMuUA&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT722LGOLBZz2pwUr32Jk6jexqABunrg0AZtw&usqp=CAU"
+    ],
+    "reviews": [
+      {
+        "user": "БУХАЛО",
+        "rating": 3,
+        "text": "Ну среднячок"
+      }
+    ],
+    "administration": {
+      "contact": "FidanzaClub@gmail.com",
+      "number": "+998 71 294 07 70"
+    },
+    "services": {
+      "Wi-Fi": true,
+      "bar": true,
+      "kitchen": true,
+      "consoles": true,
+      "games": true,
+      "relaxation_zones": true
+    },
+    "prices": {
+      "pc_rent_STANDART": 9000,
+      "pc_rent_VIP": 12000,
+      "special_offers": "Скидка постоянным клиентам"
+    },
+    "working_hours": "Круглосуточно",
+    "club_card": {
+      "loyalty_program": true,
+      "benefits": "Бонусы за посещения и скидки на напитки"
+    },
+    "comments": "Дополнительную информацию можно получить на нашем официальном сайте"
+  },
+                          {
+    "id": 39,
+    "name": "Internet",
+    "description": "Игровой клуб интернет-кафе",
+    "location": {
+      "address": "\nТашкент, Чиланзарский район, массив Аль-Хорезми-2, 56",
+      "coordinates": [41.263638, 69.161490],
+      "time": "Круглосуточно"
+    },
+    "photos": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk_1M22lBa8SLAMJg1-N8Pw7ivSrv7-oJClw&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQecHpPER5AClrE9gHOq7gH7GzVtlnSgzj0YoOfJwpzskUTRQNU_pTrA2ovcYxPxuJC-gY&usqp=CAU"
+    ],
+    "reviews": [
+      {
+        "user": "Usmonov Usmonxon",
+        "rating": 3,
+        "text": "Ну среднячок"
+      }
+    ],
+    "administration": {
+      "contact": "InternetClub@gmail.com",
+      "number": "+998 93 894 08 12"
+    },
+    "services": {
+      "Wi-Fi": true,
+      "bar": true,
+      "kitchen": true,
+      "consoles": true,
+      "games": true,
+      "relaxation_zones": true
+    },
+    "prices": {
+      "pc_rent_STANDART": 10000,
+      "pc_rent_VIP": 12000,
+      "special_offers": "Скидка постоянным клиентам"
+    },
+    "working_hours": "Круглосуточно",
+    "club_card": {
+      "loyalty_program": true,
+      "benefits": "Бонусы за посещения и скидки на напитки"
+    },
+    "comments": "Дополнительную информацию можно получить на нашем официальном сайте"
+  },
+                              {
+    "id": 40,
+    "name": "Gravity",
+    "description": "Игровой клуб интернет-кафе",
+    "location": {
+      "address": "\n1-й пр. Авиасозлар, 22",
+      "coordinates": [41.292871, 69.334961],
+      "time": "Круглосуточно"
+    },
+    "photos": [
+      "https://avatars.mds.yandex.net/get-altay/4530524/2a000001772d3d7e9d59f1295c4c9be09ca9/XXXL",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKC3q9W-ewJGNxKp9U5OE6clGvFbDUsbzdTg&usqp=CAU"
+    ],
+    "reviews": [
+      {
+        "user": "ЕРБОЛА АЗИМА",
+        "rating": 2,
+        "text": "Воняет там не советую ходить"
+      }
+    ],
+    "administration": {
+      "contact": "Gravity@gmail.com",
+      "number": "\n+998 90 968 91 61"
+    },
+    "services": {
+      "Wi-Fi": true,
+      "bar": true,
+      "kitchen": true,
+      "consoles": true,
+      "games": true,
+      "relaxation_zones": true
+    },
+    "prices": {
+      "pc_rent_STANDART": 12000,
+      "pc_rent_VIP": 14000,
+      "special_offers": "Скидка постоянным клиентам"
     },
     "working_hours": "Круглосуточно",
     "club_card": {
