@@ -9,7 +9,7 @@ function init() {
     // Загрузка данных из файла clubsData.json
     fetch('static/clubsData.json').then(response => response.json()).then(data => {
         data.clubsData.forEach(club => {
-            var balloonContent = `<strong>${club.name}</strong><br>${club.location.address}<br>Часы работы: ${club.working_hours}<br><button onclick="showDetails('${club.id}')">Подробнее</button>`;
+            var balloonContent = `<strong>${club.name}</strong><br>${club.location.address}<br>Время работы: ${club.working_hours}<br><button onclick="showDetails('${club.id}')">Подробнее</button>`;
             var placemark = new ymaps.Placemark(club.location.coordinates, {
                 balloonContent: balloonContent
             }, {
