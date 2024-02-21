@@ -566,6 +566,309 @@
         "benefits": "Скидки постоянным клиентам, бонусные игры"
       },
       "comments": "Дополнительная информация и акции доступны на сайте клуба"
-    }
+    },
+                                        {
+      "id": 14,
+      "name": "Galakticos",
+      "description": "\uD83C\uDFAE✨ Привет, друзья! Представляем настоящий рай для геймеров - GALACTICOS! \uD83C\uDF89\uD83D\uDD79✨",
+      "location": {
+        "address": "\u200BПроспект Амира Темура, 118/5\u200B2 этаж\nЮнусабадский район, Ташкент, 100099",
+        "coordinates": [41.353263, 69.288617],
+        "time": "Ежедневно с 11:00 до 02:00"
+      },
+      "photos": [
+        "https://i3.photo.2gis.com/images/branch/0/30258560100423595_b17c_328x170.jpg",
+        "https://i4.photo.2gis.com/images/branch/0/30258560100423594_2d21_328x170.jpg"
+
+      ],
+      "reviews": [
+        {
+          "user": "Махамбет Сагаталиев",
+          "rating": 5,
+          "text": "Playstation \uD83D\uDC4D\uD83C\uDFFB\uD83D\uDC4D\uD83C\uDFFB\uD83D\uDC4D\uD83C\uDFFB. Цена тоже норм"
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "+998 (55) 520‒22‒02"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar":   true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent": 12000,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "Ежедневно с 11:00 до 02:00",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+                                            {
+      "id": 15,
+      "name": "Game Vip Zone",
+      "description": "Чем дальше босс от клуба, тем новее мобилы у админов\n\nЧем меньше клуб, тем больше геморроя.",
+      "location": {
+        "address": "Юнусабад 13-й квартал, 59\u200B1 этаж\u200B2 филиала\nЮнусабад 13-й квартал, Юнусабадский район, Ташкент, 100194",
+        "coordinates": [41.305628, 69.301198],
+        "time": "Круглосуточно"
+      },
+      "photos": [
+        "https://i4.photo.2gis.com/images/branch/0/30258560111847361_d4d3_328x170.jpg",
+        "https://i6.photo.2gis.com/images/branch/0/30258560087757878_d004_328x170.jpg"
+
+      ],
+      "reviews": [
+        {
+          "user": "Асхаб ТАМАЕВ",
+          "rating": 5,
+          "text": "ПЛОХОЙ КЛУБ И ФОТОГРАФ ЖЕЛЕБ"
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "+998 95‒510‒77‒70"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar":   true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent": 35000,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "Круглосуточно",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+    {
+    "id": 16,
+    "name": "Nexus Gaming Hub",
+    "description": "Место, где игровая атмосфера смешивается с современным дизайном. У нас вы найдете все: от уютных зон для отдыха до самых передовых игровых консолей.",
+    "location": {
+      "address": "улица Мустакиллик, 21, Юнусабадский район, Ташкент, 100060",
+      "coordinates": [41.302726, 69.280759],
+      "time": "Ежедневно с 10:00 до 02:00"
+    },
+    "photos": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8jm8nOxam-OEe-R3_Spzmoh_8wKRGASlmYEjVkszxUspmfVJt86PhQLuysA24Ame1Nqk&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTBb7UD4TDOpuRalHEO_ZPPx1J3q1nulB68xW9gaDeeqaGuwaw2Bkf8HSpCJ5UTkG_WI0&usqp=CAU"
+    ],
+    "reviews": [
+      {
+        "user": "Иван Петров",
+        "rating": 5,
+        "text": "Отличное место для проведения времени с друзьями. Всегда чисто и уютно."
+      }
+    ],
+    "administration": {
+      "contact": "nexusgaminghub@gmail.com",
+      "number": "+998 95‒510‒77‒70"
+    },
+    "services": {
+      "Wi-Fi": true,
+      "bar": true,
+      "kitchen": true,
+      "consoles": true,
+      "games": true,
+      "relaxation_zones": true
+    },
+    "prices": {
+      "pc_rent": 22000,
+      "special_offers": "Скидка 20% после 22:00"
+    },
+    "working_hours": "Ежедневно с 10:00 до 02:00",
+    "club_card": {
+      "loyalty_program": true,
+      "benefits": "Скидки постоянным клиентам, бонусные игры"
+    },
+    "comments": "Дополнительная информация и акции доступны на сайте клуба"
+  },
+    {
+    "id": 17,
+    "name": "Galaxy Gaming Arena",
+    "description": "Великолепный игровой клуб с атмосферой будущего. Здесь каждый найдет что-то по душе, будь то крутые игры или просто отдых в компании друзей.",
+    "location": {
+      "address": "улица Мухаммад Юсуфа, 17, Мирабадский район, Ташкент, 100015",
+      "coordinates": [41.329394, 69.281478],
+      "time": "Круглосуточно"
+    },
+    "photos": [
+      "https://bau-architects.ru/wp-content/uploads/2020/07/CyberSpotLite-gl.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6aLtdSbe-tiAnC7r7fRgf974bvic9-yjUXVeSyTGxXzwGHrIqBUjA2z73Tbi2Ld1Ifa4&usqp=CAU"
+    ],
+    "reviews": [
+      {
+        "user": "Елена Сидорова",
+        "rating": 4,
+        "text": "Отличное место! Удивительная атмосфера и большой выбор игр. Обязательно приду еще!"
+      }
+    ],
+    "administration": {
+      "contact": "galaxygamingarena@gmail.com",
+      "number": "+998 71 234-56-78"
+    },
+    "services": {
+      "Wi-Fi": true,
+      "bar": true,
+      "kitchen": true,
+      "consoles": true,
+      "games": true,
+      "relaxation_zones": true
+    },
+    "prices": {
+      "pc_rent": 40000,
+      "special_offers": "Скидка 15% в будние дни"
+    },
+    "working_hours": "Круглосуточно",
+    "club_card": {
+      "loyalty_program": true,
+      "benefits": "Бонусы за каждое посещение, скидки на напитки"
+    },
+    "comments": "Подробности на официальном сайте клуба"
+  },
+    {
+    "id": 18,
+    "name": "Virtual Galaxy",
+    "description": "Уникальное место для настоящих геймеров. У нас вы найдете самые популярные игры, уютные зоны отдыха и дружелюбную атмосферу.",
+    "location": {
+      "address": "улица Амира Темура, 42, Яккасарайский район, Ташкент, 100084",
+      "coordinates": [41.299482, 69.239184],
+      "time": "Ежедневно с 12:00 до 02:00"
+    },
+    "photos": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKo0yzqJV8K-WGA49tKT_ZWNJA_2qG2sRUDMWpffz3O7UavMVnwR7nmYtVP8ZMN3hiEGk&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR00LBe6l9FC3U-F7aV_3pmUQP2c1seTujGMw&usqp=CAU"
+    ],
+    "reviews": [
+      {
+        "user": "Алексей Иванов",
+        "rating": 5,
+        "text": "Отличное место! Всегда приятно проводить время здесь. Рекомендую!"
+      }
+    ],
+    "administration": {
+      "contact": "virtualgalaxy@gmail.com",
+      "number": "+998 71 987-65-43"
+    },
+    "services": {
+      "Wi-Fi": true,
+      "bar": true,
+      "kitchen": true,
+      "consoles": true,
+      "games": true,
+      "relaxation_zones": true
+    },
+    "prices": {
+      "pc_rent": 30000,
+      "special_offers": "Скидка 10% при предъявлении студенческого билета"
+    },
+    "working_hours": "Ежедневно с 12:00 до 02:00",
+    "club_card": {
+      "loyalty_program": true,
+      "benefits": "Скидки для постоянных клиентов, бесплатные напитки"
+    },
+    "comments": "Более подробная информация доступна на нашем сайте"
+  },
+    {
+    "id": 19,
+    "name": "Epic Gamer's Haven",
+    "description": "Идеальное место для любителей игр и хорошего отдыха. У нас большой выбор игр, комфортные условия и дружелюбный персонал.",
+    "location": {
+      "address": "проспект Мустакиллик, 55, Мирзо-Улугбекский район, Ташкент, 100090",
+      "coordinates": [41.338746, 69.280983],
+      "time": "Пн-Пт: с 14:00 до 02:00, Сб-Вс: круглосуточно"
+    },
+    "photos": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcYZlGlTPUYUULOk2ZWeOGvuz5Yb3Tu7FI3A&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoJ9B_jqvfQsVNKi4u_ZepF8IrPxORFDaNQg&usqp=CAU"
+    ],
+    "reviews": [
+      {
+        "user": "Екатерина Смирнова",
+        "rating": 4,
+        "text": "Отличное место для проведения времени с друзьями. Понравилась атмосфера и выбор игр."
+      }
+    ],
+    "administration": {
+      "contact": "epicgamershaven@gmail.com",
+      "number": "+998 71 765-43-21"
+    },
+    "services": {
+      "Wi-Fi": true,
+      "bar": true,
+      "kitchen": true,
+      "consoles": true,
+      "games": true,
+      "relaxation_zones": true
+    },
+    "prices": {
+      "pc_rent": 32000,
+      "special_offers": "Скидка 15% при бронировании заранее"
+    },
+    "working_hours": "Пн-Пт: с 14:00 до 02:00, Сб-Вс: круглосуточно",
+    "club_card": {
+      "loyalty_program": true,
+      "benefits": "Бонусы за каждый визит, скидки на бар"
+    },
+    "comments": "Подробности о наших акциях можно узнать на нашем сайте"
+  },
+      {
+    "id": 20,
+    "name": "Cyber Zone",
+    "description": "Игровой клуб для настоящих ценителей виртуального мира. У нас широкий выбор игр, отличная атмосфера и дружелюбный персонал.",
+    "location": {
+      "address": "улица Фурката, 18, Ташкент, Чиланзарский район, 100124",
+      "coordinates": [41.316672, 69.241318],
+      "time": "Круглосуточно"
+    },
+    "photos": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzenyuKU3VrEOd-u2XPKFqCyIQjxChTYA9Vg&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY897JjUufSZ3OE-fy02Q93B2JrrSTJ9enQA&usqp=CAU"
+    ],
+    "reviews": [
+      {
+        "user": "Максим Соколов",
+        "rating": 4,
+        "text": "Отличное место для игр! Уютная атмосфера и большой выбор игровых платформ."
+      }
+    ],
+    "administration": {
+      "contact": "cyberzonetashkent@gmail.com",
+      "number": "+998 71 543-21-09"
+    },
+    "services": {
+      "Wi-Fi": true,
+      "bar": true,
+      "kitchen": true,
+      "consoles": true,
+      "games": true,
+      "relaxation_zones": true
+    },
+    "prices": {
+      "pc_rent": 30000,
+      "special_offers": "Скидка 10% для студентов"
+    },
+    "working_hours": "Круглосуточно",
+    "club_card": {
+      "loyalty_program": true,
+      "benefits": "Бонусы за посещения и скидки на напитки"
+    },
+    "comments": "Дополнительную информацию можно получить на нашем официальном сайте"
+  }
   ]
 }

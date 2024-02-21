@@ -31,18 +31,45 @@ function showDetails(clubId) {
             return;
         }
 
-        // Construct the details HTML using the club data
+        // Construct the details HTML using the club data with styles for vertical layout
         const detailsHtml = `
-            <h2>${club.name}</h2>
-            <p><strong>Description:</strong> ${club.description}</p>
-            <p><strong>Location:</strong> ${club.location.address}, Coordinates: [${club.location.coordinates.join(', ')}], Time: ${club.location.time}</p>
-            <div><strong>Photos:</strong> ${club.photos.map(photo => `<img src="${photo}" style="width: 100%; display: block; margin-bottom: 10px;">`).join('')}</div>
-            <div><strong>Reviews:</strong> ${club.reviews.map(review => `<div>${review.user}: ${review.text} (Rating: ${review.rating})</div>`).join('')}</div>
-            <p><strong>Contact:</strong> ${club.administration.contact}, ${club.administration.number}</p>
-            <div><strong>Services:</strong> ${Object.entries(club.services).map(([service, available]) => `${service}: ${available ? 'Yes' : 'No'}`).join(', ')}</div>
-            <p><strong>Prices:</strong> PC Rent: ${club.prices.pc_rent}, Special Offers: ${club.prices.special_offers}</p>
-            <p><strong>Club Card:</strong> Loyalty Program: ${club.club_card.loyalty_program ? 'Yes' : 'No'}, Benefits: ${club.club_card.benefits}</p>
-            <p><strong>Comments:</strong> ${club.comments}</p>
+            <style>
+                #clubInfo {
+                    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                    background-color: #fff;
+                    color: #4a4a4a;
+                    padding: 20px;
+                    border-radius: 8px;
+                    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+                }
+                .info-block {
+                    background-color: #ecf0f1;
+                    padding: 10px;
+                    border-radius: 8px;
+                    border-left: 5px solid #d35400;
+                    margin-bottom: 5px;
+                }
+                #clubInfo h2, #clubInfo p, #clubInfo div, #clubInfo img {
+                    margin-bottom: 10px;
+                }
+                #clubInfo img {
+                    width: 100%;
+                    border-radius: 8px;
+                }
+                .copy-icon {
+                    cursor: pointer;
+                    display: inline-block;
+                    margin-left: 5px;
+                }
+            </style>
+            <h2>${club.name} - <span style="font-weight: normal;"><strong></strong> ${club.description}</span></h2>
+            <div>${club.photos.map(photo => `<img src="${photo}" alt="Фото клуба">`).join('')}</div>
+            <div class="info-block"><strong>Адрес:</strong> ${club.location.address}</div>
+            <div class="info-block"><strong>Время:</strong> ${club.location.time}</div>
+            <div class="info-block"><strong>Контакты:</strong><br>${club.administration.contact} <span class="copy-icon" onclick="copyToClipboard('${club.administration.contact}')">&#x1f4cb;</span><br>${club.administration.number} <span class="copy-icon" onclick="copyToClipboard('${club.administration.number}')">&#x1f4cb;</span></div>
+            <div class="info-block"><strong>Услуги:</strong> ${Object.entries(club.services).map(([service, available]) => `<div>${service}: ${available ? 'Да' : 'Нет'}</div>`).join('')}</div>
+            <div class="info-block"><strong>Цены:</strong><br>PC Rent: ${club.prices.pc_rent}<br>Специальные предложения: ${club.prices.special_offers}</div>
+            <div class="info-block"><strong>Клубная карта:</strong><br>Программа лояльности: ${club.club_card.loyalty_program ? 'Да' : 'Нет'}<br>Преимущества: ${club.club_card.benefits}</div>
         `;
 
         // Populate the modal with the details and display it
@@ -54,6 +81,19 @@ function showDetails(clubId) {
         alert('There was an error fetching the club details.');
     });
 }
+
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
+        alert('Номер скопирован: ' + text);
+    }).catch(err => {
+        console.error('Error copying text: ', err);
+    });
+}
+
+
+
+
+
 
 // Close modal when the close button is clicked
 document.querySelector('.close').onclick = function() {
