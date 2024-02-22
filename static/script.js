@@ -1,15 +1,46 @@
-ymaps.ready(init);
+let myMap;
+let markers = []; // Глобальный массив для хранения меток
 
-function init() {
-    var myMap = new ymaps.Map("map", {
-        center: [41.311081, 69.240562], // Центр карты (Ташкент)
+ymaps.ready(() => {
+    myMap = new ymaps.Map("map", {
+        center: [41.311081, 69.240562],
         zoom: 12
     });
+    loadMarkers(); // Первоначальная загрузка меток
+});
 
-    // Загрузка данных из файла clubsData.json
+function loadMarkers() {
     fetch('static/clubsData.json').then(response => response.json()).then(data => {
+        // Удаляем старые метки перед добавлением новых
+        markers.forEach(marker => myMap.geoObjects.remove(marker));
+        markers = []; // Очищаем массив меток
+
         data.clubsData.forEach(club => {
-            var balloonContent = `<strong>${club.name}</strong><br>${club.location.address}<br>Время работы: ${club.working_hours}<br><button onclick="showDetails('${club.id}')">Подробнее</button>`;
+            let totalRating = club.reviews.reduce((acc, review) => acc + review.rating, 0);
+            let averageRating = club.reviews.length > 0 ? (totalRating / club.reviews.length) : 0;
+            let ratingStars = getRatingStars(averageRating);
+
+            // Берем первый номер телефона из списка
+            let phoneNumber = club.administration.number.split(', ')[0];
+
+            var balloonContent = `
+                <div style="font-family: Arial, sans-serif; font-size: 14px;">
+                    <strong>${club.name}</strong><br>
+                    <span style="color: gray;">${club.location.address}</span><br>
+                    <span>Время работы: ${club.working_hours}</span><br>
+                    <span>Рейтинг: ${ratingStars}</span><br>
+                    <div style="display: flex; align-items: center; color: navy; font-weight: bold;">
+                        <span>Телефон: ${phoneNumber}</span>
+                        <button onclick="copyToClipboard('${phoneNumber}')" style="margin-left: 10px; padding: 6px 15px; background-color: #343a40; color: white; border: none; border-radius: 11px; cursor: pointer; font-size: 10px; display: inline-flex; align-items: center; justify-content: center; transition: background-color 0.2s, transform 0.1s; min-width: 80px;">
+                            <i class="fas fa-copy" style="margin-right: 5px;"></i>
+                        </button>
+                    </div>
+                    <button style="margin-top: 10px; padding: 6px 15px; background-color: #343a40; color: white; border: none; border-radius: 11px; cursor: pointer; font-size: 10px; display: inline-flex; align-items: center; justify-content: center; transition: background-color 0.2s, transform 0.1s; min-width: 80px;" onclick="showDetails('${club.id}')">
+                        <i class="fa-solid fa-circle-info" style="margin-right: 5px;"></i>Подробнее
+                    </button>
+                </div>
+            `;
+
             var placemark = new ymaps.Placemark(club.location.coordinates, {
                 balloonContent: balloonContent
             }, {
@@ -17,9 +48,50 @@ function init() {
             });
 
             myMap.geoObjects.add(placemark);
+            markers.push(placemark); // Сохраняем метку в массиве
         });
     }).catch(error => console.error('Ошибка при загрузке данных: ', error));
 }
+
+function getRatingStars(rating) {
+    let stars = '';
+    let color;
+    if (rating <= 2) {
+        color = 'red';
+    } else if (rating <= 4) {
+        color = 'orange';
+    } else {
+        color = 'yellow';
+    }
+
+    for (let i = 0; i < 5; i++) {
+        stars += i < Math.round(rating) ? `<span style="color: ${color};">&#9733;</span>` : `<span style="color: lightgray;">&#9733;</span>`;
+    }
+
+    return stars;
+}
+
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
+        alert('Номер скопирован: ' + text);
+    }).catch(err => {
+        console.error('Error copying text: ', err);
+        alert('Ошибка при копировании текста.');
+    });
+}
+
+
+
+
+document.getElementById('removeMarkers').addEventListener('click', () => {
+    markers.forEach(marker => myMap.geoObjects.remove(marker)); // Удаление всех меток с карты
+    markers = []; // Очищаем массив меток
+});
+
+document.getElementById('showMarkers').addEventListener('click', () => {
+    loadMarkers(); // Загружаем метки снова
+});
+
 
 function showDetails(clubId) {
     // Make a request to the Flask endpoint with the club ID
@@ -91,10 +163,6 @@ function copyToClipboard(text) {
 }
 
 
-
-
-
-
 // Close modal when the close button is clicked
 document.querySelector('.close').onclick = function() {
     document.getElementById('clubModal').style.display = 'none';
@@ -106,8 +174,6 @@ window.onclick = function(event) {
         document.getElementById('clubModal').style.display = 'none';
     }
 };
-
-
 
 
 

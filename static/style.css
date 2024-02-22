@@ -6,7 +6,6 @@
 }
 
 body {
-  /* background: rgb(52, 56, 61); */
   background: #fff;
   font-family: Arial, sans-serif;
   margin: 0;
@@ -14,104 +13,9 @@ body {
 }
 
 h1 {
-  color: rgb(255, 255, 255);
-  margin: 20px auto 0;
-  width: 200px;
+  color: #333;
+  margin: 20px auto;
   text-align: center;
-}
-#wrapper {
-  position: absolute;
-  width: 320px;
-  left: 50%;
-  margin-left: -160px;
-  top: 50%;
-  margin-top: -75px;
-}
-
-/* === Sign in Form === */
-#signin {
-  height: 90px;
-  width: 300px;
-  border-radius: 8px;
-  position: relative;
-}
-#signin::before {
-  display: block;
-  position: relative;
-  height: 2px;
-  background: rgb(52, 56, 61);
-  content: "";
-  top: 44px;
-  margin-left: 20px;
-  z-index: 1;
-}
-#signin input:first-of-type {
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
-}
-#signin input:last-of-type {
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
-}
-#signin input[type="text"],
-#signin input[type="password"],
-#signin button[type="submit"] {
-  background: rgb(28, 30, 33);
-  box-shadow: inset -100px -100px 0 rgb(28, 30, 33); /*Prevent yellow autofill color*/
-  color: #fff;
-}
-#signin input[type="text"],
-#signin input[type="password"] {
-  position: relative;
-  display: block;
-  width: 280px;
-  height: 45px;
-  border: 0;
-  outline: 0;
-  top: -2px;
-  padding: 0 0 0 20px;
-  font-weight: 700;
-}
-#signin input[type="text"]:focus,
-#signin input[type="password"]:focus {
-  color: rgb(255, 255, 255);
-}
-#signin button[type="submit"] {
-  display: block;
-  position: absolute;
-  width: 52px;
-  height: 52px;
-  color: rgb(52, 56, 61);
-  border-radius: 50px;
-  outline: 0;
-  z-index: 2;
-  top: 19px;
-  right: -24px;
-  border: 6px solid rgb(52, 56, 61);
-  font-size: 25px;
-  text-indent: 0px;
-  padding-left: 9px;
-  padding-bottom: 3px;
-  text-align: center;
-}
-#signin button[type="submit"]:hover {
-  color: rgb(0, 126, 165);
-  text-shadow: 0 0 10px rgb(0, 126, 165);
-  cursor: pointer;
-}
-#signin p {
-  color: rgb(79, 85, 97);
-  padding: 0 20px;
-  font-weight: 700;
-  font-size: 12px;
-  margin: 5px 0 0 0;
-}
-#signin p > a {
-  color: rgb(111, 119, 135);
-  text-decoration: none;
-}
-#signin p > a:hover {
-  border-bottom: 1px solid;
 }
 
 header {
@@ -121,22 +25,12 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* padding: 20px 0 20px 40px; */
 }
 
 .log_avatar {
   display: flex;
   align-items: center;
   gap: 10px;
-}
-
-header .logo h1 {
-  color: red;
-  margin: 0;
-}
-
-.btn_logout a {
-  padding: 8px 14px;
 }
 
 .profile img {
@@ -160,10 +54,6 @@ header nav ul li a {
   text-decoration: none;
 }
 
-h1 {
-  color: #333;
-}
-
 #map {
   margin: 20px auto;
   width: 90%;
@@ -181,7 +71,6 @@ footer {
   width: 100%;
 }
 
-/* Basic modal styling */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -206,7 +95,6 @@ footer {
   animation: slideIn 0.5s; /* Slide-in effect */
 }
 
-/* Close button */
 .close {
   color: #aaaaaa;
   float: right;
@@ -221,57 +109,140 @@ footer {
   cursor: pointer;
 }
 
-/* Animation for the modal to fade in */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-/* Animation for the modal content to slide in */
 @keyframes slideIn {
-  from {
-    margin-top: -100px;
-    opacity: 0;
-  }
-  to {
-    margin-top: 10%;
-    opacity: 1;
-  }
+  from { margin-top: -100px; opacity: 0; }
+  to { margin-top: 10%; opacity: 1; }
 }
 
-/* Responsive modal for smaller screens */
 @media screen and (max-width: 600px) {
-  .modal-content {
-    width: 80%;
-  }
+  .modal-content { width: 80%; }
 }
-
-
 
 .logo img {
-  /* Устанавливаем ширину и высоту логотипа */
-  width: 45px; /* Пример ширины, можете настроить под свои нужды */
-  height: 45px; /* Пример высоты, чтобы сделать изображение квадратным */
-
-  /* Делаем края изображения круглыми */
+  width: 45px;
+  height: 45px;
   border-radius: 40%;
-
-  /* Опционально: добавляем небольшую тень для лучшего визуального восприятия */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-  /* Опционально: центрируем изображение, если оно находится внутри контейнера */
   display: block;
   margin: 0 auto;
-
-  /* Опционально: добавляем плавный переход для эффектов наведения или других изменений */
   transition: transform 0.3s ease;
 }
 
-/* Опционально: добавляем эффект увеличения при наведении */
 .logo img:hover {
   transform: scale(1.05);
 }
+
+
+
+
+.search-container{
+  width: 490px;
+  display: block;
+  margin: 0 auto;
+}
+
+input#search-bar{
+  margin: 0 auto;
+  width: 100%;
+  height: 45px;
+  padding: 0 20px;
+  font-size: 1rem;
+  border: 1px solid #D0CFCE;
+  outline: none;
+  &:focus{
+    border: 1px solid #008ABF;
+    transition: 0.35s ease;
+    color: #008ABF;
+    &::-webkit-input-placeholder{
+      transition: opacity 0.45s ease;
+  	  opacity: 0;
+     }
+    &::-moz-placeholder {
+      transition: opacity 0.45s ease;
+  	  opacity: 0;
+     }
+    &:-ms-placeholder {
+     transition: opacity 0.45s ease;
+  	 opacity: 0;
+     }
+   }
+ }
+
+.search-icon{
+  position: relative;
+  float: right;
+  width: 75px;
+  height: 75px;
+  top: -62px;
+  right: -45px;
+}
+
+
+
+
+
+
+
+/* Контейнер для кнопок, выравнивающий их по центру */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Позволяет кнопкам переноситься на новую строку на маленьких экранах */
+}
+
+/* Общий стиль для всех кнопок */
+.icon-button, .btn.btn-primary, .btn.btn-metro {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 25px; /* Немного уменьшенные отступы */
+    background-color: #343a40; /* Темно-серый цвет фона для единства стиля */
+    color: white;
+    border: none;
+    border-radius: 20px; /* Немного уменьшенные скругленные углы */
+    cursor: pointer;
+    font-size: 18px; /* Немного уменьшенный размер шрифта */
+    transition: background-color 0.2s, transform 0.1s;
+    text-decoration: none;
+    margin: 5px; /* Отступ вокруг кнопок */
+    width: auto; /* Автоматическая ширина в зависимости от содержимого */
+    min-width: 140px; /* Немного уменьшенная минимальная ширина кнопки */
+}
+
+/* Стили для эффектов наведения и активации */
+.icon-button:hover, .btn.btn-primary:hover, .btn.btn-metro:hover,
+.icon-button:focus, .btn.btn-primary:focus, .btn.btn-metro:focus {
+    background-color: #23272b; /* Чуть светлее темный при наведении */
+    transform: translateY(-2px);
+}
+
+.icon-button:active, .btn.btn-primary:active, .btn.btn-metro:active {
+    background-color: #1d2124; /* Еще более темный цвет при нажатии */
+    transform: translateY(0);
+}
+
+/* Медиа-запросы для адаптации стилей под разные размеры экранов */
+@media (max-width: 768px) {
+    .icon-button, .btn.btn-primary, .btn.btn-metro {
+        padding: 8px 18px; /* Уменьшаем отступы */
+        font-size: 16px; /* Уменьшаем размер шрифта */
+        min-width: 110px; /* Уменьшаем минимальную ширину кнопки */
+    }
+}
+
+@media (max-width: 480px) {
+    .icon-button, .btn.btn-primary, .btn.btn-metro {
+        padding: 6px 12px; /* Дополнительно уменьшаем отступы для маленьких экранов */
+        font-size: 14px; /* Дополнительно уменьшаем размер шрифта */
+        min-width: 90px; /* Дополнительно уменьшаем минимальную ширину кнопки */
+    }
+}
+
+
+

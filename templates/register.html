@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Регистрация</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_reg.css') }}">
 </head>
 <body>
+<div id="word">
     <h1>Регистрация</h1>
     <div id="wrapper">
         <form id="signin" method="post" action="/register" autocomplete="off">
@@ -15,12 +16,7 @@
             <button type="submit"><i class="fa-solid fa-play"></i></button>
         </form>
     </div>
-    {% if messages %}
-        <ul>
-        {% for message in messages %}
-            <li>{{ message }}</li>
-        {% endfor %}
-        </ul>
-    {% endif %}
+</div>
+
 </body>
 </html>

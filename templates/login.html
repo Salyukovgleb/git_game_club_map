@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Вход</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_reg.css') }}">
 </head>
 <body>
     <h1>Вход</h1>
@@ -17,14 +17,6 @@
             <p>Нет аккаунта? <a href="/register">Зарегистрируйтесь сейчас</a></p>
         </form>
     </div>
-    {% with messages = get_flashed_messages() %}
-      {% if messages %}
-        <div id="messages">
-          {% for message in messages %}
-            <p>{{ message }}</p>
-          {% endfor %}
-        </div>
-      {% endif %}
-    {% endwith %}
+
 </body>
 </html>
