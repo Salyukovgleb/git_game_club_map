@@ -245,4 +245,76 @@ input#search-bar{
 }
 
 
+.profile-drawer {
+    position: fixed; /* Фиксированное позиционирование относительно окна браузера */
+    top: 0; /* Верхний край окна браузера */
+    right: 0; /* Правый край окна браузера */
+    width: 250px; /* Ширина шторки */
+    height: 100%; /* Высота до нижнего края окна браузера */
+    background-color: #343a40; /* Темно-серый фон */
+    color: white; /* Белый текст */
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5); /* Тень с левой стороны */
+    display: none; /* Скрыть шторку по умолчанию */
+    z-index: 1000; /* Убедиться, что шторка будет над другими элементами */
+    padding: 20px; /* Отступы внутри шторки */
+}
+
+.profile-drawer .close-btn {
+    position: absolute; /* Абсолютное позиционирование относительно родителя */
+    top: 10px; /* Отступ сверху */
+    right: 10px; /* Отступ справа */
+    cursor: pointer; /* Курсор в виде указателя */
+    font-size: 24px; /* Размер иконки */
+}
+#profileImage {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+/* Стилизация формы загрузки */
+#uploadForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#uploadForm input[type="file"] {
+    font-size: 14px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#uploadForm input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#uploadForm input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Стилизация кнопки "Изменить данные" */
+button {
+    background-color: #008CBA; /* Синий */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #007B9E;
+}
 

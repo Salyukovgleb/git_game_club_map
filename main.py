@@ -1,22 +1,41 @@
-from flask import Flask, request, redirect, render_template, flash, session, jsonify, request
+import os
+from flask import Flask, request, redirect, render_template, flash, session, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
+from werkzeug.utils import secure_filename
+from flask import send_from_directory
 import json
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your-secret-key'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['UPLOAD_FOLDER'] = os.path.join(os.getcwd(), 'uploads')
 db = SQLAlchemy(app)
+
+os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
 with open('static/clubsData.json') as f:
     clubs_data = json.load(f)
+@app.route('/uploads/<filename>')
+def uploaded_file(filename):
+    return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
+
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80), unique=True, nullable=False)
     name = db.Column(db.String(80), nullable=True)
     password_hash = db.Column(db.String(128), nullable=False)
+    image_path = db.Column(db.String(128), nullable=True)
+    # Связь с дополнительной информацией пользователя
+    profile = db.relationship('UserProfile', backref='user', uselist=False)
+
+class UserProfile(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    phone = db.Column(db.String(20), nullable=True)
+    email = db.Column(db.String(100), nullable=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
 
 
 @app.route('/')
@@ -65,15 +84,24 @@ def login():
     return render_template('login.html')
 
 
-
 @app.route('/index')
 def index():
     # Проверка, что пользователь вошел в систему
-    if 'user_id' in session:
-        return render_template('index.html')
-    else:
+    if 'user_id' not in session:
         flash('Пожалуйста, войдите в систему для доступа к главной странице.', 'error')
         return redirect('/login')
+
+    user_id = session['user_id']
+    user = User.query.get(user_id)
+    if not user:
+        flash('Пользователь не найден.', 'error')
+        return redirect('/login')
+
+    # Используйте атрибут image_path объекта user, чтобы передать путь к изображению в шаблон
+    # Если image_path не определен, вы можете установить значение по умолчанию
+    image_path = user.image_path if user.image_path else 'default.jpg'
+
+    return render_template('index.html', image_path=image_path)
 
 @app.route('/logout')
 def logout():
@@ -92,31 +120,78 @@ def get_club_details():
     return jsonify({"error": "Club not found"}), 404
 
 
+@app.route('/user_info')
+def user_info():
+    user_id = session.get('user_id')
+    if not user_id:
+        return jsonify({'error': 'User not logged in'}), 401
+
+    user = User.query.get(user_id)
+    profile = UserProfile.query.filter_by(user_id=user_id).first()  # Получаем дополнительные данные пользователя
+    if user:
+        return jsonify({
+            'username': user.username,
+            'name': user.name,
+            'phone': profile.phone if profile else '',  # Добавляем номер телефона
+            'email': profile.email if profile else ''  # Добавляем email
+        })
+    else:
+        return jsonify({'error': 'User not found'}), 404
+
+
+@app.route('/upload_image', methods=['POST'])
+def upload_image():
+    if 'user_id' not in session:
+        return redirect('/login')
+    file = request.files['profile_image']
+    if file:
+        filename = secure_filename(file.filename)
+        filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+        file.save(filepath)
+        user_id = session['user_id']
+        user = User.query.get(user_id)
+        user.image_path = filepath
+        db.session.commit()
+        return redirect('/profile')
+    return 'Файл не загружен', 400
 @app.route('/profile')
 def profile():
     if 'user_id' not in session:
         return redirect('/login')
+
     user_id = session['user_id']
     user = User.query.get(user_id)
-    if user:
-        return render_template('profile.html', user=user)
-    else:
-        return redirect('/login')
+    if not user:
+        flash('Пользователь не найден', 'error')
+        return redirect('/')
+
+    # Проверяем, есть ли путь к изображению в базе данных
+    image_path = user.image_path if user.image_path else 'default_image.jpg'  # Используйте имя файла изображения по умолчанию
+    return render_template('profile.html', user=user, image_path=image_path)
+
 
 @app.route('/update_profile', methods=['POST'])
 def update_profile():
     if 'user_id' not in session:
-        return jsonify({'error': 'Not logged in'}), 401
-    user = User.query.filter_by(id=session['user_id']).first()
-    if user:
-        user.name = request.form.get('name', user.name)
-        # Update other fields as needed
-        db.session.commit()
-        flash('Profile updated successfully.', 'success')
+        return redirect('/login')
+
+    user_id = session['user_id']
+    user = User.query.get(user_id)
+    if not user:
+        flash('Пользователь не найден', 'error')
+        return redirect('/profile')
+
+    user.name = request.form['name']
+    profile = UserProfile.query.filter_by(user_id=user_id).first()
+    if not profile:
+        profile = UserProfile(user_id=user_id)
+        db.session.add(profile)
+    profile.phone = request.form['phone']
+    profile.email = request.form['email']
+
+    db.session.commit()
+    flash('Профиль успешно обновлен', 'success')
     return redirect('/profile')
-
-
-
 
 
 if __name__ == '__main__':

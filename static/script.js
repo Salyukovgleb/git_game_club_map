@@ -177,6 +177,50 @@ window.onclick = function(event) {
 
 
 
+
+
+
+
+
+function toggleProfileDrawer() {
+    const drawer = document.getElementById('profileDrawer');
+
+    // Переключение видимости шторки
+    drawer.style.display = drawer.style.display === 'none' ? 'block' : 'none';
+
+    if (drawer.style.display === 'block') {
+        fetch('/user_info')
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    console.log(data.error);
+                    drawer.style.display = 'none';
+                } else {
+                    document.getElementById('profileName').textContent = data.name || data.username;
+                    // Добавляем отображение номера телефона и почты
+                    document.getElementById('profilePhone').textContent = 'Телефон: ' + (data.phone || 'Не указан');
+                    document.getElementById('profileEmail').textContent = 'Email: ' + (data.email || 'Не указан');
+
+                    const profileImage = document.getElementById('profileImage');
+                    profileImage.src = data.image_path ? `/uploads/${data.image_path.split('/').pop()}` : '/path/to/default/image.jpg';
+                    profileImage.style.width = '50px';
+                    profileImage.style.height = '50px';
+                    profileImage.style.borderRadius = '50%';
+                }
+            })
+            .catch(error => console.error('Ошибка:', error));
+    }
+}
+
+
+
+
+
+
+
+
+
+
 function buildRoute(from, to, map) {
     map.geoObjects.each(function (geoObject) {
         if (geoObject instanceof ymaps.Polyline) {
