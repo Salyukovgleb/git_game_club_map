@@ -1,144 +1,169 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css');
-
-* {
-    font-family: 'Open Sans', 'sans-serif', 'FontAwesome';
+*,
+::after,
+::before {
+  box-sizing: border-box;
 }
 
 body {
-    background: rgb(52, 56, 61);
+  background-color: #212121;
+  color: #fff;
+  font-family: monospace, serif;
+  letter-spacing: 0.05em;
 }
 
 h1 {
-    color: rgb(255, 255, 255);
-    margin: 20px auto 0;
-    width: 200px;
-    text-align: center;
+  font-size: 23px;
 }
 
-#wrapper {
-    position: absolute;
-    width: 320px;
-    left: 50%;
-    margin-left: -160px;
-    top: 50%;
-    margin-top: -75px;
+.form {position: absolute;
+  background-color: rgba(33, 33, 33, 0.7);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 32px 15px 24px;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+.form .control {
+  margin: 0 0 24px;
+}
+.form .control input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-family: monospace, serif;
+  letter-spacing: 0.05em;
+  font-size: 16px;
+}
+.form .control input:hover,
+.form .control input:focus {
+  outline: none;
+  border: 0;
+}
+.form .btn {
+  width: 100%;
+  display: block;
+  padding: 14px 16px;
+  background: transparent;
+  outline: none;
+  border: 0;
+  color: #fff;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 16px;
 }
 
-/* === Sign in Form === */
-#signin {
-    height: 90px;
-    width: 300px;
-    border-radius: 8px;
-    position: relative;
+.block-cube {
+  position: relative;
+}
+.block-cube .bg-top {
+  position: absolute;
+  height: 10px;
+  background: #020024;
+  background: linear-gradient(90deg, #020024 0%, #340979 37%, #00d4ff 94%);
+  bottom: 100%;
+  left: 5px;
+  right: -5px;
+  transform: skew(-45deg, 0);
+  margin: 0;
+}
+.block-cube .bg-top .bg-inner {
+  bottom: 0;
+}
+.block-cube .bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #020024;
+  background: linear-gradient(90deg, #020024 0%, #340979 37%, #00d4ff 94%);
+}
+.block-cube .bg-right {
+  position: absolute;
+  background: #020024;
+  background: #00d4ff;
+  top: -5px;
+  z-index: 0;
+  bottom: 5px;
+  width: 10px;
+  left: 100%;
+  transform: skew(0, -45deg);
+}
+.block-cube .bg-right .bg-inner {
+  left: 0;
+}
+.block-cube .bg .bg-inner {
+  transition: all 0.2s ease-in-out;
+}
+.block-cube .bg-inner {
+  background: #212121;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  right: 2px;
+  bottom: 2px;
+}
+.block-cube .text {
+  position: relative;
+  z-index: 2;
+}
+.block-cube.block-input input {
+  position: relative;
+  z-index: 2;
+}
+.block-cube.block-input input:focus ~ .bg-right .bg-inner,
+.block-cube.block-input input:focus ~ .bg-top .bg-inner,
+.block-cube.block-input input:focus ~ .bg-inner .bg-inner {
+  top: 100%;
+  background: rgba(255, 255, 255, 0.5);
+}
+.block-cube.block-input .bg-top,
+.block-cube.block-input .bg-right,
+.block-cube.block-input .bg {
+  background: rgba(255, 255, 255, 0.5);
+  transition: background 0.2s ease-in-out;
+}
+.block-cube.block-input .bg-right .bg-inner,
+.block-cube.block-input .bg-top .bg-inner {
+  transition: all 0.2s ease-in-out;
+}
+.block-cube.block-input:focus .bg-top,
+.block-cube.block-input:focus .bg-right,
+.block-cube.block-input:focus .bg,
+.block-cube.block-input:hover .bg-top,
+.block-cube.block-input:hover .bg-right,
+.block-cube.block-input:hover .bg {
+  background: rgba(255, 255, 255, 0.8);
+}
+.block-cube.block-cube-hover:focus .bg .bg-inner,
+.block-cube.block-cube-hover:hover .bg .bg-inner {
+  top: 100%;
 }
 
-#signin::before {
-    display: block;
-    position: relative;
-    height: 2px;
-    background: rgb(52, 56, 61);
-    content: '';
-    top: 44px;
-    margin-left: 20px;
-    z-index: 1;
+.credits {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 15px 15px;
+  width: 100%;
+  z-index: 111;
 }
-
-#signin input:first-of-type {
-    border-top-right-radius: 8px;
-    border-top-left-radius: 8px;
+.credits a {
+  opacity: 0.6;
+  color: #fff;
+  font-size: 11px;
+  text-decoration: none;
 }
-
-#signin input:last-of-type {
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
+.credits a:hover {
+  opacity: 1;
 }
-
-#signin input[type="text"],
-#signin input[type="password"],
-#signin button[type="submit"] {
-    background: rgb(28, 30, 33);
-    box-shadow: inset -100px -100px 0 rgb(28, 30, 33); /*Prevent yellow autofill color*/
-    color: rgb(52, 56, 61);
-}
-
-#signin input[type="text"],
-#signin input[type="password"] {
-    position: relative;
-    display: block;
-    width: 280px;
-    height: 45px;
-    border: 0;
-    outline: 0;
-    top: -2px;
-    padding: 0 0 0 20px;
-    font-weight: 700;
-}
-
-#signin input[type="text"]:focus,
-#signin input[type="password"]:focus {
-    color: rgb(255, 255, 255);
-}
-
-#signin button[type="submit"] {
-    display: block;
-    position: absolute;
-    width: 52px;
-    height: 52px;
-    color: rgb(52, 56, 61);
-    border-radius: 50px;
-    outline: 0;
-    z-index: 2;
-    top: 19px;
-    right: -24px;
-    border: 6px solid rgb(52, 56, 61);
-    font-size: 25px;
-    text-indent: 0px;
-    padding-left: 9px;
-    padding-bottom: 3px;
-    text-align: center;
-}
-
-#signin button[type="submit"]:hover {
-    color: rgb(0, 126, 165);
-    text-shadow: 0 0 10px rgb(0, 126, 165);
-    cursor: pointer;
-}
-
-#signin p {
-    color: rgb(79, 85, 97);
-    padding: 0 20px;
-    font-weight: 700;
-    font-size: 12px;
-    margin: 5px 0 0 0;
-}
-
-#signin p > a {
-    color: rgb(111, 119, 135);
-    text-decoration: none;
-}
-
-#signin p > a:hover {
-    border-bottom: 1px solid;
-}
-
-/* === Медиа-запросы для мобильных устройств === */
-@media (max-width: 480px) {
-    #wrapper {
-        width: 90%;
-        margin-left: -45%;
-    }
-
-    #signin input[type="text"],
-    #signin input[type="password"] {
-        width: calc(100% - 40px); /* Уменьшаем ширину, учитывая padding */
-    }
-
-    h1 {
-        width: 100%;
-    }
-
-    #signin button[type="submit"] {
-        right: 10px; /* Адаптируем положение кнопки под меньшую ширину */
-    }
+.control p, .control p a {
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
 }
