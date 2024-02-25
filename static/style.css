@@ -318,3 +318,57 @@ button:hover {
     background-color: #007B9E;
 }
 
+/* Основные стили для всплывающего окна */
+.metro-balloon {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9; /* Базовый цвет фона */
+    background-image: linear-gradient(135deg, #f9f9f9 0%, #e4e4e4 100%); /* Градиентный фон */
+    border: 1px solid #ccc; /* Граница */
+    border-radius: 8px; /* Скругленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
+    padding: 15px; /* Внутренний отступ */
+    max-width: 320px; /* Максимальная ширина */
+    color: #333; /* Основной цвет текста */
+}
+
+.metro-balloon h3 {
+    font-size: 20px; /* Размер шрифта для заголовка */
+    color: #0095b6; /* Цвет заголовка */
+    margin-bottom: 5px; /* Отступ снизу для заголовка */
+}
+
+.metro-balloon p {
+    font-size: 14px; /* Размер шрифта для параграфа */
+    line-height: 1.5; /* Межстрочный интервал */
+    color: #666; /* Цвет параграфа */
+}
+
+/* Стили для выделения времени */
+.metro-time {
+    font-weight: bold; /* Жирное начертание */
+    color: #d14; /* Цвет текста времени */
+    animation: blinker 1s linear infinite; /* Анимация для времени */
+}
+
+@keyframes blinker {
+    50% { opacity: 0; }
+}
+
+/* Стилизация текста с градиентом и тенью */
+.metro-text {
+    background: linear-gradient(45deg, #0095b6, #f76b1c); /* Градиент для текста */
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Тень для текста */
+    animation: textGlow 2s ease-in-out infinite alternate; /* Анимация для градиента */
+}
+
+@keyframes textGlow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+}

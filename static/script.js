@@ -96,15 +96,15 @@ document.getElementById('showMarkers').addEventListener('click', () => {
 function showDetails(clubId) {
     // Make a request to the Flask endpoint with the club ID
     fetch(`/get_club_details?id=${clubId}`)
-    .then(response => response.json())
-    .then(club => {
-        if (club.error) {
-            alert(club.error);
-            return;
-        }
+        .then(response => response.json())
+        .then(club => {
+            if (club.error) {
+                alert(club.error);
+                return;
+            }
 
-        // Construct the details HTML using the club data with styles for vertical layout
-        const detailsHtml = `
+            // Construct the details HTML using the club data with styles for vertical layout
+            const detailsHtml = `
             <style>
                 #clubInfo {
                     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -144,14 +144,14 @@ function showDetails(clubId) {
             <div class="info-block"><strong>Клубная карта:</strong><br>Программа лояльности: ${club.club_card.loyalty_program ? 'Да' : 'Нет'}<br>Преимущества: ${club.club_card.benefits}</div>
         `;
 
-        // Populate the modal with the details and display it
-        document.getElementById('clubInfo').innerHTML = detailsHtml;
-        document.getElementById('clubModal').style.display = 'block';
-    })
-    .catch(error => {
-        console.error('Error fetching club details:', error);
-        alert('There was an error fetching the club details.');
-    });
+            // Populate the modal with the details and display it
+            document.getElementById('clubInfo').innerHTML = detailsHtml;
+            document.getElementById('clubModal').style.display = 'block';
+        })
+        .catch(error => {
+            console.error('Error fetching club details:', error);
+            alert('There was an error fetching the club details.');
+        });
 }
 
 function copyToClipboard(text) {
@@ -164,12 +164,12 @@ function copyToClipboard(text) {
 
 
 // Close modal when the close button is clicked
-document.querySelector('.close').onclick = function() {
+document.querySelector('.close').onclick = function () {
     document.getElementById('clubModal').style.display = 'none';
 };
 
 // Close the modal when clicking outside of it
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (event.target == document.getElementById('clubModal')) {
         document.getElementById('clubModal').style.display = 'none';
     }
@@ -214,13 +214,73 @@ function toggleProfileDrawer() {
 
 // Все что связано с метро
 
+function getNextThreeTimes(times, currentTime) {
+    return times.filter(time => time > currentTime).slice(0, 3);
+}
+
+function updateMetroMarkersTimes() {
+    console.log("Обновление времени прибытия метро...");
+    const currentTime = new Date();
+    const currentHours = currentTime.getHours();
+    const currentMinutes = currentTime.getMinutes();
+    const currentTimeString = `${currentHours < 10 ? '0' + currentHours : currentHours}:${currentMinutes < 10 ? '0' + currentMinutes : currentMinutes}`;
+
+    metroStations.forEach((station, index) => {
+        const nextTimesForward = getNextThreeTimes(station.timetable["Вперед"], currentTimeString);
+        const nextTimesBackward = getNextThreeTimes(station.timetable["Назад"], currentTimeString);
+
+        // Проверяем, существует ли метка, и обновляем ее данные
+        if (markers[index]) {
+            markers[index].properties.set('balloonContent', `
+                <strong>${station.name}</strong><br>
+                Линия: ${station.line}<br>
+                Время прибытия вперед: ${nextTimesForward.join(", ")}<br>
+                Время прибытия назад: ${nextTimesBackward.join(", ")}
+            `);
+        }
+    });
+}
+
+function loadMetroMarkers() {
+    console.log("Загрузка меток метро...", metroStations);
+    // Очищаем существующие метки, если они есть
+    markers.forEach(marker => myMap.geoObjects.remove(marker));
+    markers = []; // Очищаем массив меток для новых данных
+
+    const currentTime = new Date();
+    const currentHours = currentTime.getHours();
+    const currentMinutes = currentTime.getMinutes();
+    const currentTimeString = `${currentHours < 10 ? '0' + currentHours : currentHours}:${currentMinutes < 10 ? '0' + currentMinutes : currentMinutes}`;
+
+    metroStations.forEach(station => {
+        const nextTimesForward = getNextThreeTimes(station.timetable["Вперед"], currentTimeString);
+        const nextTimesBackward = getNextThreeTimes(station.timetable["Назад"], currentTimeString);
+
+        let placemark = new ymaps.Placemark(station.coordinates, {
+            balloonContent: `
+        <div class="metro-balloon">
+            <h3>${station.name}</h3>
+            <p>Линия: <strong>${station.line}</strong></p>
+            <p>Время прибытия вперед: <span class="metro-time">${nextTimesForward.join(", ")}</span></p>
+            <p>Время прибытия назад: <span class="metro-time">${nextTimesBackward.join(", ")}</span></p>
+        </div>
+    `
+        }, {
+            preset: 'islands#icon',
+            iconColor: '#0095b6'
+        });
 
 
+        myMap.geoObjects.add(placemark);
+        markers.push(placemark); // Сохраняем метку в массиве для последующего доступа
+    });
+}
 
-
-
-
-
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('metroMarkers').addEventListener('click', loadMetroMarkers);
+    // Обновляем время на метках каждую минуту
+    setInterval(updateMetroMarkersTimes, 60000);
+});
 
 
 
