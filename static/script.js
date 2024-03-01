@@ -214,43 +214,63 @@ function toggleProfileDrawer() {
 
 // Все что связано с метро
 
-function getNextThreeTimes(times, currentTime) {
-    return times.filter(time => time > currentTime).slice(0, 3);
+// Функция для преобразования строки времени в количество минут с начала дня
+function timeStringToMinutes(timeString) {
+    const [hours, minutes] = timeString.split(':').map(Number);
+    return hours * 60 + minutes;
 }
 
+// Функция для получения следующих трех времен прибытия на основе текущего времени
+function getNextThreeTimes(times, currentTimeString) {
+    const currentTimeMinutes = timeStringToMinutes(currentTimeString);
+    return times
+        .map(time => ({ time, minutes: timeStringToMinutes(time) }))
+        .filter(({ minutes }) => minutes > currentTimeMinutes)
+        .slice(0, 3)
+        .map(({ time }) => time);
+}
+
+// Получение текущего времени в Ташкенте
+function getCurrentTimeForTashkent() {
+    const now = new Date();
+    const currentTimeUtc = now.getTime() + (now.getTimezoneOffset() * 60000); // Конвертация в UTC
+    const tashkentOffset = 5; // UTC+5 для Ташкента
+    const tashkentTime = new Date(currentTimeUtc + (3600000 * tashkentOffset));
+
+    const currentHours = tashkentTime.getHours();
+    const currentMinutes = tashkentTime.getMinutes();
+    return `${currentHours < 10 ? '0' + currentHours : currentHours}:${currentMinutes < 10 ? '0' + currentMinutes : currentMinutes}`;
+}
+
+// Обновление времени прибытия на метках
 function updateMetroMarkersTimes() {
     console.log("Обновление времени прибытия метро...");
-    const currentTime = new Date();
-    const currentHours = currentTime.getHours();
-    const currentMinutes = currentTime.getMinutes();
-    const currentTimeString = `${currentHours < 10 ? '0' + currentHours : currentHours}:${currentMinutes < 10 ? '0' + currentMinutes : currentMinutes}`;
+    const currentTimeString = getCurrentTimeForTashkent();
 
     metroStations.forEach((station, index) => {
         const nextTimesForward = getNextThreeTimes(station.timetable["Вперед"], currentTimeString);
         const nextTimesBackward = getNextThreeTimes(station.timetable["Назад"], currentTimeString);
 
-        // Проверяем, существует ли метка, и обновляем ее данные
         if (markers[index]) {
             markers[index].properties.set('balloonContent', `
-                <strong>${station.name}</strong><br>
-                Линия: ${station.line}<br>
-                Время прибытия вперед: ${nextTimesForward.join(", ")}<br>
-                Время прибытия назад: ${nextTimesBackward.join(", ")}
+                <div class="metro-balloon">
+                    <h3>${station.name}</h3>
+                    <p>Линия: <strong>${station.line}</strong></p>
+                    <p>Время прибытия вперед: <span class="metro-time">${nextTimesForward.join(", ")}</span></p>
+                    <p>Время прибытия назад: <span class="metro-time">${nextTimesBackward.join(", ")}</span></p>
+                </div>
             `);
         }
     });
 }
 
+// Загрузка меток метро
 function loadMetroMarkers() {
     console.log("Загрузка меток метро...", metroStations);
-    // Очищаем существующие метки, если они есть
     markers.forEach(marker => myMap.geoObjects.remove(marker));
-    markers = []; // Очищаем массив меток для новых данных
+    markers = [];
 
-    const currentTime = new Date();
-    const currentHours = currentTime.getHours();
-    const currentMinutes = currentTime.getMinutes();
-    const currentTimeString = `${currentHours < 10 ? '0' + currentHours : currentHours}:${currentMinutes < 10 ? '0' + currentMinutes : currentMinutes}`;
+    const currentTimeString = getCurrentTimeForTashkent();
 
     metroStations.forEach(station => {
         const nextTimesForward = getNextThreeTimes(station.timetable["Вперед"], currentTimeString);
@@ -258,21 +278,19 @@ function loadMetroMarkers() {
 
         let placemark = new ymaps.Placemark(station.coordinates, {
             balloonContent: `
-        <div class="metro-balloon">
-            <h3>${station.name}</h3>
-            <p>Линия: <strong>${station.line}</strong></p>
-            <p>Время прибытия вперед: <span class="metro-time">${nextTimesForward.join(", ")}</span></p>
-            <p>Время прибытия назад: <span class="metro-time">${nextTimesBackward.join(", ")}</span></p>
-        </div>
-    `
-        }, {
+                <div class="metro-balloon">
+                    <h3>${station.name}</h3>
+                    <p>Линия: <strong>${station.line}</strong></p>
+                    <p>Время прибытия вперед: <span class="metro-time">${nextTimesForward.join(", ")}</span></p>
+                    <p>Время прибытия назад: <span class="metro-time">${nextTimesBackward.join(", ")}</span></p>
+                </div>
+            `,
             preset: 'islands#icon',
             iconColor: '#0095b6'
         });
 
-
         myMap.geoObjects.add(placemark);
-        markers.push(placemark); // Сохраняем метку в массиве для последующего доступа
+        markers.push(placemark);
     });
 }
 
