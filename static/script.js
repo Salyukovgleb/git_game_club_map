@@ -303,6 +303,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+
+
+
+
+
+
+
+
+
 function buildRoute(from, to, map) {
     map.geoObjects.each(function (geoObject) {
         if (geoObject instanceof ymaps.Polyline) {
