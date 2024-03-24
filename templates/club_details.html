@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- club_details.html -->
+<div>
+    <h2>{{ club.name }}</h2>
+    <p>{{ club.description }}</p>
+    <!-- Добавьте другие поля по мере необходимости -->
+    <form method="POST" action="{{ url_for('admin.update_club', club_id=club.id) }}">
+        <input type="hidden" name="name" value="{{ club.name }}">
+        <input type="hidden" name="description" value="{{ club.description }}">
+        <!-- Добавьте поля для редактирования других атрибутов клуба -->
+        <button type="submit">Сохранить изменения</button>
+    </form>
+</div>
+
+
+</body>
+</html>

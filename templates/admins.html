@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Панель администратора</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+        .active, .accordion:hover {
+            background-color: #ccc;
+        }
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+        .club-info {
+            margin-bottom: 20px;
+        }
+        img {
+            width: 100px;
+            margin-top: 10px;
+            margin-right: 10px;
+            float: left;
+        }
+        .clear {
+            clear: both;
+        }
+        .review-list, .photo-list {
+            margin-top: 10px;
+        }
+        .review-item, .photo-item {
+            margin-bottom: 10px;
+        }
+        .review-rating {
+            font-weight: bold;
+        }
+
+        /* Новый компактный стиль */
+        .card-header {
+            padding: 10px;
+        }
+        .card-body {
+            padding: 10px;
+        }
+        .form-section {
+            margin-bottom: 10px;
+        }
+        input[type="text"], input[type="number"], textarea {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+        }
+        button {
+            padding: 5px 10px;
+            margin-top: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<form action="{{ url_for('admin.assign_admin') }}" method="POST">
+    <input type="text" name="new_admin_username" placeholder="Enter new admin username">
+    <button type="submit">Assign New Admin</button>
+</form>
+
+<div class="container mt-5">
+    <h2>Панель администратора клуба</h2>
+    <div class="accordion" id="accordionExample">
+        {% for club in clubs_data %}
+        <div class="card">
+            <div class="card-header" id="heading{{ club.id }}">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left accordion" type="button" data-toggle="collapse" data-target="#collapse{{ club.id }}" aria-expanded="true" aria-controls="collapse{{ club.id }}">
+                        {{ club.name }} (ID: {{ club.id }})
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapse{{ club.id }}" class="collapse" aria-labelledby="heading{{ club.id }}" data-parent="#accordionExample">
+                <div class="card-body">
+                    <div class="club-info">
+                        <p><strong>Описание:</strong> {{ club.description }}</p>
+                        <p><strong>Адрес:</strong> {{ club.location.address }}</p>
+                        <p><strong>Телефон:</strong> {{ club.administration.number }}</p>
+                        <div class="photo-list">
+                            <strong>Фотографии:</strong>
+                            {% for photo in club.photos %}
+                                <div class="photo-item">
+                                    <img src="{{ photo }}" alt="Фото клуба">
+                                </div>
+                            {% endfor %}
+                            <div class="clear"></div>
+                        </div>
+                        <div class="review-list">
+                            <strong>Отзывы:</strong>
+                            {% for review in club.reviews %}
+                                <div class="review-item">
+                                    <p class="review-rating">{{ review.rating }}/5 звёзд</p>
+                                    <p>"{{ review.text }}" - {{ review.user }}</p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <form method="POST" action="{{ url_for('admin.save_club', club_id=club.id) }}">
+
+
+                        <div class="form-section">
+                            <label>Название:</label>
+                            <input type="text" name="name" value="{{ club.name }}" required>
+                        </div>
+                        <div class="form-section">
+                            <label>Описание:</label>
+                            <textarea name="description" required>{{ club.description }}</textarea>
+                        </div>
+                        <div class="form-section">
+                            <label>Адрес:</label>
+                            <input type="text" name="address" value="{{ club.location.address }}" required>
+                        </div>
+                        <div class="form-section">
+                            <label>Телефон:</label>
+                            <input type="text" name="phone" value="{{ club.administration.number }}" required>
+                        </div>
+                        <div class="form-section">
+                            <label>Рабочее время:</label>
+                            <input type="text" name="working_hours" value="{{ club.working_hours }}" required>
+                        </div>
+                        <div class="form-section">
+                            <h4>Фотографии</h4>
+                            {% for photo in club.photos %}
+                            <div class="photo-url">
+                                <input type="text" name="photos[]" value="{{ photo }}">
+                                <button type="button" class="remove-photo">Удалить</button>
+                            </div>
+                            {% endfor %}
+                            <button type="button" class="add-photo">Добавить фото</button>
+                        </div>
+                        <div class="form-section">
+                            <h4>Отзывы</h4>
+                            {% for review in club.reviews %}
+                            <div class="review">
+                                <input type="text" name="review_user[]" value="{{ review.user }}" placeholder="Пользователь">
+                                <input type="number" name="review_rating[]" value="{{ review.rating }}" min="1" max="5" placeholder="Рейтинг">
+                                <textarea name="review_text[]" placeholder="Текст отзыва">{{ review.text }}</textarea>
+                                <button type="button" class="remove-review">Удалить</button>
+                            </div>
+                            {% endfor %}
+                            <button type="button" class="add-review">Добавить отзыв</button>
+                        </div>
+                        <button type="submit">Сохранить изменения</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.collapse').collapse('toggle');
+
+        let acc = document.getElementsByClassName("accordion");
+        for (let i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                let panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+
+        $('.add-photo').click(function() {
+            $(this).before('<div class="photo-url"><input type="text" name="photos[]"><button type="button" class="remove-photo">Remove</button></div>');
+        });
+        $(document).on('click', '.remove-photo', function() {
+            $(this).parent().remove();
+        });
+        $('.add-review').click(function() {
+            $(this).before('<div class="review"><input type="text" name="review_user[]" placeholder="User"><input type="number" name="review_rating[]" min="1" max="5" placeholder="Rating"><textarea name="review_text[]" placeholder="Review Text"></textarea><button type="button" class="remove-review">Remove</button></div>');
+        });
+        $(document).on('click', '.remove-review', function() {
+            $(this).parent().remove();
+        });
+    });
+</script>
+
+</body>
+</html>

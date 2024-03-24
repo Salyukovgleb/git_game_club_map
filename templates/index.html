@@ -12,7 +12,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
-    <!-- font awesome end -->
 </head>
 
 <body>
@@ -22,6 +21,9 @@
             <li class="btn_logout">
                 <a href="/logout"><i class="fas fa fa-solid fa-right-from-bracket"></i></a>
             </li>
+            <a href="{{ url_for('admin.admin_panel') }}" class="btn">Перейти к администраторам</a>
+
+
         </div>
 
         <h1>PCmap</h1>
@@ -72,6 +74,18 @@
         <button id="metroMarkers" class="btn btn-metro">
             <i class="fa-duotone fa-bus-simple"></i>
         </button>
+        <div class="search-params">
+            <select id="transportMode">
+                <option value="walk">Пешком</option>
+                <option value="car">Авто</option>
+            </select>
+            <input type="number" id="rating" placeholder="Минимальный рейтинг" min="1" max="5">
+            <button id="useCurrentLocation">Использовать текущее местоположение</button>
+            <input type="text" id="address" placeholder="Адрес">
+            <button id="findClubs">Найти ближайшие клубы</button>
+        </div>
+        
+        
 
     </div>
 
@@ -82,6 +96,85 @@
         type="text/javascript"></script>
     <script src="{{ url_for('static', filename='script.js') }}" defer></script>
     <script src="{{ url_for('static', filename='metro.js') }}" defer></script>
+
+    <script>
+        async function geocodeAddress(address) {
+            const apiKey = 'cf4edede-f81a-4f0e-a0fd-c913e60a4518';
+            const requestUrl = `https://geocode-maps.yandex.ru/1.x/?apikey=${apiKey}&geocode=${encodeURIComponent(address)}&format=json`;
+        
+            try {
+                const response = await fetch(requestUrl);
+                const data = await response.json();
+                const position = data.response.GeoObjectCollection.featureMember[0].GeoObject.Point.pos.split(' ');
+                const [longitude, latitude] = position.split(" ");
+                return { latitude, longitude };
+            } catch (error) {
+                console.error('Ошибка при геокодировании:', error);
+                return null;
+            }
+        }
+        navigator.geolocation.getCurrentPosition(function(position) {
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+    findClubs(latitude, longitude);
+}, function(error) {
+    if(error.code == error.PERMISSION_DENIED) {
+        alert("Ошибка: доступ к местоположению был запрещен. Пожалуйста, разрешите доступ к местоположению в настройках вашего браузера.");
+    } else if (error.code == error.POSITION_UNAVAILABLE) {
+        alert("Ошибка: информация о местоположении недоступна.");
+    } else if (error.code == error.TIMEOUT) {
+        alert("Ошибка: превышено время ожидания запроса местоположения.");
+    } else {
+        alert("Ошибка при получении вашего местоположения: " + error.message);
+    }
+});
+
+        
+        document.getElementById('useCurrentLocation').addEventListener('click', function() {
+            if ("geolocation" in navigator) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    const latitude = position.coords.latitude;
+                    const longitude = position.coords.longitude;
+                    findClubs(latitude, longitude);
+                }, function(error) {
+                    alert("Ошибка при получении вашего местоположения: " + error.message);
+                });
+            } else {
+                alert("Геолокация не поддерживается вашим браузером");
+            }
+        });
+        
+        document.getElementById('findClubs').addEventListener('click', async function() {
+            const address = document.getElementById('address').value;
+            if (!address) {
+                alert('Пожалуйста, введите адрес');
+                return;
+            }
+            const coords = await geocodeAddress(address);
+            if (coords) {
+                findClubs(coords.latitude, coords.longitude);
+            } else {
+                alert('Не удалось найти адрес');
+            }
+        });
+        
+        async function findClubs(latitude, longitude) {
+            const transportMode = document.getElementById('transportMode').value;
+            let maxDistance = transportMode === 'car' ? 5 : 3; // 5 км для авто и 3 км для пешеходов
+            const rating = document.getElementById('rating').value;
+        
+            fetch(`/find_nearest_clubs?location=${latitude},${longitude}&rating=${rating}&maxDistance=${maxDistance}`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    // Здесь добавьте логику для отображения результатов
+                })
+                .catch(error => console.error('Ошибка при запросе ближайших клубов:', error));
+        }
+        </script>
+        
+        
+    
 </body>
 
 </html>
