@@ -143,13 +143,16 @@ def logout():
     return redirect('/login')
 
 
-@app.route('/get_club_details', methods=['GET'])
+@app.route('/get-club-details', methods=['GET'])
 def get_club_details():
-    club_id = request.args.get('id')
-    for club in clubs_data['clubsData']:
-        if str(club['id']) == club_id:
-            return jsonify(club)
+    club_id = request.args.get('club_id')
+    with open('static/clubsData.json') as f:
+        clubs_data = json.load(f)
+    club = next((club for club in clubs_data['clubsData'] if str(club['id']) == club_id), None)
+    if club:
+        return jsonify(club)
     return jsonify({"error": "Club not found"}), 404
+
 
 
 @app.route('/user_info')
@@ -186,6 +189,7 @@ def upload_image():
         db.session.commit()
         return redirect('/profile')
     return 'Файл не загружен', 400
+
 @app.route('/profile')
 def profile():
     if 'user_id' not in session:
@@ -273,7 +277,9 @@ def update_club(club_id):
     app.register_blueprint(admin_bp, url_prefix='/admin')
 
 
-
+@app.route('/metro-map')
+def metro_map():
+    return render_template('map.html')
 
 
 if __name__ == '__main__':

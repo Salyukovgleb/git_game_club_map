@@ -1,0 +1,407 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #101e23;
+  color: #cdcdcd;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #231b2d;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  height: 84px;
+  background: #192f37;
+
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+#menuToggle {
+  position: sticky;
+  top: 0;
+  width: 400px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.close {
+  display: none !important;
+}
+
+.btn_menu {
+  display: block;
+  font-size: 32px;
+  width: 40px;
+  color: #cdcdcd;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  z-index: 100 !important;
+  position: absolute;
+}
+
+#open_menu {
+  top: 24px;
+  left: 15px;
+  animation: slideInMenu 1s ease forwards;
+}
+
+#close_menu {
+  top: 24px;
+  right: 0px;
+  animation: slideInMenuButton 1s ease forwards;
+}
+
+@keyframes slideInMenuButton {
+  from {
+    transform: translateX(-1800%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.close {
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+.close_menu {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background: #ededed;
+}
+
+.open_menu {
+  display: block;
+  width: 100%;
+  height: 97.1vh;
+  margin: 0;
+  padding: 20px 0 0 32px;
+  background: #192f37;
+  animation: slideInMenu 1s ease forwards;
+}
+
+.open_menu ul {
+  margin-top: 24px;
+  padding: 0;
+}
+
+.open_menu li {
+  padding: 16px 0;
+  font-size: 20px;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 16px;
+}
+
+.open_menu li i {
+  font-size: 18px;
+  transition: color 0.3s ease;
+  color: #c7c6c6;
+}
+
+.open_menu li a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+  color: #c7c6c6;
+}
+
+.open_menu li:hover i,
+.open_menu li:hover a {
+  color: tomato;
+}
+
+@keyframes slideInMenu {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.main_info {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info {
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 2em;
+  letter-spacing: 4px;
+  margin: 24px;
+  overflow: visible;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+
+  100% {
+    background-position: 500%;
+  }
+}
+/* main_section */
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+.main_section {
+  background: #000;
+  width: 50%;
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.info_img {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.modal_info {
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.modal_info span {
+  color: #dadada;
+}
+
+.info_img img {
+  width: 49%;
+  height: 264px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.text_select {
+  list-style-type: none;
+  padding: 0;
+}
+
+.text_select li {
+  background: #363636;
+  border-radius: 6px;
+  border-left: 4px solid red;
+  padding: 10px 12px;
+  margin-top: 20px;
+}
+
+/* map */
+
+.chouse_club {
+  display: flex;
+  justify-content: center; /* Центрирование содержимого */
+  padding: 20px; /* Отступы для внешнего контейнера, чтобы карта не прилегала вплотную к краям экрана */
+}
+
+.chouse_club #map {
+  border-radius: 20px;
+  overflow: hidden;
+}
+#map {
+  border-radius: 10px; /* Закругленные углы для карты */
+  overflow: hidden; /* Убедитесь, что закругления применяются к карте */
+  max-width: 70%; /* Максимальная ширина карты */
+  margin: auto; /* Автоматические отступы для центрирования карты внутри .chouse_club */
+}
+
+
+
+
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Позволяет кнопкам переноситься на новую строку на маленьких экранах */
+}
+
+/* Общий стиль для всех кнопок */
+.icon-button, .btn.btn-primary, .btn.btn-metro {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 25px; /* Немного уменьшенные отступы */
+    background-color: #343a40; /* Темно-серый цвет фона для единства стиля */
+    color: white;
+    border: none;
+    border-radius: 20px; /* Немного уменьшенные скругленные углы */
+    cursor: pointer;
+    font-size: 18px; /* Немного уменьшенный размер шрифта */
+    transition: background-color 0.2s, transform 0.1s;
+    text-decoration: none;
+    margin: 5px; /* Отступ вокруг кнопок */
+    width: auto; /* Автоматическая ширина в зависимости от содержимого */
+    min-width: 140px; /* Немного уменьшенная минимальная ширина кнопки */
+}
+
+/* Стили для эффектов наведения и активации */
+.icon-button:hover, .btn.btn-primary:hover, .btn.btn-metro:hover,
+.icon-button:focus, .btn.btn-primary:focus, .btn.btn-metro:focus {
+    background-color: #23272b; /* Чуть светлее темный при наведении */
+    transform: translateY(-2px);
+}
+
+.icon-button:active, .btn.btn-primary:active, .btn.btn-metro:active {
+    background-color: #1d2124; /* Еще более темный цвет при нажатии */
+    transform: translateY(0);
+}
+
+/* Медиа-запросы для адаптации стилей под разные размеры экранов */
+@media (max-width: 768px) {
+    .icon-button, .btn.btn-primary, .btn.btn-metro {
+        padding: 8px 18px; /* Уменьшаем отступы */
+        font-size: 16px; /* Уменьшаем размер шрифта */
+        min-width: 110px; /* Уменьшаем минимальную ширину кнопки */
+    }
+}
+
+@media (max-width: 480px) {
+    .icon-button, .btn.btn-primary, .btn.btn-metro {
+        padding: 6px 12px; /* Дополнительно уменьшаем отступы для маленьких экранов */
+        font-size: 14px; /* Дополнительно уменьшаем размер шрифта */
+        min-width: 90px; /* Дополнительно уменьшаем минимальную ширину кнопки */
+    }
+}
+
+
+
+
+
+#clubDetails {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  padding: 20px;
+  display: none; /* Initial state is hidden, will be made visible by JS */
+}
+
+#clubDetails h2 {
+  color: #333;
+  font-size: 24px;
+}
+
+#clubDetails div {
+  margin-bottom: 10px;
+}
+
+#clubDetails img {
+  border-radius: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+#clubDetails strong {
+  color: #000;
+  font-weight: bold;
+}
+
+.info-block {
+  background: #e9ecef;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.fa-icon {
+  margin-right: 5px;
+}
+
+/* Custom icons for different sections */
+.address-icon::before {
+  content: "\f3c5"; /* FontAwesome map-marker-alt */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+
+.time-icon::before {
+  content: "\f017"; /* FontAwesome clock */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+
+.contact-icon::before {
+  content: "\f095"; /* FontAwesome phone */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+
+.services-icon::before {
+  content: "\f0c0"; /* FontAwesome users */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+
+.price-icon::before {
+  content: "\f155"; /* FontAwesome dollar-sign */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+
+.card-icon::before {
+  content: "\f2f2"; /* FontAwesome id-card */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
