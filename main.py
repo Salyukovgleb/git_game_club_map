@@ -1,17 +1,28 @@
-import os
 from flask import Flask, request, redirect, render_template, flash, session, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 from werkzeug.utils import secure_filename
 from flask import send_from_directory
 import json
+from math import radians, cos, sin, asin, sqrt
+from admin import admin_bp
+import os
 
 app = Flask(__name__)
+app.register_blueprint(admin_bp, url_prefix='/admin')
 app.config['SECRET_KEY'] = 'your-secret-key'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
+
+# Создаем папку instance, если она не существует
+if not os.path.exists(app.instance_path):
+    os.makedirs(app.instance_path)
+
+# Конфигурируем приложение для использования базы данных в папке instance
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(app.instance_path, 'users.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['UPLOAD_FOLDER'] = os.path.join(os.getcwd(), 'uploads')
 db = SQLAlchemy(app)
+
+
 
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
@@ -37,6 +48,23 @@ class UserProfile(db.Model):
     email = db.Column(db.String(100), nullable=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
 
+class Admin(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(80), unique=True, nullable=False)
+
+    def __repr__(self):
+        return '<Admin %r>' % self.username
+def insert_main_admin():
+    main_admin_username = 'sp1ngo'
+    main_admin = Admin.query.filter_by(username=main_admin_username).first()
+    if not main_admin:
+        main_admin = Admin(username=main_admin_username)
+        db.session.add(main_admin)
+        db.session.commit()
+
+with app.app_context():
+    db.create_all()
+    insert_main_admin()
 
 @app.route('/')
 def home():
@@ -48,12 +76,14 @@ def home():
 
 
 
+
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
-        username = request.form['Логин']
-        name = request.form['Имя']
-        password = request.form['Пароль']
+        username = request.form['username']
+        name = request.form['name']
+        password = request.form['password']
+
 
         existing_user = User.query.filter_by(username=username).first()
         if existing_user:
@@ -77,11 +107,13 @@ def login():
         user = User.query.filter_by(username=username).first()
         if user and check_password_hash(user.password_hash, password):
             session['user_id'] = user.id
+            session['username'] = user.username  # Добавьте эту строку
             flash('Вход выполнен успешно!', 'success')
-            return redirect('/index')  # Измененный редирект
+            return redirect('/index')
         else:
             flash('Неверный логин или пароль.', 'error')
     return render_template('login.html')
+
 
 
 @app.route('/index')
@@ -111,13 +143,16 @@ def logout():
     return redirect('/login')
 
 
-@app.route('/get_club_details', methods=['GET'])
+@app.route('/get-club-details', methods=['GET'])
 def get_club_details():
-    club_id = request.args.get('id')
-    for club in clubs_data['clubsData']:
-        if str(club['id']) == club_id:
-            return jsonify(club)
+    club_id = request.args.get('club_id')
+    with open('static/clubsData.json') as f:
+        clubs_data = json.load(f)
+    club = next((club for club in clubs_data['clubsData'] if str(club['id']) == club_id), None)
+    if club:
+        return jsonify(club)
     return jsonify({"error": "Club not found"}), 404
+
 
 
 @app.route('/user_info')
@@ -154,6 +189,7 @@ def upload_image():
         db.session.commit()
         return redirect('/profile')
     return 'Файл не загружен', 400
+
 @app.route('/profile')
 def profile():
     if 'user_id' not in session:
@@ -194,12 +230,56 @@ def update_profile():
     return redirect('/profile')
 
 
+def haversine(lon1, lat1, lon2, lat2):
+    # Конвертация десятичных координат в радианы
+    lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
+
+    # Формула гаверсинуса
+    dlon = lon2 - lon1
+    dlat = lat2 - lat1
+    a = sin(dlat / 2) ** 2 + cos(lat1) * cos(lat2) * sin(dlon / 2) ** 2
+    c = 2 * asin(sqrt(a))
+    r = 6371  # Радиус Земли в километрах
+    return c * r
 
 
+@app.route('/find_nearest_clubs', methods=['GET'])
+def find_nearest_clubs():
+    location = request.args.get('location', '').split(',')
+    rating = float(request.args.get('rating', 0))
+    maxDistance = float(request.args.get('maxDistance', 5))  # Максимальное расстояние в км
+
+    if not location:
+        return jsonify({'error': 'Location not provided'}), 400
+
+    lat, lon = float(location[0]), float(location[1])
+
+    suitable_clubs = []
+    for club in clubs_data['clubsData']:
+        club_lat, club_lon = club['location']['coordinates']
+        distance = haversine(lon, lat, club_lon, club_lat)
+
+        # Средний рейтинг клуба
+        total_rating = sum(review['rating'] for review in club['reviews'])
+        average_rating = total_rating / len(club['reviews']) if club['reviews'] else 0
+
+        if distance <= maxDistance and average_rating >= rating:
+            club['distance'] = distance
+            suitable_clubs.append(club)
+
+    return jsonify(suitable_clubs)
 
 
+@app.route('/update_club/<int:club_id>', methods=['POST'])
+def update_club(club_id):
+    # Тут ваш код для обновления информации о клубе
+    # Например, получение данных формы и обновление данных в базе
+    app.register_blueprint(admin_bp, url_prefix='/admin')
 
 
+@app.route('/metro-map')
+def metro_map():
+    return render_template('map.html')
 
 
 if __name__ == '__main__':

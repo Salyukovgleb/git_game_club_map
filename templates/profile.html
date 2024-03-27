@@ -88,6 +88,16 @@
             <input type="email" name="email" placeholder="Email" value="{{ user.profile.email or '' }}">
             <input type="submit" value="Сохранить изменения">
         </form>
+        <div id="profileDrawer" class="profile-drawer">
+            <span class="close-btn" onclick="toggleProfileDrawer()">&#10005;</span>
+            <img src="{{ url_for('uploaded_file', filename=image_path.split('/')[-1]) }}" alt="Профиль"
+                style="width: 50px; height: 50px; border-radius: 50%;">
+            <form id="uploadForm" action="/upload_image" method="post" enctype="multipart/form-data">
+                <input type="file" name="profile_image" accept="image/*">
+                <input type="submit" value="Загрузить">
+            </form>
+            <button onclick="window.location.href='/profile'">Изменить данные</button>
+        </div>
         <!-- Кнопка Назад -->
         <a href="/" class="back-button">Назад</a>
     </div>
