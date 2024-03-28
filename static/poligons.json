@@ -1,0 +1,46 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [69.216519, 41.294857],
+              [69.279730, 41.311141],
+              [69.240562, 41.326648],
+              [69.196289, 41.311081],
+              [69.216519, 41.294857]
+            ]
+          ]
+        },
+        "properties": {
+          "name": "Tashkent",
+          "fill": "#64B5F6",
+          "stroke": "#1976D2"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [66.9597, 39.6542],
+              [66.9450, 39.6668],
+              [66.9736, 39.6729],
+              [66.9857, 39.6581],
+              [66.9597, 39.6542]
+            ]
+          ]
+        },
+        "properties": {
+          "name": "Samarkand",
+          "fill": "#FFCDD2",
+          "stroke": "#D32F2F"
+        }
+      }
+    ]
+  }
+  

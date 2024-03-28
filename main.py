@@ -281,6 +281,10 @@ def update_club(club_id):
 def metro_map():
     return render_template('map.html')
 
+@app.route('/get-poligons')
+def get_poligons():
+    return app.send_static_file('path/to/poligons.json')
+
 
 if __name__ == '__main__':
     with app.app_context():
