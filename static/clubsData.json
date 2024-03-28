@@ -3089,6 +3089,1511 @@
       "benefits": "Бонусы за каждый час использования и скидки на напитки"
     },
     "comments": "Подписывайтесь на наш Telegram канал для получения новостей и специальных предложений"
-  }
+  },
+    {
+      "id": 71,
+      "name": "ARENA",
+      "description": "4 кабинки 5x5 + Вип & Люкс кабинки. Переферия от Redragon и HyperX",
+      "location": {
+        "address": "ул. Сайхун, 39, Гулистан",
+        "coordinates": [40.498997, 68.773116],
+        "time": "24/7"
+      },
+      "photos": ["https://avatars.mds.yandex.net/get-altay/3522550/2a0000017599d0b1f442b8d2260b29b3d9ff/XXXL",
+                 "https://avatars.mds.yandex.net/get-altay/2442526/2a0000017599d04793d3d4e54191a4bb8d43/XXXL"],
+
+      "reviews": [
+        {
+          "user": "Ulugbek Khudoynazarov",
+          "rating": 3,
+          "text": "Интернет слабый, удобных креслых нет, гарнитуры надо поменять а-то очень сильно жмут уши."
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "+998 99‒022‒68‒68, +998 99‒023‒68‒68"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar": true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent_STANDART": 14400,
+      "pc_rent_VIP": 17700,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "9:00 - 24:00",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+        {
+      "id": 72,
+      "name": "Polygon",
+      "description": "4 кабинки 5x5 + Вип & Люкс кабинки. Переферия от Redragon и HyperX",
+      "location": {
+        "address": "Сырдарьинская область, Гулистан, улица Туркистон",
+        "coordinates": [40.497391, 68.767345],
+        "time": "24/7"
+      },
+      "photos": ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6MWFGGxbIUzCwyXx7fEEi3IdNwL3iIRxn6g&usqp=CAU",
+                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm8SCf-NZriIOygyHKRyiGtjtlY0qJt5Rx2A&usqp=CAU"],
+
+      "reviews": [
+        {
+          "user": "Ulugbek",
+          "rating": 3,
+          "text": "Интернет слабый, удобных креслых нет, гарнитуры надо поменять а-то очень сильно жмут уши."
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "+998 99‒022‒68‒68, +998 99‒023‒68‒68"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar": true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent_STANDART": 14400,
+      "pc_rent_VIP": 17700,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "9:00 - 24:00",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+            {
+      "id": 73,
+      "name": "New Viva Myrzakent",
+      "description": "4 кабинки 5x5",
+      "location": {
+        "address": "ул. Кожанова, 31, посёлок Мырзакент",
+        "coordinates": [40.666837, 68.535691],
+        "time": "24/7"
+      },
+      "photos": ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTefCaVO1wlTY9FNwR65c042HStAsFPSQrnMQ&usqp=CAU",
+                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzenyuKU3VrEOd-u2XPKFqCyIQjxChTYA9Vg&usqp=CAU"],
+
+      "reviews": [
+        {
+          "user": "Марат Таубай Муханбетулы",
+          "rating": 3,
+          "text": "Хорошая баня"
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "+998 99‒022‒68‒68, +998 99‒023‒68‒68"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar": true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent_STANDART": 14400,
+      "pc_rent_VIP": 17700,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "9:00 - 24:00",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+                {
+      "id": 74,
+      "name": "Интернет-кафе",
+      "description": "4 кабинки 5x5",
+      "location": {
+        "address": "\nТуркестанская область, Жетысай",
+        "coordinates": [40.765813, 68.331191],
+        "time": "24/7"
+      },
+      "photos": ["https://avatars.mds.yandex.net/i?id=04dd6999678ba33c4d4b3983daf873d0ea49edda-12438744-images-thumbs&n=13",
+                 "https://avatars.mds.yandex.net/i?id=0ed7c6d76e07d7b4240b7ed1dd3786ff93d8a86c-12627914-images-thumbs&n=13"],
+
+      "reviews": [
+        {
+          "user": "Марат Таубай Муханбетулы",
+          "rating": 3,
+          "text": "Хорошая баня"
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "+998 99‒022‒68‒68, +998 99‒023‒68‒68"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar": true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent_STANDART": 14400,
+      "pc_rent_VIP": 17700,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "9:00 - 24:00",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+                    {
+      "id": 75,
+      "name": "Интернет-кафе",
+      "description": "4 кабинки 5x5",
+      "location": {
+        "address": "\nТуркестанская область, Жетысай, улица Кожанова",
+        "coordinates": [40.772695, 68.330610],
+        "time": "24/7"
+      },
+      "photos": ["https://avatars.mds.yandex.net/i?id=04dd6999678ba33c4d4b3983daf873d0ea49edda-12438744-images-thumbs&n=13",
+                 "https://avatars.mds.yandex.net/i?id=0ed7c6d76e07d7b4240b7ed1dd3786ff93d8a86c-12627914-images-thumbs&n=13"],
+
+      "reviews": [
+        {
+          "user": "Марат Таубай Муханбетулы",
+          "rating": 3,
+          "text": "Хорошая баня"
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "+998 99‒022‒68‒68, +998 99‒023‒68‒68"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar": true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent_STANDART": 14400,
+      "pc_rent_VIP": 17700,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "9:00 - 24:00",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+                       {
+      "id": 76,
+      "name": "Lion Net",
+      "description": "4 кабинки 5x5",
+      "location": {
+        "address": "ул. Сайилгох, 45Аэтаж 2",
+        "coordinates": [40.386987, 71.788048],
+        "time": "24/7"
+      },
+      "photos": ["https://avatars.mds.yandex.net/get-altay/6548191/2a000001894d9cef9d5d8d1c8cd01ddb5d1b/XXXL",
+                 "https://avatars.mds.yandex.net/get-altay/7695774/2a00000188e1457ad62316c7566a9ac7ef46/XXXL"],
+
+      "reviews": [
+        {
+          "user": "Руслан Байдавлетов",
+          "rating": 4,
+          "text": "Хорошее место , просторно, ребята всегда помогут, из минусов это крутая лестница с которой можно навернуться"
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "+998 91 117 77 70"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar": true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent_STANDART": 12000,
+        "pc_rent_VIP": 17700,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "9:00 - 24:00",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+                        {
+      "id": 77,
+      "name": "Ps3",
+      "description": "4 кабинки 5x5",
+      "location": {
+        "address": "\nФергана, массив Яссави",
+        "coordinates": [40.383423, 71.801918],
+        "time": "24/7"
+      },
+      "photos": ["https://avatars.mds.yandex.net/i?id=8a3f1b6facffcc1d9c3429af5562c8d0bc1fa46c-8803246-images-thumbs&n=13",
+                 "https://avatars.mds.yandex.net/i?id=10d869082d9a565aba7d8d1e947ccab3555bf327-9701523-images-thumbs&n=13"],
+
+      "reviews": [
+        {
+          "user": "Руслан Байдавлетов",
+          "rating": 4,
+          "text": "Хорошее место , просторно, ребята всегда помогут, из минусов это крутая лестница с которой можно навернуться"
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "+998 91 117 77 70"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar": true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent_STANDART": 12000,
+        "pc_rent_VIP": 17700,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "9:00 - 24:00",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+                        {
+      "id": 78,
+      "name": "Ps3",
+      "description": "4 кабинки 5x5",
+      "location": {
+        "address": "\nФергана, массив Яссави",
+        "coordinates": [40.383423, 71.801918],
+        "time": "24/7"
+      },
+      "photos": ["https://avatars.mds.yandex.net/i?id=8a3f1b6facffcc1d9c3429af5562c8d0bc1fa46c-8803246-images-thumbs&n=13",
+                 "https://avatars.mds.yandex.net/i?id=10d869082d9a565aba7d8d1e947ccab3555bf327-9701523-images-thumbs&n=13"],
+
+      "reviews": [
+        {
+          "user": "Руслан Байдавлетов",
+          "rating": 4,
+          "text": "Хорошее место , просторно, ребята всегда помогут, из минусов это крутая лестница с которой можно навернуться"
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "+998 91 117 77 70"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar": true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent_STANDART": 12000,
+        "pc_rent_VIP": 17700,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "24/7",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+                            {
+      "id": 79,
+      "name": "Рутек арена",
+      "description": "4 кабинки 5x5",
+      "location": {
+        "address": "\nул. Амира Темура, 357",
+        "coordinates": [40.520993, 70.931676],
+        "time": "24/7"
+      },
+      "photos": ["https://avatars.mds.yandex.net/get-altay/2776464/2a00000174c79614b8f57d48410ef976af4a/XXXL",
+                 "https://avatars.mds.yandex.net/get-altay/2356223/2a00000174c7967d1999ee39566f4b234bc0/XXXL"],
+
+      "reviews": [
+        {
+          "user": "Байдавлетов",
+          "rating": 4,
+          "text": "Хорошее место , просторно, ребята всегда помогут, из минусов это крутая лестница с которой можно навернуться"
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "+998 91 117 77 70"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar": true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent_STANDART": 12000,
+        "pc_rent_VIP": 17700,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "9:00 - 24:00",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+                            {
+      "id": 80,
+      "name": "Diamonds stargroup",
+      "description": "4 кабинки 5x5",
+      "location": {
+        "address": "\nФерганская область, Коканд, Туркестанская улица",
+        "coordinates": [40.531880, 70.937720],
+        "time": "24/7"
+      },
+      "photos": ["https://avatars.mds.yandex.net/i?id=31b5510ad0db7e8f91fa1fa4c78f3462c732a541-10792867-images-thumbs&n=13",
+                 "https://avatars.mds.yandex.net/i?id=c205bf170f31061b50be5f22ae8866834a20e7ac-12486332-images-thumbs&n=13"],
+
+      "reviews": [
+        {
+          "user": "Байдавлетов",
+          "rating": 5,
+          "text": "Хорошее место , просторно, ребята всегда помогут, из минусов это крутая лестница с которой можно навернуться"
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "+998 91 117 77 70"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar": true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent_STANDART": 12000,
+        "pc_rent_VIP": 17700,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "24/7",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+                                {
+      "id": 81,
+      "name": "Computer games",
+      "description": "4 кабинки 5x5",
+      "location": {
+        "address": "Ферганская область, Коканд, населённый пункт Тулибай",
+        "coordinates": [40.557796, 70.955580],
+        "time": "24/7"
+      },
+      "photos": ["https://avatars.mds.yandex.net/i?id=770ce0d243ef681def1aa8b9bda1c238e2ef251c-10355200-images-thumbs&n=13",
+                 "https://avatars.mds.yandex.net/i?id=15c0b0a2371af307eaaa603a15695eeabe35c688-4558319-images-thumbs&n=13"],
+
+      "reviews": [
+        {
+          "user": "Байдавлетов",
+          "rating": 5,
+          "text": "Хорошее место , просторно, ребята всегда помогут, из минусов это крутая лестница с которой можно навернуться"
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "+998 91 117 77 70"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar": true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent_STANDART": 12000,
+        "pc_rent_VIP": 17700,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "24/7",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+                                    {
+      "id": 82,
+      "name": "Playstation",
+      "description": "4 кабинки 5x5",
+      "location": {
+        "address": "\nФерганская область, Коканд, Туркестанская улица",
+        "coordinates": [40.557796, 70.955580],
+        "time": "24/7"
+      },
+      "photos": ["https://avatars.mds.yandex.net/i?id=1d14fee4114b0f1aa0fe502467039bf8c6cf5b87-10702343-images-thumbs&n=13",
+                 "https://avatars.mds.yandex.net/i?id=2a0000017a02d250b60b49c7380519531244-4539046-images-thumbs&n=13"],
+
+      "reviews": [
+        {
+          "user": "Йцукар",
+          "rating": 5,
+          "text": "Хорошее место , просторно, ребята всегда помогут, из минусов это крутая лестница с которой можно навернуться"
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "+998 91 117 77 70"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar": true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent_STANDART": 12000,
+        "pc_rent_VIP": 17700,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "24/7",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+                                    {
+      "id": 83,
+      "name": "Arslan Computer Service",
+      "description": "Интернет-кафе компьютерный ремонт и услуги",
+      "location": {
+        "address": "Ургенч, 23",
+        "coordinates": [41.556667, 60.624340],
+        "time": "24/7"
+      },
+      "photos": ["https://avatars.mds.yandex.net/i?id=1d14fee4114b0f1aa0fe502467039bf8c6cf5b87-10702343-images-thumbs&n=13",
+                 "https://avatars.mds.yandex.net/i?id=2a0000017a02d250b60b49c7380519531244-4539046-images-thumbs&n=13"],
+
+      "reviews": [
+        {
+          "user": "Жобар",
+          "rating": 5,
+          "text": "Хорошее место , просторно, ребята всегда помогут, из минусов это крутая лестница с которой можно навернуться"
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "+998 90 649 55 05"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar": true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent_STANDART": 12000,
+        "pc_rent_VIP": 17700,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "24/7",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+                                    {
+      "id": 84,
+      "name": "Игровой клуб Asus",
+      "description": "Интернет-кафе",
+      "location": {
+        "address": "Кашкадарьинская область, Карши, 4-й микрорайон",
+        "coordinates": [38.836347, 65.791421],
+        "time": "24/7"
+      },
+      "photos": ["https://avatars.mds.yandex.net/get-altay/1871013/2a0000016bc3e9f0c943c58762fd5859663e/XXXL",
+                 "https://avatars.mds.yandex.net/i?id=39ca896eeb23f982f83d0819aacf798da04f8aa0-8497596-images-thumbs&n=13"],
+
+      "reviews": [
+        {
+          "user": "Жобар",
+          "rating": 5,
+          "text": "Хорошее место , просторно, ребята всегда помогут, из минусов это крутая лестница с которой можно навернуться"
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "+998 90 649 55 05"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar": true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent_STANDART": 12000,
+        "pc_rent_VIP": 17700,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "24/7",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+                                        {
+      "id": 85,
+      "name": "Fartuna",
+      "description": "Интернет-кафе",
+      "location": {
+        "address": "Кашкадарьинская область, Карши, улица А. Юлбарисова",
+        "coordinates": [38.840931, 65.798415],
+        "time": "24/7"
+      },
+      "photos": ["https://avatars.mds.yandex.net/i?id=a0e9afed39dcedc96f84e0262e49dcabdc02ea3f-12624456-images-thumbs&n=13",
+                 "https://avatars.mds.yandex.net/i?id=95aaaea6ac4b4d3d2d8ae4dc241acaff6bd5ede9-11507539-images-thumbs&n=13"],
+
+      "reviews": [
+        {
+          "user": "Жобар",
+          "rating": 5,
+          "text": "Хорошее место , просторно, ребята всегда помогут, из минусов это крутая лестница с которой можно навернуться"
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "+998 90 649 55 05"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar": true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent_STANDART": 12000,
+        "pc_rent_VIP": 17700,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "24/7",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+                                            {
+      "id": 86,
+      "name": "Game Sfera Club",
+      "description": "Интернет-кафекиберспорт",
+      "location": {
+        "address": "\nКарши, ул. Ислама Каримова, 289",
+        "coordinates": [38.857705, 65.795341],
+        "time": "24/7"
+      },
+      "photos": ["https://avatars.mds.yandex.net/get-altay/5496626/2a0000017c99763b75f864f399df37990761/XXXL",
+                 "https://avatars.mds.yandex.net/i?id=9bf69ca72a5e3e8c20c7b24487a5f31e7c1b8b41-10767497-images-thumbs&n=13"],
+
+      "reviews": [
+        {
+          "user": "Боб",
+          "rating": 5,
+          "text": "Прохладно, с кайфом можно поиграть в любимую игру, и можно заказать покушать у этого клуба"
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "+998 90 649 55 05"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar": true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent_STANDART": 12000,
+        "pc_rent_VIP": 17700,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "24/7",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+                                            {
+      "id": 87,
+      "name": "Игровой клуб Токио",
+      "description": "Интернет-кафе",
+      "location": {
+        "address": "Карши, 4-й микрорайон, 4",
+        "coordinates": [38.838399, 65.790393],
+        "time": "24/7"
+      },
+      "photos": ["https://avatars.mds.yandex.net/i?id=eb1d248ca17cd964c936e46c0545212dc1a66b4f-12661757-images-thumbs&n=13",
+                 "https://avatars.mds.yandex.net/i?id=b517bef2492f51f4d8fce0b63da2e1f5f20e24ec-12202401-images-thumbs&n=13"],
+
+      "reviews": [
+        {
+          "user": "\nНина Гинора",
+          "rating": 1,
+          "text": "Зачем игровые клубы?Лучше для молодёж надо что то другой.Бесплатно не будет играть.Родители не отдасть денег проста так.Что будеть потом?Если азартный тем боле я против игр.клубы."
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "+998 90 649 55 05"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar": true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent_STANDART": 12000,
+        "pc_rent_VIP": 17700,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "24/7",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+                                            {
+      "id": 87,
+      "name": "Игровой клуб Токио",
+      "description": "Интернет-кафе",
+      "location": {
+        "address": "Карши, 4-й микрорайон, 4",
+        "coordinates": [38.838399, 65.790393],
+        "time": "24/7"
+      },
+      "photos": ["https://avatars.mds.yandex.net/i?id=eb1d248ca17cd964c936e46c0545212dc1a66b4f-12661757-images-thumbs&n=13",
+                 "https://avatars.mds.yandex.net/i?id=b517bef2492f51f4d8fce0b63da2e1f5f20e24ec-12202401-images-thumbs&n=13"],
+
+      "reviews": [
+        {
+          "user": "\nНина Гинора",
+          "rating": 1,
+          "text": "Зачем игровые клубы?Лучше для молодёж надо что то другой.Бесплатно не будет играть.Родители не отдасть денег проста так.Что будеть потом?Если азартный тем боле я против игр.клубы."
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "+998 90 649 55 05"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar": true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent_STANDART": 12000,
+        "pc_rent_VIP": 17700,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "24/7",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+                                                {
+      "id": 88,
+      "name": "Discovery Интернет-кафе",
+      "description": "Интернет-кафе",
+      "location": {
+        "address": "Нукус, ул. Беруни, 23",
+        "coordinates": [42.452871, 59.639430],
+        "time": "24/7"
+      },
+      "photos": ["https://avatars.mds.yandex.net/i?id=73e1734366344c6eb0d7ef1313ef0f8492baf644-9385956-images-thumbs&n=13",
+                 "https://avatars.mds.yandex.net/i?id=971f6f2b0b114ddcb486a598878020b0ac18ed4a-10414372-images-thumbs&n=13"],
+
+      "reviews": [
+        {
+          "user": "ЖалгасЛиз",
+          "rating": 4,
+          "text": "Пабджи уйнамсан место топ зор екан"
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "+998 90 649 55 05"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar": true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent_STANDART": 12000,
+        "pc_rent_VIP": 17700,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "24/7",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+      {
+      "id": 89,
+      "name": "Infiniti",
+      "description": "Интернет-кафе",
+      "location": {
+        "address": "Нукус, ул. Бердаха, 58/15",
+        "coordinates": [42.449993, 59.615753],
+        "time": "24/7"
+      },
+      "photos": ["https://avatars.mds.yandex.net/i?id=1d14fee4114b0f1aa0fe502467039bf8c6cf5b87-10702343-images-thumbs&n=13",
+                 "https://avatars.mds.yandex.net/i?id=012282d440b5891fc802b8c3fd95b5194eefffb2-4238614-images-thumbs&n=13"],
+
+      "reviews": [
+        {
+          "user": "ЖалгасЛиз",
+          "rating": 5,
+          "text": "Пабджи уйнамсан место топ зор екан"
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "+998 90 649 55 05"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar": true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent_STANDART": 12000,
+        "pc_rent_VIP": 17700,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "24/7",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+          {
+      "id": 90,
+      "name": "Go play",
+      "description": "Интернет-кафе",
+      "location": {
+        "address": "\nНукус, просп. Аллаяра Досназарова, 1",
+        "coordinates": [42.438473, 59.640194],
+        "time": "24/7"
+      },
+      "photos": ["https://avatars.mds.yandex.net/i?id=5a6cec4e2b9dfcebd0b192ab5edb1d5749912407-9180973-images-thumbs&n=13",
+                 "https://avatars.mds.yandex.net/i?id=422ffa258500be61d2b0261386b50664c0ce0824-12795182-images-thumbs&n=13"],
+
+      "reviews": [
+        {
+          "user": "ЖалгасЛиз",
+          "rating": 5,
+          "text": "Пабджи уйнамсан место топ зор екан"
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "+998 90 649 55 05"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar": true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent_STANDART": 12000,
+        "pc_rent_VIP": 17700,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "24/7",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+              {
+      "id": 91,
+      "name": "GeForce",
+      "description": "Интернет-кафе",
+      "location": {
+        "address": "\nНукус, просп. Билимлилер, 19",
+        "coordinates": [42.472710, 59.582462],
+        "time": "24/7"
+      },
+      "photos": ["https://avatars.mds.yandex.net/i?id=098f64131c1e0c01d16bed2b0f125a0d53358f06-12486332-images-thumbs&n=13",
+                 "https://avatars.mds.yandex.net/i?id=b950c214c217914d6089637657292c8fa4303a45-10159322-images-thumbs&n=13"],
+
+      "reviews": [
+        {
+          "user": "ЖалгасЛиз",
+          "rating": 5,
+          "text": "Пабджи уйнамсан место топ зор екан"
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "+998 90 649 55 05"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar": true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent_STANDART": 12000,
+        "pc_rent_VIP": 17700,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "24/7",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+              {
+      "id": 92,
+      "name": "Интернет-кафе",
+      "description": "Интернет-кафе",
+      "location": {
+        "address": "Бухара, ул. Джалола Икроми, 19",
+        "coordinates": [39.771804, 64.430804],
+        "time": "24/7"
+      },
+      "photos": ["https://avatars.mds.yandex.net/get-altay/10869107/2a0000018a18c9e9b0e021a61999e13348ec/XXXL",
+                 "https://avatars.mds.yandex.net/get-altay/9724410/2a00000189e5146453e63e84815efdf0f377/XXXL"],
+
+      "reviews": [
+        {
+          "user": "Комил Саидов",
+          "rating": 4,
+          "text": "Клуб нормальный, админ страшный, клавиатура удобная, питание пока слабое, напитки в ассортименте хорошие, главное не воняет, не шумно, по цене тоже \uD83D\uDC4D"
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "+998 90 298 99 16"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar": true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent_STANDART": 12000,
+        "pc_rent_VIP": 17700,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "24/7",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+                  {
+      "id": 93,
+      "name": "Интернет-кафе",
+      "description": "Интернет-кафе",
+      "location": {
+        "address": "\nБухара",
+        "coordinates": [39.788498, 64.443183],
+        "time": "24/7"
+      },
+      "photos": ["https://avatars.mds.yandex.net/i?id=02766bb512110581d6aafd0b9a018fef3c4f6bcd-12421006-images-thumbs&n=13",
+                 "https://avatars.mds.yandex.net/i?id=db96d5cb7dc89eb25cba4458eee3eb580af82deb-10197150-images-thumbs&n=13"],
+
+      "reviews": [
+        {
+          "user": "\nMöminmirzo O.",
+          "rating": 1,
+          "text": "Не аккуратние и очень бардак"
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "+998 90 298 99 16"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar": true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent_STANDART": 12000,
+        "pc_rent_VIP": 17700,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "24/7",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+                      {
+      "id": 94,
+      "name": "Интернет-кафе",
+      "description": "Интернет-кафе",
+      "location": {
+        "address": "\nБухара",
+        "coordinates": [39.788498, 64.443183],
+        "time": "24/7"
+      },
+      "photos": ["https://avatars.mds.yandex.net/i?id=02766bb512110581d6aafd0b9a018fef3c4f6bcd-12421006-images-thumbs&n=13",
+                 "https://avatars.mds.yandex.net/i?id=db96d5cb7dc89eb25cba4458eee3eb580af82deb-10197150-images-thumbs&n=13"],
+
+      "reviews": [
+        {
+          "user": "\nMöminmirzo O.",
+          "rating": 1,
+          "text": "Не аккуратние и очень бардак"
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "+998 90 298 99 16"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar": true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent_STANDART": 12000,
+        "pc_rent_VIP": 17700,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "24/7",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+                          {
+      "id": 95,
+      "name": "Next",
+      "description": "Интернет-кафе",
+      "location": {
+        "address": "Навои, улица Булата",
+        "coordinates": [40.085865, 65.384566],
+        "time": "24/7"
+      },
+      "photos": ["https://avatars.mds.yandex.net/i?id=004b92908a03066a22bc23a1ba5837d9162db6c4-8751582-images-thumbs&n=13",
+                 "https://avatars.mds.yandex.net/i?id=aacffce43ae17cf46cddae0bf62c682d5230d0ec-9036873-images-thumbs&n=13"],
+
+      "reviews": [
+        {
+          "user": "Odilbek Abd",
+          "rating": 5,
+          "text": "Если хотите напечатать что-то, например, книгу, буклет, диссертацию самое то место где обслуживание и качество на высшем уровне. От маленьких книг до больших - объемных плакатов и баннеров можно распечатать, не дорого и качественно. Плюс есть услуги интернета и интернет кафе."
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "\n+998 93 438 25 75"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar": true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent_STANDART": 12000,
+        "pc_rent_VIP": 17700,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "24/7",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+                              {
+      "id": 96,
+      "name": "Rampage GameClub",
+      "description": "Интернет-кафе киберспорт",
+      "location": {
+        "address": "Навои, ул. Меморлар, 23",
+        "coordinates": [40.117067, 65.369313],
+        "time": "24/7"
+      },
+      "photos": ["https://avatars.mds.yandex.net/i?id=9db1dcac0bef25a7a8de1ede445bf0cadf28460c-11271031-images-thumbs&n=13",
+                 "https://avatars.mds.yandex.net/i?id=af2957939972ae16710ff39479cf131232947742-3344187-images-thumbs&n=13"],
+
+      "reviews": [
+        {
+          "user": "Abd",
+          "rating": 5,
+          "text": "От маленьких книг до больших - объемных плакатов и баннеров можно распечатать, не дорого и качественно. Плюс есть услуги интернета и интернет кафе."
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "\n+998 93 438 25 75"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar": true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent_STANDART": 12000,
+        "pc_rent_VIP": 17700,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "24/7",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+                                  {
+      "id": 97,
+      "name": "Bistro&Internet",
+      "description": "Интернет-кафе",
+      "location": {
+        "address": "Навои, просп. Галаба, 184",
+        "coordinates": [40.095080, 65.386400],
+        "time": "24/7"
+      },
+      "photos": ["https://avatars.mds.yandex.net/i?id=3c0aed1e28af8efe04542e7e1604db95dc08d748-12733951-images-thumbs&n=13",
+                 "https://avatars.mds.yandex.net/i?id=25e889dea8b85a73e500d0fe590c8386-4396223-images-thumbs&n=13"],
+
+      "reviews": [
+        {
+          "user": "Abd",
+          "rating": 5,
+          "text": "От маленьких книг до больших - объемных плакатов и баннеров можно распечатать, не дорого и качественно. Плюс есть услуги интернета и интернет кафе."
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "\n+998 93 438 25 75"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar": true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent_STANDART": 12000,
+        "pc_rent_VIP": 17700,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "24/7",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+                                      {
+      "id": 98,
+      "name": "Asia net",
+      "description": "Интернет-кафе",
+      "location": {
+        "address": "Наманганская область, Наманган, микрорайон 5А",
+        "coordinates": [41.000744, 71.609832],
+        "time": "24/7"
+      },
+      "photos": ["https://avatars.mds.yandex.net/i?id=6604fd5f1fa553bab2eef7b53fbd4845011bc213-12627978-images-thumbs&n=13",
+                 "https://avatars.mds.yandex.net/i?id=4f18a71ca6417ace03d0e0607566644f15e58d61-9849111-images-thumbs&n=13"],
+
+      "reviews": [
+        {
+          "user": "Ан Валерий",
+          "rating": 1,
+          "text": "Шаражкина контора, не вздумайте обращаться. Обсчитывают на посылках"
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "\n+998 93 438 25 75"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar": true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent_STANDART": 10000,
+        "pc_rent_VIP": 12500,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "24/7",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+                                          {
+      "id": 99,
+      "name": "Asl",
+      "description": "Интернет-кафе копировальный центр",
+      "location": {
+        "address": "Наманган, микрорайон 5А, 46",
+        "coordinates": [40.993836, 71.609677],
+        "time": "24/7"
+      },
+      "photos": ["https://avatars.mds.yandex.net/get-altay/1880508/2a0000016c052102b3137c29039e961ba354/XXXL",
+                 "https://avatars.mds.yandex.net/i?id=8e342a02e645b408434ea1362147942862e4110d-7552082-images-thumbs&n=13"],
+
+      "reviews": [
+        {
+          "user": "Ан Роман",
+          "rating": 4,
+          "text": "Ну перспектива имеется у этого интернет кафе"
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "\n+998 93 438 25 75"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar": true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent_STANDART": 10000,
+        "pc_rent_VIP": 12500,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "24/7",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+                                              {
+      "id": 100,
+      "name": "NamCITY",
+      "description": "Интернет-кафе",
+      "location": {
+        "address": "Наманган, улица Лутфий, 1",
+        "coordinates": [41.004915, 71.680661],
+        "time": "24/7"
+      },
+      "photos": ["https://avatars.mds.yandex.net/get-altay/5533948/2a0000017c78a3e3f6edfc3fbd12247cf795/XXXL",
+                 "https://avatars.mds.yandex.net/i?id=84fd2d078914851c4feb50cd83c323864c2bd159-8497316-images-thumbs&n=13"],
+
+      "reviews": [
+        {
+          "user": "Ан Роман",
+          "rating": 4,
+          "text": "Ну перспектива имеется у этого интернет кафе"
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "\n+998 93 438 25 75"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar": true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent_STANDART": 10000,
+        "pc_rent_VIP": 12500,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "24/7",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+                                                  {
+      "id": 101,
+      "name": "Game club",
+      "description": "Игровой клуб интернет-кафе",
+      "location": {
+        "address": "\nНаманганская область, Наманган, улица Алишера Навоиэтаж цокольный",
+        "coordinates": [40.999035, 71.675726],
+        "time": "24/7"
+      },
+      "photos": ["https://avatars.mds.yandex.net/i?id=bd01d93f5240df62cf52461e6c1c71940c54fbc9-10341337-images-thumbs&n=13",
+                 "https://avatars.mds.yandex.net/i?id=48c2283b696358fb9934af10145e4e5bdac212bc-5232019-images-thumbs&n=13"],
+
+      "reviews": [
+        {
+          "user": "Абдусаммат",
+          "rating": 5,
+          "text": "Как по мне классное место"
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "\n+998 93 438 25 75"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar": true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent_STANDART": 11000,
+        "pc_rent_VIP": 12500,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "24/7",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+                                                      {
+      "id": 102,
+      "name": "PlayStation",
+      "description": "Игровой клуб интернет-кафе",
+      "location": {
+        "address": "Наманганская область, Наманган, Davlatobod",
+        "coordinates": [39.048245, 66.834215],
+        "time": "24/7"
+      },
+      "photos": ["https://avatars.mds.yandex.net/i?id=53f41e71cf890b1348131feba9c4c8a5717cd396-5293164-images-thumbs&n=13",
+                 "https://avatars.mds.yandex.net/i?id=6e450cfc952872e606cfb3be1f5d4166a11f1ca5-4077689-images-thumbs&n=13"],
+
+      "reviews": [
+        {
+          "user": "Назаров Хаким",
+          "rating": 4,
+          "text": "Среднячок, там где я обычно играю намного прекраснее"
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "\n+998 93 438 25 75"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar": true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent_STANDART": 11000,
+        "pc_rent_VIP": 12500,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "24/7",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+                                                          {
+      "id": 103,
+      "name": "Tokiyo",
+      "description": "Игровой клуб интернет-кафе",
+      "location": {
+        "address": "Шахрисабз, ул. Ипак Йули, 340",
+        "coordinates": [39.048245, 66.834215],
+        "time": "24/7"
+      },
+      "photos": ["https://avatars.mds.yandex.net/i?id=ece4823c6ca9ae78d42bb0e0354d681d-5220954-images-thumbs&n=13",
+                 "https://avatars.mds.yandex.net/i?id=e0f620214d22d2c2f89875d6db1ecb34e1b5fc36-5220232-images-thumbs&n=13"],
+
+      "reviews": [
+        {
+          "user": "Назаров Хаким",
+          "rating": 4,
+          "text": "Среднячок, там где я обычно играю намного прекраснее"
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "\n+998 93 438 25 75"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar": true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent_STANDART": 11000,
+        "pc_rent_VIP": 12500,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "24/7",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    },
+                                                              {
+      "id": 104,
+      "name": "Game Club Playstation",
+      "description": "Игровой клуб интернет-кафе",
+      "location": {
+        "address": "\nШахрисабз, ул. Ипак Йули, 24A",
+        "coordinates": [39.085443, 66.838340],
+        "time": "24/7"
+      },
+      "photos": ["https://avatars.mds.yandex.net/i?id=ebaeb0698dbe7d5a3c05855d7758f022e6db7914-4404575-images-thumbs&n=13",
+                 "https://avatars.mds.yandex.net/i?id=2d2734c1014acb55873c51351078a1ac17a19dcb-4908143-images-thumbs&n=13"],
+
+      "reviews": [
+        {
+          "user": "Анда",
+          "rating": 4,
+          "text": "Среднячок, там где я обычно играю намного прекраснее"
+        }
+      ],
+      "administration": {
+        "contact": "-",
+        "number": "\n+998 91 949 91 90"
+      },
+      "services": {
+        "Wi-Fi": true,
+        "bar": true,
+        "kitchen": true,
+        "consoles": true,
+        "games": true,
+        "relaxation_zones": true
+      },
+      "prices": {
+        "pc_rent_STANDART": 11000,
+        "pc_rent_VIP": 12500,
+        "special_offers": "Скидка 20% после 22:00"
+      },
+      "working_hours": "24/7",
+      "club_card": {
+        "loyalty_program": true,
+        "benefits": "Скидки постоянным клиентам, бонусные игры"
+      },
+      "comments": "Дополнительная информация и акции доступны на сайте клуба"
+    }
   ]
 }

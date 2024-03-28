@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Initialize Yandex Maps
   ymaps.ready(initMap);
 
+
   // Set up event listeners for dynamically generated "Подробнее" buttons
   document.addEventListener('click', function (e) {
     if (e.target && e.target.matches("button[data-club-id]")) {
@@ -50,11 +51,31 @@ document.addEventListener('DOMContentLoaded', function () {
 // Initialize the map
 function initMap() {
   myMap = new ymaps.Map("map", {
-    center: [41.311081, 69.240562], // Example coordinates, replace as needed
-    zoom: 12
+    center: [69.240073, 41.299496], // Center on Tashkent, Uzbekistan
+    zoom: 5
   });
-  loadMarkers(); // Load initial set of markers
+
+  loadMarkers(); // Load markers
+  loadPolygons(); // Load polygons
 }
+function loadPolygons() {
+  fetch('/static/poligons.json')
+    .then(response => response.json())
+    .then(data => {
+      data.features.forEach(feature => {
+        const polygon = new ymaps.Polygon(feature.geometry.coordinates, {
+          hintContent: feature.properties.name
+        }, {
+          fillColor: feature.properties.fill,
+          strokeColor: feature.properties.stroke,
+          opacity: 0.5
+        });
+        myMap.geoObjects.add(polygon);
+      });
+    })
+    .catch(error => console.error('Error loading polygons:', error));
+}
+
 
 // Load markers onto the map
 function loadMarkers() {
@@ -103,7 +124,7 @@ function createBalloonContent(club) {
   // Вычисление среднего рейтинга из массива отзывов
   let totalRating = club.reviews.reduce((acc, review) => acc + review.rating, 0);
   let averageRating = club.reviews.length > 0 ? (totalRating / club.reviews.length) : 0;
-  
+
   // Получение строки со звёздами для рейтинга
   let ratingStars = getRatingStars(averageRating);
 
