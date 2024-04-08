@@ -1,5 +1,5 @@
 let myMap; // Declare myMap globally
-
+var polygons = {};
 // Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function () {
   // Initialize Yandex Maps
@@ -48,33 +48,42 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-// Initialize the map
 function initMap() {
   myMap = new ymaps.Map("map", {
-    center: [69.240073, 41.299496], // Center on Tashkent, Uzbekistan
-    zoom: 5
+    center: [41.299496, 69.240073], // Правильно указанный центр Ташкента
+    zoom: 10 // Изменил масштаб для лучшего отображения
   });
 
-  loadMarkers(); // Load markers
-  loadPolygons(); // Load polygons
+  loadMarkers(); // Загружаем маркеры
+  loadPolygons(); // Загружаем полигоны
 }
+
+// Загрузка и анимация полигонов
 function loadPolygons() {
-  fetch('/static/poligons.json')
+  fetch('/static/poligons.json') // Убедитесь, что путь к файлу верный
     .then(response => response.json())
     .then(data => {
-      data.features.forEach(feature => {
+      console.log("Всего полигонов для загрузки:", data.features.length); // Выводим количество полигонов
+      data.features.forEach((feature, index) => {
+        console.log(`Загрузка полигона ${index + 1}: ${feature.properties.name}`); // Выводим информацию о каждом полигоне перед его добавлением
         const polygon = new ymaps.Polygon(feature.geometry.coordinates, {
           hintContent: feature.properties.name
         }, {
           fillColor: feature.properties.fill,
           strokeColor: feature.properties.stroke,
-          opacity: 0.5
+          strokeWidth: feature.properties["stroke-width"],
+          fillOpacity: feature.properties["fill-opacity"],
+          strokeOpacity: feature.properties["stroke-opacity"]
         });
         myMap.geoObjects.add(polygon);
       });
     })
-    .catch(error => console.error('Error loading polygons:', error));
+    .catch(error => {
+      console.error('Error loading polygons:', error); // Выводим ошибку, если что-то пошло не так
+    });
 }
+
+
 
 
 // Load markers onto the map

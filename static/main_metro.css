@@ -405,3 +405,97 @@ section {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
 }
+
+
+
+/* Стили для основной кнопки */
+#linesButton {
+  background-color: #333; /* Темно-серый цвет */
+  color: #fff; /* Белый текст */
+  padding: 12px 20px;
+  border: 2px solid transparent; /* Прозрачная граница */
+  cursor: pointer;
+  border-radius: 8px; /* Скругленные края */
+  font-size: 18px;
+  transition: background-color 0.3s, color 0.3s; /* Плавное изменение цвета */
+}
+
+#linesButton:hover {
+  background-color: #555; /* Чуть светлее серого при наведении */
+  color: #ddd; /* Светло-серый текст */
+}
+
+/* Стили для меню с линиями метро */
+#linesMenu {
+  margin-top: 12px;
+  background-color: #f3f3f3; /* Светло-серый фон */
+  border-radius: 8px; /* Скругленные края */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Небольшая тень */
+}
+
+#linesMenu ul {
+  list-style: none; /* Убрать маркеры списка */
+  margin: 0;
+  padding: 0;
+}
+
+#linesMenu ul li {
+  border-bottom: 1px solid #ddd; /* Разделительные линии */
+}
+
+#linesMenu ul li:last-child {
+  border-bottom: none; /* Убрать линию у последнего элемента */
+}
+
+/* Стили для кнопок линий метро */
+.metroLine {
+  background-color: transparent; /* Прозрачный фон */
+  color: #333; /* Темно-серый текст */
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 0; /* Убрать скругление */
+  text-align: left; /* Выравнивание текста по левому краю */
+  width: 100%; /* Ширина кнопки */
+  box-sizing: border-box; /* Размер включает padding и border */
+  transition: background-color 0.3s; /* Плавное изменение фона */
+}
+
+.metroLine:hover {
+  background-color: #ddd; /* Светло-серый фон при наведении */
+}
+
+
+
+.metro-balloon {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f2f4f6;
+  border: 1px solid #ccd1d9;
+  border-radius: 5px;
+  padding: 10px;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+}
+
+.metro-balloon h3 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.metro-balloon p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 14px;
+}
+
+.blink {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+      opacity: 0;
+  }
+}
