@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='dev.css') }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Главное меню</title>
+</head>
+
+<body>
+
+    <form action="" method="post">
+        <h2>Регистрация для получения API-ключа</h2>
+        {% if message %}
+        <p class="message">{{ message }}</p>
+        {% endif %}
+        <label for="developer_name">Имя разработчика:</label>
+        <input type="text" id="developer_name" name="developer_name" required>
+        <button type="submit">Регистрация</button>
+    </form>
+    <div class="api-docs">
+        <h1>Документация API</h1>
+        <p>Эта документация предоставляет подробную информацию о доступных точках доступа, методах запросов и форматах
+            данных нашего API. Для доступа к API необходим API-ключ, который вы можете получить, зарегистрировавшись.
+        </p>
+
+        <h2>Начало работы</h2>
+        <p>Для выполнения запроса к API используйте следующий заголовок:</p>
+        <code>Authorization: Bearer ВАШ_API_КЛЮЧ</code>
+
+        <h2>Точки доступа</h2>
+
+        <h3>/api/clubs</h3>
+        <p>Возвращает список клубов.</p>
+        <ul>
+            <li><strong>Метод:</strong> GET</li>
+            <li><strong>Параметры запроса:</strong> Отсутствуют</li>
+            <li><strong>Пример запроса:</strong>
+                <code>curl -H "Authorization: Bearer ВАШ_API_КЛЮЧ" https://example.com/api/clubs</code>
+            </li>
+            <li><strong>Ответ:</strong> JSON-массив клубов.</li>
+        </ul>
+
+        <h3>/api/club/{id}</h3>
+        <p>Возвращает детали определенного клуба.</p>
+        <ul>
+            <li><strong>Метод:</strong> GET</li>
+            <li><strong>Параметр пути:</strong> <code>id</code> - Идентификатор клуба.</li>
+            <li><strong>Пример запроса:</strong>
+                <code>curl -H "Authorization: Bearer ВАШ_API_КЛЮЧ" https://example.com/api/club/123</code>
+            </li>
+            <li><strong>Ответ:</strong> JSON-объект, содержащий детали клуба.</li>
+        </ul>
+
+        <h3>/api/club</h3>
+        <p>Создает новый клуб.</p>
+        <ul>
+            <li><strong>Метод:</strong> POST</li>
+            <li><strong>Тело запроса:</strong> JSON-объект с данными клуба.</li>
+            <li><strong>Пример запроса:</strong>
+                <code>curl -X POST -H "Authorization: Bearer ВАШ_API_КЛЮЧ" -H "Content-Type: application/json" -d '{"name": "Новый Клуб", "location": "Город"}' https://example.com/api/club</code>
+            </li>
+            <li><strong>Ответ:</strong> JSON-объект с деталями созданного клуба.</li>
+        </ul>
+
+        <h2>Ограничения по частоте запросов</h2>
+        <p>Для обеспечения справедливого использования API установлены ограничения по частоте запросов. Превышение этих
+            лимитов приведет к ограничению ваших запросов. Пожалуйста, не делайте более 100 запросов в минуту.</p>
+
+        <h2>Ошибки</h2>
+        <p>API использует стандартные коды ответов HTTP для указания на успех или неудачу выполнения запросов:</p>
+        <ul>
+            <li><strong>200 OK:</strong> Запрос был успешно выполнен.</li>
+            <li><strong>401 Unauthorized:</strong> Отсутствует или неверен API-ключ.</li>
+            <li><strong>404 Not Found:</strong> Запрашиваемый ресурс не найден.</li>
+            <li><strong>500 Internal Server Error:</strong> Произошла ошибка на нашей стороне. Пожалуйста, попробуйте
+                позже.</li>
+        </ul>
+
+        <h2>Использование API с Python</h2>
+        <p>Вы можете легко использовать наш API в своих Python-проектах. В этом разделе мы рассмотрим, как отправлять
+            запросы к API и обрабатывать ответы с использованием библиотеки <code>requests</code>.</p>
+
+        <h3>Установка библиотеки requests</h3>
+        <p>Если у вас еще не установлена библиотека <code>requests</code>, вы можете легко установить ее с помощью
+            следующей команды в терминале:</p>
+        <code>pip install requests</code>
+
+        <h3>Примеры запросов</h3>
+
+        <h4>Базовый GET-запрос</h4>
+        <p>Для получения данных от API вы можете использовать метод GET. Ниже приведен пример запроса к эндпоинту API
+            для получения списка клубов:</p>
+        <code>
+# Импортируем библиотеку/n
+import requests/n
+
+# Задаем URL эндпоинта/n
+url = "https://example.com/api/clubs"/n
+
+# Ваши данные для авторизации/n
+headers = {"Authorization": "Bearer ВАШ_API_КЛЮЧ"}/n
+
+# Выполняем запрос
+response = requests.get(url, headers=headers)
+
+# Выводим результат
+print(response.json())
+</code>
+
+        <h4>Обработка ответа</h4>
+        <p>Ответ от API придет в формате JSON. Вот как вы можете извлечь данные из ответа и работать с ними:</p>
+        <code>
+clubs = response.json()
+for club in clubs:
+    print(club["name"], club["location"])
+</code>
+
+        <h4>Обработка ошибок</h4>
+        <p>Важно обрабатывать возможные ошибки при запросах к API. Вот пример, как проверить статус ответа и обработать
+            ошибки:</p>
+        <code>
+if response.status_code == 200:
+    clubs = response.json()
+    for club in clubs:
+        print(club["name"], club["location"])
+else:
+    print("Ошибка:", response.status_code)
+</code>
+
+        <h4>POST-запросы</h4>
+        <p>Для создания или изменения данных используются POST-запросы. Пример отправки POST-запроса для создания нового
+            клуба:</p>
+        <code>
+data = {
+    "name": "Новый Клуб",
+    "location": "Город"
+}
+
+response = requests.post(url, headers=headers, json=data)
+
+if response.status_code == 201:
+    print("Клуб успешно создан.")
+else:
+    print("Ошибка при создании клуба:", response.status_code)
+</code>
+
+        <p>В этом примере мы используем <code>json=data</code> для отправки данных в формате JSON в теле запроса.
+            Убедитесь, что ваш API поддерживает прием данных в таком формате.</p>
+
+        <p>Эти примеры дадут вам основу для работы с нашим API с использованием Python. Для выполнения более сложных
+            операций обратитесь к полной документации API.</p>
+
+
+
+    </div>
+</body>
+
+</html>

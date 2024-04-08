@@ -7,6 +7,8 @@ import json
 from math import radians, cos, sin, asin, sqrt
 from admin import admin_bp
 import os
+import secrets
+from functools import wraps
 
 app = Flask(__name__)
 app.register_blueprint(admin_bp, url_prefix='/admin')
@@ -62,9 +64,31 @@ def insert_main_admin():
         db.session.add(main_admin)
         db.session.commit()
 
+class DeveloperAPIKey(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    developer_name = db.Column(db.String(100), nullable=False)
+    api_key = db.Column(db.String(128), unique=True, nullable=False)
+
+    def __repr__(self):
+        return '<DeveloperAPIKey %r>' % self.developer_name
+
+
 with app.app_context():
     db.create_all()
     insert_main_admin()
+
+
+def require_api_key(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        api_key = request.headers.get('Authorization')
+        if api_key:
+            api_key = api_key.replace('Bearer ', '', 1)
+            developer = DeveloperAPIKey.query.filter_by(api_key=api_key).first()
+            if developer:
+                return f(*args, **kwargs)
+        return jsonify({"error": "Unauthorized"}), 401
+    return decorated_function
 
 @app.route('/')
 def home():
@@ -129,8 +153,7 @@ def index():
         flash('Пользователь не найден.', 'error')
         return redirect('/login')
 
-    # Используйте атрибут image_path объекта user, чтобы передать путь к изображению в шаблон
-    # Если image_path не определен, вы можете установить значение по умолчанию
+
     image_path = user.image_path if user.image_path else 'default.jpg'
 
     return render_template('index.html', image_path=image_path)
@@ -279,11 +302,42 @@ def update_club(club_id):
 
 @app.route('/metro-map')
 def metro_map():
-    return render_template('map.html')
+    with open('static/metro_stations.json') as f:
+        stations = json.load(f)
+    return render_template('map.html', stations=stations)
+
+
 
 @app.route('/get-poligons')
 def get_poligons():
     return app.send_static_file('path/to/poligons.json')
+
+
+@app.route('/developer/register', methods=['GET', 'POST'])
+def register_developer():
+    if request.method == 'POST':
+        developer_name = request.form.get('developer_name')
+        if not developer_name:
+            return render_template('register_developer.html', message="Имя разработчика обязательно к заполнению")
+        
+        # Проверяем, существует ли уже разработчик с таким именем
+        existing_developer = DeveloperAPIKey.query.filter_by(developer_name=developer_name).first()
+        if existing_developer:
+            # Если разработчик найден, возвращаем его существующий API-ключ
+            return render_template('register_developer.html', message=f"Разработчик уже зарегистрирован. Ваш API-ключ: {existing_developer.api_key}")
+        
+        # Если разработчик не найден, создаем новый API-ключ
+        new_api_key = secrets.token_urlsafe(32)
+        new_developer = DeveloperAPIKey(developer_name=developer_name, api_key=new_api_key)
+        db.session.add(new_developer)
+        db.session.commit()
+
+        # Возвращаем шаблон с сообщением об успешной регистрации и новым API-ключом
+        return render_template('register_developer.html', message=f"Регистрация успешна. Ваш API-ключ: {new_api_key}")
+    
+    return render_template('register_developer.html')
+
+
 
 
 if __name__ == '__main__':
