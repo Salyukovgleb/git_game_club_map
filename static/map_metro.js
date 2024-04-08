@@ -51,6 +51,19 @@ function fetchStations() {
         })
         .catch(error => console.error('Error loading the metro stations data:', error));
 }
+function getNextThreeTimes(times, currentTimeString) {
+    const currentTimeMinutes = timeStringToMinutes(currentTimeString);
+    return times
+        .map(time => ({ time, minutes: timeStringToMinutes(time) }))
+        .filter(({ minutes }) => minutes >= currentTimeMinutes)
+        .slice(0, 3)
+        .map(({ time }) => time);
+}
+
+function timeStringToMinutes(timeString) {
+    const [hours, minutes] = timeString.split(':').map(Number);
+    return hours * 60 + minutes;
+}
 
 function addMetroStations(data) {
     data.forEach(station => {
@@ -144,24 +157,95 @@ function drawAllMetroLines() {
     });
 }
 
+function getCurrentTimeForTashkent() {
+    const now = new Date();
+    const currentTimeUtc = now.getTime() + (now.getTimezoneOffset() * 60000); // Конвертация в UTC
+    const tashkentOffset = 5; // UTC+5 для Ташкента
+    const tashkentTime = new Date(currentTimeUtc + (3600000 * tashkentOffset));
+
+    const currentHours = tashkentTime.getHours();
+    const currentMinutes = tashkentTime.getMinutes();
+    return `${currentHours < 10 ? '0' + currentHours : currentHours}:${currentMinutes < 10 ? '0' + currentMinutes : currentMinutes}`;
+}
 
 function updateMetroMarkersTimes() {
-    console.log("Обновление времени прибытия метро...");
+    console.log("Updating metro arrival times...");
     const currentTimeString = getCurrentTimeForTashkent();
 
     metroStations.forEach(station => {
         const nextTimesForward = getNextThreeTimes(station.timetable["Вперед"], currentTimeString);
         const nextTimesBackward = getNextThreeTimes(station.timetable["Назад"], currentTimeString);
 
-        station.placemark.properties.set('balloonContentBody', 'Линия: ' + station.line + '<br>' +
-            'Следующие прибытия:<br>Вперед: ' + nextTimesForward.join(', ') + '<br>' +
-            'Назад: ' + nextTimesBackward.join(', ')
-        );
+        station.placemark.properties.set('balloonContentBody', `
+            <div class="metro-balloon">
+                <p>Линия: <strong>${station.line}</strong></p>
+                <p>Следующие прибытия:<br>
+                Вперед: <span class="metro-time blink">${nextTimesForward.join(', ')}</span><br>
+                Назад: <span class="metro-time blink">${nextTimesBackward.join(', ')}</span></p>
+                <button onclick="buildRoute([${station.coordinates}])">Как добраться?</button>
+            </div>
+        `);
     });
 }
-station.placemark = placemark; // Добавьте эту строку в функцию addMetroStations после создания placemark
 
-// И наконец, добавьте регулярное обновление времени прибытия:
+function buildRoute(destination) {
+    if (!navigator.geolocation) {
+        alert("Геолокация не поддерживается вашим браузером");
+        return;
+    }
+
+    function success(position) {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+
+        ymaps.route([
+            [latitude, longitude],
+            destination
+        ], {
+            multiRoute: true,
+            routingMode: 'pedestrian'
+        }).then(function (route) {
+            myMap.geoObjects.remove(myRoute);
+            myRoute = route;
+            myMap.geoObjects.add(route);
+
+            // Расчет времени и расстояния
+            const time = Math.round(route.getJamsTime() / 60); // Время в минутах
+            const distance = route.getLength() / 1000; // Расстояние в километрах
+
+            // Обновление информации в панели маршрута
+            document.getElementById('routeTime').textContent = `Время в пути: ${time} мин.`;
+            document.getElementById('routeDistance').textContent = `Расстояние: ${distance.toFixed(2)} км.`;
+
+            // Отображение панели маршрута
+            document.getElementById('routeInfoPanel').style.display = 'block';
+        }, function (error) {
+            alert("Возникла ошибка: " + error.message);
+        });
+    }
+
+    function error() {
+        alert("Невозможно получить ваше местоположение");
+    }
+
+    navigator.geolocation.getCurrentPosition(success, error);
+}
+
+function clearRoute() {
+    if (myRoute) {
+        myMap.geoObjects.remove(myRoute);
+        myRoute = null; // Обнулите переменную маршрута после его удаления
+        
+        // Скрыть панель информации о маршруте после удаления маршрута
+        document.getElementById('routeInfoPanel').style.display = 'none';
+    }
+}
+document.getElementById('clearRoute').addEventListener('click', clearRoute);
+
+
+let myRoute; // Для хранения текущего маршрута
 document.addEventListener('DOMContentLoaded', function () {
-    setInterval(updateMetroMarkersTimes, 15000);
+    setInterval(updateMetroMarkersTimes, 3000); // Обновление каждые 3 секунды
 });
+
+//крипт для навигации

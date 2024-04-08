@@ -499,3 +499,37 @@ section {
       opacity: 0;
   }
 }
+#routeInfoPanel {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  z-index: 1000; /* Убедитесь, что панель находится поверх карты */
+  display: none; /* Остаётся скрытой до активации */
+}
+
+#routeInfoPanel p {
+  margin: 10px 0; /* Отступы между параграфами */
+  font-size: 16px; /* Размер шрифта текста */
+  color: #333; /* Цвет текста */
+}
+
+#routeInfoPanel button {
+  display: block; /* Занимает всю доступную ширину */
+  width: 100%;
+  padding: 10px 0; /* Вертикальные отступы в кнопке */
+  background-color: #007bff; /* Фоновый цвет кнопки */
+  color: white; /* Цвет текста кнопки */
+  border: none; /* Убираем рамку кнопки */
+  border-radius: 5px; /* Скругление углов кнопки */
+  cursor: pointer; /* Курсор в виде указателя */
+  font-size: 16px; /* Размер шрифта текста кнопки */
+  margin-top: 15px; /* Отступ сверху */
+}
+
+#routeInfoPanel button:hover {
+  background-color: #0056b3; /* Цвет кнопки при наведении */
+}
