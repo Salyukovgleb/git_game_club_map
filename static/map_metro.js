@@ -33,13 +33,22 @@ function init() {
         zoom: 12
     }, {
         searchControlProvider: 'yandex#search'
-
     });
+
+    // Удаление стандартных элементов управления
+    myMap.controls.remove('geolocationControl'); // удаляем геолокацию
+    myMap.controls.remove('searchControl'); // удаляем поиск
+    myMap.controls.remove('trafficControl'); // удаляем контроль трафика
+    myMap.controls.remove('typeSelector'); // удаляем тип
+    myMap.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+    myMap.controls.remove('zoomControl'); // удаляем контрол зуммирования
+    myMap.controls.remove('rulerControl'); // удаляем контрол правил
+
 
     fetchStations();
     attachEventListeners();
-
 }
+
 
 function fetchStations() {
     fetch('static/metro_stations.json')
@@ -70,14 +79,14 @@ function addMetroStations(data) {
         var placemark = new ymaps.Placemark(station.coordinates, {
             balloonContentHeader: `<strong>${station.name}</strong>`,
             balloonContentBody: `
-    <div class="metro-balloon">
-        <h3></h3>
-        <p>Линия: <strong>${station.line}</strong></p>
-        <p>Следующие прибытия:<br>
-        Вперед: <span class="metro-time blink">${station.timetable.Вперед.slice(0, 3).join(', ')}</span><br>
-        Назад: <span class="metro-time blink">${station.timetable.Назад.slice(0, 3).join(', ')}</span></p>
-    </div>
-`,
+                <div class="metro-balloon">
+                    <p>Линия: <strong>${station.line}</strong></p>
+                    <p>Следующие прибытия:<br>
+                    Вперед: <span class="metro-time blink">${station.timetable.Вперед.slice(0, 3).join(', ')}</span><br>
+                    Назад: <span class="metro-time blink">${station.timetable.Назад.slice(0, 3).join(', ')}</span></p>
+                    <button id="routeButton-${station.id}" class="route-button">Как добраться?</button>
+                </div>
+            `,
         }, {
             iconLayout: 'default#image',
             iconImageHref: 'static/images/metro_2.png',
@@ -86,7 +95,17 @@ function addMetroStations(data) {
         });
 
         myMap.geoObjects.add(placemark);
-        metroStations.push({ ...station, placemark }); // Обновлено: Сохраняем метку в массив вместе с данными станции
+        metroStations.push({ ...station, placemark });
+
+        // Добавляем обработчик на открытие балуна
+        placemark.events.add('balloonopen', function () {
+            var button = document.getElementById(`routeButton-${station.id}`);
+            if (button) {
+                button.onclick = function () {
+                    buildRoute(station.coordinates);
+                };
+            }
+        });
     });
 }
 

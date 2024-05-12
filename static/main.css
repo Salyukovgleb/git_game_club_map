@@ -3,7 +3,18 @@ body {
   padding: 0;
   background: #101e23;
   color: #cdcdcd;
+  width: 100%;
+  height: 100%;
   font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 ::-webkit-scrollbar {
@@ -17,23 +28,20 @@ body {
   background: #000;
 }
 
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 nav {
   position: sticky;
   top: 0;
   height: 84px;
   background: #192f37;
-
+  z-index: 10;
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
-}
-
-#menuToggle {
-  position: sticky;
-  top: 0;
-  width: 400px;
-  z-index: 1;
-  -webkit-user-select: none;
-  user-select: none;
 }
 
 .close {
@@ -82,34 +90,42 @@ nav {
     background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
 
-.close_menu {
+#menu {
+  width: 400px;
+}
+
+.closed {
   display: none;
   position: absolute;
-  width: 100%;
+  width: 400px;
   height: 100%;
   top: 0;
   left: 0;
   margin: 0;
   padding: 0;
   background: #ededed;
+  z-index: 20;
 }
 
-.open_menu {
+.opened {
   display: block;
   width: 100%;
   height: 97.1vh;
   margin: 0;
+  position: absolute;
+  top: 0;
   padding: 20px 0 0 32px;
   background: #192f37;
   animation: slideInMenu 1s ease forwards;
+  z-index: 20;
 }
 
-.open_menu ul {
+.opened ul {
   margin-top: 24px;
   padding: 0;
 }
 
-.open_menu li {
+.opened li {
   padding: 16px 0;
   font-size: 20px;
   list-style-type: none;
@@ -119,20 +135,20 @@ nav {
   gap: 16px;
 }
 
-.open_menu li i {
+.opened li i {
   font-size: 18px;
   transition: color 0.3s ease;
   color: #c7c6c6;
 }
 
-.open_menu li a {
+.opened li a {
   text-decoration: none;
   transition: color 0.3s ease;
   color: #c7c6c6;
 }
 
-.open_menu li:hover i,
-.open_menu li:hover a {
+.opened li:hover i,
+.opened li:hover a {
   color: tomato;
 }
 
@@ -157,15 +173,6 @@ nav {
   100% {
     background-position: 0% 50%;
   }
-}
-
-.main_info {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .info {
@@ -265,69 +272,72 @@ section {
   margin: auto; /* Автоматические отступы для центрирования карты внутри .chouse_club */
 }
 
-
-
-
-
-
 .button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; /* Позволяет кнопкам переноситься на новую строку на маленьких экранах */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Позволяет кнопкам переноситься на новую строку на маленьких экранах */
 }
 
 /* Общий стиль для всех кнопок */
-.icon-button, .btn.btn-primary, .btn.btn-metro {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 25px; /* Немного уменьшенные отступы */
-    background-color: #343a40; /* Темно-серый цвет фона для единства стиля */
-    color: white;
-    border: none;
-    border-radius: 20px; /* Немного уменьшенные скругленные углы */
-    cursor: pointer;
-    font-size: 18px; /* Немного уменьшенный размер шрифта */
-    transition: background-color 0.2s, transform 0.1s;
-    text-decoration: none;
-    margin: 5px; /* Отступ вокруг кнопок */
-    width: auto; /* Автоматическая ширина в зависимости от содержимого */
-    min-width: 140px; /* Немного уменьшенная минимальная ширина кнопки */
+.icon-button,
+.btn.btn-primary,
+.btn.btn-metro {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 25px; /* Немного уменьшенные отступы */
+  background-color: #343a40; /* Темно-серый цвет фона для единства стиля */
+  color: white;
+  border: none;
+  border-radius: 20px; /* Немного уменьшенные скругленные углы */
+  cursor: pointer;
+  font-size: 18px; /* Немного уменьшенный размер шрифта */
+  transition: background-color 0.2s, transform 0.1s;
+  text-decoration: none;
+  margin: 5px; /* Отступ вокруг кнопок */
+  width: auto; /* Автоматическая ширина в зависимости от содержимого */
+  min-width: 140px; /* Немного уменьшенная минимальная ширина кнопки */
 }
 
 /* Стили для эффектов наведения и активации */
-.icon-button:hover, .btn.btn-primary:hover, .btn.btn-metro:hover,
-.icon-button:focus, .btn.btn-primary:focus, .btn.btn-metro:focus {
-    background-color: #23272b; /* Чуть светлее темный при наведении */
-    transform: translateY(-2px);
+.icon-button:hover,
+.btn.btn-primary:hover,
+.btn.btn-metro:hover,
+.icon-button:focus,
+.btn.btn-primary:focus,
+.btn.btn-metro:focus {
+  background-color: #23272b; /* Чуть светлее темный при наведении */
+  transform: translateY(-2px);
 }
 
-.icon-button:active, .btn.btn-primary:active, .btn.btn-metro:active {
-    background-color: #1d2124; /* Еще более темный цвет при нажатии */
-    transform: translateY(0);
+.icon-button:active,
+.btn.btn-primary:active,
+.btn.btn-metro:active {
+  background-color: #1d2124; /* Еще более темный цвет при нажатии */
+  transform: translateY(0);
 }
 
 /* Медиа-запросы для адаптации стилей под разные размеры экранов */
 @media (max-width: 768px) {
-    .icon-button, .btn.btn-primary, .btn.btn-metro {
-        padding: 8px 18px; /* Уменьшаем отступы */
-        font-size: 16px; /* Уменьшаем размер шрифта */
-        min-width: 110px; /* Уменьшаем минимальную ширину кнопки */
-    }
+  .icon-button,
+  .btn.btn-primary,
+  .btn.btn-metro {
+    padding: 8px 18px; /* Уменьшаем отступы */
+    font-size: 16px; /* Уменьшаем размер шрифта */
+    min-width: 110px; /* Уменьшаем минимальную ширину кнопки */
+  }
 }
 
 @media (max-width: 480px) {
-    .icon-button, .btn.btn-primary, .btn.btn-metro {
-        padding: 6px 12px; /* Дополнительно уменьшаем отступы для маленьких экранов */
-        font-size: 14px; /* Дополнительно уменьшаем размер шрифта */
-        min-width: 90px; /* Дополнительно уменьшаем минимальную ширину кнопки */
-    }
+  .icon-button,
+  .btn.btn-primary,
+  .btn.btn-metro {
+    padding: 6px 12px; /* Дополнительно уменьшаем отступы для маленьких экранов */
+    font-size: 14px; /* Дополнительно уменьшаем размер шрифта */
+    min-width: 90px; /* Дополнительно уменьшаем минимальную ширину кнопки */
+  }
 }
-
-
-
-
 
 #clubDetails {
   background-color: #f8f9fa;
@@ -372,36 +382,36 @@ section {
 /* Custom icons for different sections */
 .address-icon::before {
   content: "\f3c5"; /* FontAwesome map-marker-alt */
-  font-family: 'Font Awesome 5 Free';
+  font-family: "Font Awesome 5 Free";
   font-weight: 900;
 }
 
 .time-icon::before {
   content: "\f017"; /* FontAwesome clock */
-  font-family: 'Font Awesome 5 Free';
+  font-family: "Font Awesome 5 Free";
   font-weight: 900;
 }
 
 .contact-icon::before {
   content: "\f095"; /* FontAwesome phone */
-  font-family: 'Font Awesome 5 Free';
+  font-family: "Font Awesome 5 Free";
   font-weight: 900;
 }
 
 .services-icon::before {
   content: "\f0c0"; /* FontAwesome users */
-  font-family: 'Font Awesome 5 Free';
+  font-family: "Font Awesome 5 Free";
   font-weight: 900;
 }
 
 .price-icon::before {
   content: "\f155"; /* FontAwesome dollar-sign */
-  font-family: 'Font Awesome 5 Free';
+  font-family: "Font Awesome 5 Free";
   font-weight: 900;
 }
 
 .card-icon::before {
   content: "\f2f2"; /* FontAwesome id-card */
-  font-family: 'Font Awesome 5 Free';
+  font-family: "Font Awesome 5 Free";
   font-weight: 900;
 }
