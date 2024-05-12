@@ -458,36 +458,55 @@ def home():
 
 
 ```json
-[
-    {
-        "id": 1,
-        "name": "Club A",
-        "description": "This is a description of Club A.",
-        "address": "123 Main St, City, Country",
-        "phone": "+1234567890",
-        "rating": 4.5,
-        "reviews": [
-            {
-                "user": "User1",
-                "comment": "Great place!",
-                "rating": 5
+{
+    "clubsData": [
+        {
+            "id": 1,
+            "name": "DENVER GAME CLUB",
+            "description": "4 \u043a\u0430\u0431\u0438\u043d\u043a\u0438 5x5 + \u0412\u0438\u043f & \u041b\u044e\u043a\u0441 \u043a\u0430\u0431\u0438\u043d\u043a\u0438. \u041f\u0435\u0440\u0435\u0444\u0435\u0440\u0438\u044f \u043e\u0442 Redragon \u0438 HyperX",
+            "location": {
+                "address": "\u200b\u0427\u0438\u043b\u0430\u043d\u0437\u0430\u0440 \u0426 \u043a\u0432\u0430\u0440\u0442\u0430\u043b \u043c\u0438\u043a\u0440\u043e\u0440\u0430\u0439\u043e\u043d, 1\u0430/1\u200b1 \u044d\u0442\u0430\u0436",
+                "coordinates": [
+                    41.315569,
+                    69.279737
+                ],
+                "time": "24/7"
             },
-            {
-                "user": "User2",
-                "comment": "Good music.",
-                "rating": 4
-            }
-        ]
-    },
-    {
-        "id": 2,
-        "name": "Club B",
-        "description": "This is a description of Club B.",
-        "address": "234 Second St, City, Country",
-        "phone": "+0987654321",
-        "rating": 4.0
-    }
-]
+            "photos": [
+                "https://lh3.googleusercontent.com/p/AF1QipMa8c9hEFJkd7tR6CXnOP79BLgSuVpOBgJYwuh-=s1360-w1360-h1020-rw",
+                "https://i4.photo.2gis.com/images/branch/0/30258560163944869_b67b_328x170.jpg"
+            ],
+            "reviews": [
+                {
+                    "user": "Ulugbek Khudoynazarov",
+                    "rating": 5,
+                    "text": "\u041e\u0447\u0435\u043d\u044c \u043a\u0440\u0443\u0442\u043e\u0435 \u043c\u0435\u0441\u0442\u043e! \u041c\u043e\u0449\u043d\u044b\u0435 \u043a\u043e\u043c\u043f\u044b, \u0443\u044e\u0442\u043d\u0430\u044f \u0430\u0442\u043c\u043e\u0441\u0444\u0435\u0440\u0430, \u0431\u0430\u0440 \u0441 \u0445\u043e\u0442-\u0434\u043e\u0433\u0430\u043c\u0438 \u0438 \u043c\u043d\u043e\u0433\u0438\u043c\u0438 \u0434\u0440\u0443\u0433\u0438\u043c\u0438 \u0441\u043d\u0435\u043a\u0430\u043c\u0438. \u041f\u0440\u0438\u0445\u043e\u0434\u0438\u0442\u0435 \u043d\u0435 \u043f\u043e\u0436\u0430\u043b\u0435\u0435\u0442\u0435!"
+                }
+            ],
+            "administration": {
+                "contact": "-",
+                "number": "+998 99\u2012022\u201268\u201268, +998 99\u2012023\u201268\u201268"
+            },
+            "services": {
+                "Wi-Fi": true,
+                "bar": true,
+                "kitchen": true,
+                "consoles": true,
+                "games": true,
+                "relaxation_zones": true
+            },
+            "prices": {
+                "pc_rent_STANDART": 14400,
+                "pc_rent_VIP": 17700,
+                "special_offers": "\u0421\u043a\u0438\u0434\u043a\u0430 20% \u043f\u043e\u0441\u043b\u0435 22:00"
+            },
+            "working_hours": "9:00 - 24:00",
+            "club_card": {
+                "loyalty_program": true,
+                "benefits": "\u0421\u043a\u0438\u0434\u043a\u0438 \u043f\u043e\u0441\u0442\u043e\u044f\u043d\u043d\u044b\u043c \u043a\u043b\u0438\u0435\u043d\u0442\u0430\u043c, \u0431\u043e\u043d\u0443\u0441\u043d\u044b\u0435 \u0438\u0433\u0440\u044b"
+            },
+            "comments": "\u0414\u043e\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u0430\u044f \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044f \u0438 \u0430\u043a\u0446\u0438\u0438 \u0434\u043e\u0441\u0442\u0443\u043f\u043d\u044b \u043d\u0430 \u0441\u0430\u0439\u0442\u0435 \u043a\u043b\u0443\u0431\u0430"
+        }
 ```
 
 ### `metro_stations.json`
