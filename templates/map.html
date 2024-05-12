@@ -1,44 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!DOCTYPE html>
-  <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='main_metro.css') }}" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='main_metro.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
       integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="../static/main.css" />
     <title>Главное меню</title>
+  </head>
+
+  <body>
+    <canvas id="starCanvas"></canvas>
     <nav>
-      <div id="menuToggle">
-        <button id="open_menu" class="btn_menu">
-          <i class="fa-solid fa-bars"></i>
-        </button>
+      <header>
+        <div>
+          <button id="open_menu" class="btn_menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+        <div>
+          <p class="info">Eventra</p>
+        </div>
+        <div></div>
+      </header>
+      <div id="menu" class="closed">
         <button id="close_menu" class="btn_menu close">
           <i class="fa-solid fa-xmark"></i>
         </button>
-        <div id="menu" class="close_menu">
-          {% if image_path %}
-          <div class="profile">
+        {% if image_path %}
+        <div class="profile">
+
             <img src="{{ url_for('uploaded_file', filename=image_path.split('/')[-1]) }}" alt="Profile Image"
-              style="width: 80px; height: 80px; border-radius: 50%" />
-            {% else %}
-            <p>No image uploaded.</p>
-            {% endif %}
-          </div>
+            style="width: 80px; height: 80px; border-radius: 50%" />
+          {% else %}
+          <p>No image uploaded.</p>
+          {% endif %}
           <ul>
             <!-- Главное меню  -->
             <!-- <li>
               <i class="fa-solid fa-house"></i>
               <a href="#"> Главное меню </a>
-            </li>-->
+            </li> -->
             <!-- Главное меню  -->
             <li>
               <i class="fa-solid fa-gamepad"></i>
@@ -48,16 +59,17 @@
               <i class="fa-solid fa-map"></i>
               <a href="/metro-map">Карта метро</a>
             </li>
-
             <li>
               <i class="fa-solid fa-gear"></i>
-
-              <a href="{{ url_for('profile') }}" id="Profile">Изменить данные</a>
+              <a href="{{ url_for('profile') }}" id="Profile"
+                >Изменить данные</a
+              >
             </li>
             <li>
               <i class="fa-solid fa-code"></i>
-
-              <a href="{{ url_for('register_developer') }}">Для разработчиков</a>
+              <a href="{{ url_for('register_developer') }}"
+                >Для разработчиков</a
+              >
             </li>
             <li class="btn_logout">
               <i class="fas fa fa-solid fa-right-from-bracket"></i>
@@ -65,19 +77,14 @@
             </li>
             <li>
               <i class="fa-solid fa-user-tie"></i>
-              <a href="{{ url_for('admin.admin_panel') }}" class="btn">Администраторы
+              <a href="{{ url_for('admin.admin_panel') }}" class="btn"
+                >Администраторы
               </a>
             </li>
           </ul>
         </div>
       </div>
-      <div class="main_info">
-        <p class="info">Eventra</p>
-      </div>
     </nav>
-
-
-
 
     <!-- <section class="chouse_club">
       <div id="map" style="width: 80%; height: 600px"></div>
@@ -85,39 +92,56 @@
     <!-- Выбор подходящих клубов -->
 
     <div class="chouse_club">
-      <div id="map" style="width: 100%; height: 600px;"></div>
+      <div id="map" style="width: 100%; height: 600px"></div>
+
+      <div class="line_metro">
+        <button id="linesButton">Линия</button>
+        <!-- <button id="showAllLinesButton">Показать все линии</button>
+        <button id="clearRoute">Стереть маршрут</button> -->
+        <div id="linesMenu" style="display: none">
+          <ul>
+            <li>
+              <button class="metroLine" data-line="Чиланзарская Линия">
+                Чиланзарская Линия
+              </button>
+            </li>
+            <li>
+              <button class="metroLine" data-line="Узбекистанская Линия">
+                Узбекистанская Линия
+              </button>
+            </li>
+            <li>
+              <button class="metroLine" data-line="Юнусабадская Линия">
+                Юнусабадская Линия
+              </button>
+            </li>
+            <li>
+              <button class="metroLine" data-line="Наземная кольцевая линия">
+                Наземная кольцевая линия
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-
-    <button id="linesButton">Линия</button>
-    <button id="showAllLinesButton">Показать все линии</button>
-    <button id="clearRoute">Стереть маршрут</button>
-
-    <div id="linesMenu" style="display: none;">
-      <ul>
-        <li><button class="metroLine" data-line="Чиланзарская Линия">Чиланзарская Линия</button></li>
-        <li><button class="metroLine" data-line="Узбекистанская Линия">Узбекистанская Линия</button></li>
-        <li><button class="metroLine" data-line="Юнусабадская Линия">Юнусабадская Линия</button></li>
-        <li><button class="metroLine" data-line="Наземная кольцевая линия">Наземная кольцевая линия</button></li>
-
-      </ul>
-    </div>
-
 
 
     <!-- The button below might be removed since its functionality will be integrated into map markers -->
-    </div>
 
     <!-- Club Details Display Section -->
-    <div id="clubDetails" style="display: none;"></div>
+    <div id="clubDetails" style="display: none"></div>
+
+    <script></script>
+
+    <script src="../static/constellation.js"></script>
     <!-- Выбор подходящих клубов -->
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=a4f31dff-8fe8-4648-818d-31cea424e6af&lang=ru_RU"
-      type="text/javascript"></script>
-    <script src="{{ url_for('static', filename='map_metro.js') }}" defer></script>
-
-
-  </head>
-
-  </html>
-</head>
-
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=a4f31dff-8fe8-4648-818d-31cea424e6af&lang=ru_RU"
+      type="text/javascript"
+    ></script>
+    <script
+      src="{{ url_for('static', filename='map_metro.js') }}"
+      defer
+    ></script>
+  </body>
 </html>

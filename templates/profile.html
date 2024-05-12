@@ -2,72 +2,132 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Важно для адаптивного дизайна -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: linear-gradient(135deg, #485563, #29323c); /* Тёмный градиентный фон */
             text-align: center;
+            color: #fff;
         }
         .container {
             max-width: 600px;
-            margin: 20px auto;
+            margin: 40px auto;
             padding: 20px;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон контейнера */
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px); /* Размытие заднего фона */
+        }
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #485563, #29323c);
+            text-align: center;
+            color: #fff;
+        }
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px);
+        }
+        h1 {
+            font-size: 28px;
+            color: #00aaff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+        .user-info {
+            background-color: rgba(255, 255, 255, 0.2);
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            text-align: left;
+            width: 90%;
+        }
+        .user-info p {
+            font-size: 16px;
+            margin: 5px 0;
+            color: #e0e0e0;
+        }
+        h1 {
+            font-size: 28px;
+            color: #00aaff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 5px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
         }
         img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             object-fit: cover;
+            border: 3px solid #00aaff;
+            margin: 10px 0;
         }
         form {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            align-items: center;
+            gap: 15px;
             margin-top: 20px;
         }
-        input[type="text"], input[type="email"], a.back-button {
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            width: calc(100% - 22px);
+         input[type="text"], input[type="email"] {
+            padding: 12px;
+            border: 2px solid #00aaff;
+            border-radius: 15px; /* Закругленные углы для полей ввода */
+            background: transparent;
+            color: #fff;
+            transition: all 0.3s ease;
+            width: 80%;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
         }
-        input[type="submit"], a.back-button {
-            background-color: #007bff;
+        input[type="text"]:focus, input[type="email"]:focus {
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4), 0 2px 8px rgba(255, 255, 255, 0.2);
+            border-color: #0088cc;
+        }
+        input[type="submit"], a.back-button, button {
+            background-color: #00aaff;
             color: white;
-            padding: 10px;
+            padding: 12px 24px;
             border: none;
-            border-radius: 4px;
+            border-radius: 15px; /* Закругленные углы для кнопок */
             cursor: pointer;
             text-decoration: none;
-            display: inline-block;
-            margin-top: 10px;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+            margin: 5px;
+            width: auto;
         }
-        input[type="submit"]:hover, a.back-button:hover {
-            background-color: #0056b3;
+        input[type="submit"]:hover, a.back-button:hover, button:hover {
+            background-color: #0088cc;
         }
-
-        /* Медиа-запросы для адаптации под мобильные устройства */
         @media (max-width: 768px) {
             .container {
                 width: 90%;
                 padding: 10px;
             }
             img {
-                width: 100px; /* Адаптация размера изображения для мобильных устройств */
+                width: 100px;
                 height: 100px;
             }
-            form {
+            form, input[type="text"], input[type="email"], input[type="submit"], a.back-button, button {
                 width: 100%;
-            }
-            input[type="text"], input[type="email"], input[type="submit"], a.back-button {
-                width: 100%; /* Увеличить ширину полей и кнопок */
             }
         }
     </style>
@@ -75,8 +135,10 @@
 <body>
     <div class="container">
         <h1>Изменение данных профиля</h1>
-        <p>User: {{ user.username }}</p>
-        <p>Имя: {{ user.name }}</p>
+        <div class="user-info">
+            <p><strong>User:</strong> {{ user.username }}</p>
+            <p><strong>Имя:</strong> {{ user.name }}</p>
+        </div>
         {% if image_path %}
             <img src="{{ url_for('uploaded_file', filename=image_path.split('/')[-1]) }}" alt="Profile Image">
         {% else %}
@@ -103,5 +165,3 @@
     </div>
 </body>
 </html>
-
-
